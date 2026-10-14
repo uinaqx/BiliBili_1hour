@@ -1,0 +1,513 @@
+[
+  {
+    "key": "01-1",
+    "code": "fn main() {\n    let score = 80;\n    println!(\"{score}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "80\n"
+  },
+  {
+    "key": "01-2",
+    "code": "fn main() {\n    let score = 80;\n    score = 85;\n    println!(\"{score}\");\n}\n",
+    "kind": "error",
+    "error": "E0384",
+    "output": null
+  },
+  {
+    "key": "01-3",
+    "code": "fn main() {\n    let mut score = 80;\n    score += 5;\n    println!(\"{score}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "85\n"
+  },
+  {
+    "key": "01-4",
+    "code": "fn main() {\n    let score = 80;\n    let score = score + 5;\n    println!(\"{score}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "85\n"
+  },
+  {
+    "key": "01-5",
+    "code": "fn main() {\n    let count = 3;\n    let count = count * 2;\n    println!(\"{count}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "6\n"
+  },
+  {
+    "key": "02-1",
+    "code": "fn main() {\n    let age: u32 = 18;\n    let average: f64 = 88.5;\n    let passed: bool = true;\n    let initial: char = '林';\n    println!(\"{age} {average} {passed} {initial}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "18 88.5 true 林\n"
+  },
+  {
+    "key": "02-2",
+    "code": "fn main() {\n    let whole = 5 / 2;\n    let decimal = 5.0 / 2.0;\n    let small: u8 = 100;\n    let large: u16 = 200;\n    let total = u16::from(small) + large;\n    println!(\"{whole} {decimal} {total}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "2 2.5 300\n"
+  },
+  {
+    "key": "02-3",
+    "code": "fn main() {\n    let student = (18, 85);\n    let (age, score) = student;\n    println!(\"{age} {score}\");\n    let scores = [80, 85, 90];\n    println!(\"{} {}\", scores[1], scores.len());\n    let first_two = &scores[..2];\n    println!(\"{}\", first_two[0]);\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "18 85\n85 3\n80\n"
+  },
+  {
+    "key": "02-4",
+    "code": "fn main() {\n    let scores = [60, 75, 90, 95];\n    println!(\"{} {}\", scores[2], scores.len());\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "90 4\n"
+  },
+  {
+    "key": "03-1",
+    "code": "fn add_bonus(score: i32, bonus: i32) -> i32 {\n    return score + bonus;\n}\n\nfn main() {\n    let result = add_bonus(80, 5);\n    println!(\"{result}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "85\n"
+  },
+  {
+    "key": "03-2",
+    "code": "fn add_bonus(score: i32, bonus: i32) -> i32 {\n    score + bonus\n}\n\nfn main() {\n    println!(\"{}\", add_bonus(80, 5));\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "85\n"
+  },
+  {
+    "key": "03-3",
+    "code": "fn welcome() {\n    println!(\"欢迎学习 Rust\");\n}\n\nfn main() {\n    welcome();\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "欢迎学习 Rust\n"
+  },
+  {
+    "key": "03-4",
+    "code": "fn double(n: i32) -> i32 {\n    n * 2;\n}\n\nfn main() {\n    println!(\"{}\", double(6));\n}\n",
+    "kind": "error",
+    "error": "E0308",
+    "output": null
+  },
+  {
+    "key": "04-1",
+    "code": "fn main() {\n    let score = 75;\n    if score >= 60 {\n        println!(\"及格\");\n    } else {\n        println!(\"还需要努力\");\n    }\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "及格\n"
+  },
+  {
+    "key": "04-2",
+    "code": "fn main() {\n    let score = 75;\n    let result = if score >= 60 {\n        \"及格\"\n    } else {\n        \"还需要努力\"\n    };\n    println!(\"{result}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "及格\n"
+  },
+  {
+    "key": "04-3",
+    "code": "fn main() {\n    let value = if true {\n        1\n    } else {\n        \"没有成绩\"\n    };\n    println!(\"{value}\");\n}\n",
+    "kind": "error",
+    "error": "E0308",
+    "output": null
+  },
+  {
+    "key": "05-1",
+    "code": "fn main() {\n    let score = 80;\n    let another = score;\n    println!(\"{score} {another}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "80 80\n"
+  },
+  {
+    "key": "05-2",
+    "code": "fn main() {\n    let name = String::from(\"小林\");\n    let another = name;\n    println!(\"{name}\");\n}\n",
+    "kind": "error",
+    "error": "E0382",
+    "output": null
+  },
+  {
+    "key": "05-3",
+    "code": "fn main() {\n    let name = String::from(\"小林\");\n    let another = name.clone();\n    println!(\"{name} {another}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林 小林\n"
+  },
+  {
+    "key": "05-4",
+    "code": "fn show_name(name: String) {\n    println!(\"{name}\");\n}\n\nfn main() {\n    let name = String::from(\"小林\");\n    show_name(name);\n    println!(\"{name}\");\n}\n",
+    "kind": "error",
+    "error": "E0382",
+    "output": null
+  },
+  {
+    "key": "05-5",
+    "code": "fn show_name(name: &String) {\n    println!(\"{name}\");\n}\n\nfn main() {\n    let name = String::from(\"小林\");\n    show_name(&name);\n    println!(\"{name}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林\n小林\n"
+  },
+  {
+    "key": "05-6",
+    "code": "fn main() {\n    let name = String::from(\"小林\");\n    let first = &name;\n    let second = &name;\n    println!(\"{first} {second}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林 小林\n"
+  },
+  {
+    "key": "05-7",
+    "code": "fn add_suffix(name: &mut String) {\n    name.push_str(\"同学\");\n}\n\nfn main() {\n    let mut name = String::from(\"小林\");\n    add_suffix(&mut name);\n    println!(\"{name}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林同学\n"
+  },
+  {
+    "key": "05-8",
+    "code": "fn main() {\n    let mut name = String::from(\"小林\");\n    let view = &name;\n    name.push_str(\"同学\");\n    println!(\"{view}\");\n}\n",
+    "kind": "error",
+    "error": "E0502",
+    "output": null
+  },
+  {
+    "key": "05-9",
+    "code": "fn main() {\n    let mut name = String::from(\"小林\");\n    let view = &name;\n    println!(\"{view}\");\n    name.push_str(\"同学\");\n    println!(\"{name}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林\n小林同学\n"
+  },
+  {
+    "key": "05-10",
+    "code": "fn main() {\n    let name = String::from(\"小林\");\n    let view = &name;\n    println!(\"{view}\");\n    println!(\"{name}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林\n小林\n"
+  },
+  {
+    "key": "06-1",
+    "code": "struct Student {\n    name: String,\n    score: u32,\n}\n\nfn main() {\n    let student = Student {\n        name: String::from(\"小林\"),\n        score: 80,\n    };\n    println!(\"{} {}\", student.name, student.score);\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林 80\n"
+  },
+  {
+    "key": "06-2",
+    "code": "struct Student { name: String, score: u32 }\nimpl Student {\n    fn passed(&self) -> bool {\n        self.score >= 60\n    }\n}\nfn main() {\n    let student = Student {\n        name: String::from(\"小林\"), score: 80,\n    };\n    println!(\"{}\", student.passed());\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "true\n"
+  },
+  {
+    "key": "06-3",
+    "code": "struct Student { name: String, score: u32 }\nimpl Student {\n    fn new(name: String, score: u32) -> Self {\n        Self { name, score }\n    }\n    fn add_bonus(&mut self, bonus: u32) {\n        self.score += bonus;\n    }\n}\nfn main() {\n    let mut student = Student::new(String::from(\"小林\"), 80);\n    student.add_bonus(5);\n    println!(\"{} {}\", student.name, student.score);\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林 85\n"
+  },
+  {
+    "key": "06-4",
+    "code": "struct Student { name: String, score: u32 }\nfn main() {\n    let first = Student {\n        name: String::from(\"小林\"), score: 80,\n    };\n    let second = Student {\n        name: String::from(\"小周\"),\n        ..first\n    };\n    println!(\"{} {}\", second.name, second.score);\n    println!(\"{}\", first.score);\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小周 80\n80\n"
+  },
+  {
+    "key": "07-1",
+    "code": "enum ExamState {\n    NotSubmitted,\n    Checking,\n    Finished(u32),\n}\nfn main() {\n    let state = ExamState::Finished(85);\n    match state {\n        ExamState::NotSubmitted => println!(\"还没交\"),\n        ExamState::Checking => println!(\"批改中\"),\n        ExamState::Finished(score) => println!(\"成绩：{score}\"),\n    }\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "成绩：85\n"
+  },
+  {
+    "key": "07-2",
+    "code": "enum Answer { Yes, No }\nfn main() {\n    let answer = Answer::Yes;\n    match answer {\n        Answer::Yes => println!(\"同意\"),\n    }\n}\n",
+    "kind": "error",
+    "error": "E0004",
+    "output": null
+  },
+  {
+    "key": "08-1",
+    "code": "fn main() {\n    let score: Option<u32> = None;\n    match score {\n        Some(value) => println!(\"成绩：{value}\"),\n        None => println!(\"还没有成绩\"),\n    }\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "还没有成绩\n"
+  },
+  {
+    "key": "08-2",
+    "code": "fn main() {\n    let score = Some(85);\n    if let Some(value) = score {\n        println!(\"成绩：{value}\");\n    }\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "成绩：85\n"
+  },
+  {
+    "key": "08-3",
+    "code": "fn main() {\n    let score: Option<u32> = None;\n    let displayed = score.unwrap_or(0);\n    println!(\"展示值：{displayed}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "展示值：0\n"
+  },
+  {
+    "key": "08-4",
+    "code": "fn main() {\n    let score: Option<u32> = None;\n    println!(\"{}\", score.unwrap());\n}\n",
+    "kind": "panic",
+    "error": null,
+    "output": ""
+  },
+  {
+    "key": "08-5",
+    "code": "fn main() {\n    let first = Some(0);\n    let second: Option<i32> = None;\n    println!(\"{}\", first.unwrap_or(60));\n    println!(\"{}\", second.unwrap_or(60));\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "0\n60\n"
+  },
+  {
+    "key": "09-1",
+    "code": "fn main() {\n    let mut scores = vec![80, 85];\n    scores.push(90);\n    println!(\"{}\", scores.len());\n    let last = scores.pop();\n    if let Some(value) = last {\n        println!(\"取出：{value}\");\n    }\n    println!(\"{}\", scores.len());\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "3\n取出：90\n2\n"
+  },
+  {
+    "key": "09-2",
+    "code": "fn main() {\n    let scores = vec![80, 85, 90];\n    println!(\"{}\", scores[1]);\n    match scores.get(8) {\n        Some(value) => println!(\"{value}\"),\n        None => println!(\"这个位置没有成绩\"),\n    }\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "85\n这个位置没有成绩\n"
+  },
+  {
+    "key": "09-3",
+    "code": "fn main() {\n    let mut scores = vec![80, 85, 90];\n    for score in &scores {\n        println!(\"{score}\");\n    }\n    for score in &mut scores {\n        *score += 1;\n    }\n    for score in &scores {\n        println!(\"{score}\");\n    }\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "80\n85\n90\n81\n86\n91\n"
+  },
+  {
+    "key": "09-4",
+    "code": "fn main() {\n    let scores = vec![70, 80];\n    match scores.get(4) {\n        Some(score) => println!(\"{score}\"),\n        None => println!(\"没有第五个成绩\"),\n    }\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "没有第五个成绩\n"
+  },
+  {
+    "key": "10-1",
+    "code": "fn show(text: &str) {\n    println!(\"{text}\");\n}\nfn main() {\n    let fixed = \"Rust\";\n    let mut name = String::from(\"小林\");\n    name.push_str(\"同学\");\n    show(fixed);\n    show(&name);\n    println!(\"{name}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "Rust\n小林同学\n小林同学\n"
+  },
+  {
+    "key": "10-2",
+    "code": "fn main() {\n    let first = String::from(\"小林\");\n    let second = String::from(\"，欢迎\");\n    let message = first + &second;\n    println!(\"{message}\");\n    println!(\"{second}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林，欢迎\n，欢迎\n"
+  },
+  {
+    "key": "10-3",
+    "code": "fn main() {\n    let text = \"中A\";\n    println!(\"{}\", text.len());\n    for ch in text.chars() {\n        println!(\"{ch}\");\n    }\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "4\n中\nA\n"
+  },
+  {
+    "key": "10-4",
+    "code": "fn main() {\n    let text = \"中A\";\n    let chinese = &text[..3];\n    println!(\"{chinese}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "中\n"
+  },
+  {
+    "key": "10-5",
+    "code": "fn main() {\n    let greeting = \"你好\";\n    println!(\"{}\", greeting.len());\n    println!(\"{}\", greeting.chars().count());\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "6\n2\n"
+  },
+  {
+    "key": "11-1",
+    "code": "use std::collections::HashMap;\nfn main() {\n    let mut scores = HashMap::new();\n    scores.insert(\"小林\", 80);\n    scores.insert(\"小周\", 90);\n    match scores.get(\"小林\") {\n        Some(score) => println!(\"小林：{score}\"),\n        None => println!(\"没有找到这名学生\"),\n    }\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林：80\n"
+  },
+  {
+    "key": "11-2",
+    "code": "use std::collections::HashMap;\nfn main() {\n    let mut scores = HashMap::new();\n    scores.insert(\"小林\", 80);\n    scores.insert(\"小林\", 85);\n    if let Some(score) = scores.get(\"小林\") {\n        println!(\"{score}\");\n    }\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "85\n"
+  },
+  {
+    "key": "11-3",
+    "code": "use std::collections::HashMap;\nfn main() {\n    let names = [\"小林\", \"小周\", \"小林\"];\n    let mut counts = HashMap::new();\n    for name in names {\n        let count = counts.entry(name).or_insert(0);\n        *count += 1;\n    }\n    if let Some(count) = counts.get(\"小林\") {\n        println!(\"{count}\");\n    }\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "2\n"
+  },
+  {
+    "key": "11-4",
+    "code": "use std::collections::HashMap;\nfn main() {\n    let name = String::from(\"小林\");\n    let mut scores = HashMap::new();\n    scores.insert(name, 80);\n    println!(\"{name}\");\n}\n",
+    "kind": "error",
+    "error": "E0382",
+    "output": null
+  },
+  {
+    "key": "11-5",
+    "code": "use std::collections::HashMap;\nfn main() {\n    let mut counts = HashMap::new();\n    counts.insert(\"小林\", 2);\n    let count = counts.entry(\"小林\").or_insert(0);\n    *count += 7;\n    println!(\"{count}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "9\n"
+  },
+  {
+    "key": "12-1",
+    "code": "fn make_pair<T>(first: T, second: T) -> (T, T) {\n    (first, second)\n}\nfn main() {\n    let (left, right) = make_pair(80, 90);\n    println!(\"{left} {right}\");\n    let (left, right) = make_pair(\"小林\", \"小周\");\n    println!(\"{left} {right}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "80 90\n小林 小周\n"
+  },
+  {
+    "key": "12-2",
+    "code": "struct Record<T> {\n    value: T,\n}\nimpl<T> Record<T> {\n    fn value(&self) -> &T {\n        &self.value\n    }\n}\nfn main() {\n    let score = Record { value: 85 };\n    let name = Record { value: \"小林\" };\n    println!(\"{}\", score.value());\n    println!(\"{}\", name.value());\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "85\n小林\n"
+  },
+  {
+    "key": "12-3",
+    "code": "fn larger<T>(left: T, right: T) -> T {\n    if left > right { left } else { right }\n}\nfn main() {\n    println!(\"{}\", larger(80, 90));\n}\n",
+    "kind": "error",
+    "error": "E0369",
+    "output": null
+  },
+  {
+    "key": "12-4",
+    "code": "fn larger<T: PartialOrd>(left: T, right: T) -> T {\n    if left > right { left } else { right }\n}\nfn main() {\n    println!(\"{}\", larger(80, 90));\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "90\n"
+  },
+  {
+    "key": "13-2",
+    "code": "trait Welcome {\n    fn welcome(&self) {\n        println!(\"欢迎学习 Rust\");\n    }\n}\nstruct Student;\nimpl Welcome for Student {}\nfn main() {\n    let student = Student;\n    student.welcome();\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "欢迎学习 Rust\n"
+  },
+  {
+    "key": "13-3",
+    "code": "#[derive(Debug)]\nstruct Student {\n    score: u32,\n}\nfn show<T>(item: &T)\nwhere\n    T: std::fmt::Debug,\n{\n    println!(\"{item:?}\");\n}\nfn main() {\n    let student = Student { score: 85 };\n    show(&student);\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "Student { score: 85 }\n"
+  },
+  {
+    "key": "14-1",
+    "code": "fn main() {\n    let view;\n    {\n        let name = String::from(\"小林\");\n        view = &name;\n    }\n    println!(\"{view}\");\n}\n",
+    "kind": "error",
+    "error": "E0597",
+    "output": null
+  },
+  {
+    "key": "14-2",
+    "code": "fn main() {\n    let name = String::from(\"小林\");\n    let view = &name;\n    println!(\"{view}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林\n"
+  },
+  {
+    "key": "14-3",
+    "code": "fn longer<'a>(left: &'a str, right: &'a str) -> &'a str {\n    if left.len() >= right.len() {\n        left\n    } else {\n        right\n    }\n}\nfn main() {\n    let first = String::from(\"Lin\");\n    let second = String::from(\"Zhou\");\n    let result = longer(&first, &second);\n    println!(\"{result}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "Zhou\n"
+  },
+  {
+    "key": "14-4",
+    "code": "fn longer<'a>(left: &'a str, right: &'a str) -> &'a str {\n    if left.len() >= right.len() { left } else { right }\n}\nfn main() {\n    let first = String::from(\"Lin\");\n    let result;\n    {\n        let second = String::from(\"Zhou\");\n        result = longer(&first, &second);\n    }\n    println!(\"{result}\");\n}\n",
+    "kind": "error",
+    "error": "E0597",
+    "output": null
+  },
+  {
+    "key": "14-5",
+    "code": "fn as_text(name: &String) -> &str {\n    name.as_str()\n}\nfn main() {\n    let name = String::from(\"小林\");\n    let view = as_text(&name);\n    println!(\"{view}\");\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林\n"
+  },
+  {
+    "key": "14-6",
+    "code": "struct NameTag<'a> {\n    text: &'a str,\n}\nfn main() {\n    let name = String::from(\"小林\");\n    let tag = NameTag { text: &name };\n    println!(\"{}\", tag.text);\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林\n"
+  },
+  {
+    "key": "13-1",
+    "code": "trait Introduce {\n    fn introduction(&self) -> String;\n}\n\nstruct Student {\n    name: String,\n}\n\nimpl Introduce for Student {\n    fn introduction(&self) -> String {\n        format!(\"学生：{}\", self.name)\n    }\n}\n\nfn show<T: Introduce>(item: &T) {\n    println!(\"{}\", item.introduction());\n}\nfn main() {\n    let student = Student { name: String::from(\"小林\") };\n    show(&student);\n}\n\n",
+    "kind": "run",
+    "error": null,
+    "output": "学生：小林\n"
+  },
+  {
+    "key": "15-1",
+    "code": "struct Student {\n    name: String,\n    score: Option<u32>,\n}\nimpl Student {\n    fn passed(&self) -> bool {\n        match self.score {\n            Some(score) => score >= 60,\n            None => false,\n        }\n    }\n}\n\nfn main() {\n    let students = vec![\n        Student { name: String::from(\"小林\"), score: Some(80) },\n        Student { name: String::from(\"小周\"), score: None },\n    ];\n    for student in &students {\n        if student.passed() {\n            if let Some(score) = student.score {\n                println!(\"{}：{score}\", student.name);\n            }\n        }\n    }\n}\n\n",
+    "kind": "run",
+    "error": null,
+    "output": "小林：80\n"
+  },
+  {
+    "key": "03-4-fixed",
+    "code": "fn double(n: i32) -> i32 {\n    n * 2\n}\n\nfn main() {\n    println!(\"{}\", double(6));\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "12\n"
+  },
+  {
+    "key": "06-question",
+    "code": "struct Student { name: String, score: u32 }\nimpl Student {\n    fn new(name: String, score: u32) -> Self {\n        Self { name, score }\n    }\n    fn add_bonus(&mut self, bonus: u32) {\n        self.score += bonus;\n    }\n}\nfn main() {\n    let student = Student::new(String::from(\"小林\"), 80);\n    student.add_bonus(5);\n    println!(\"{} {}\", student.name, student.score);\n}\n",
+    "kind": "error",
+    "error": "E0596",
+    "output": null
+  },
+  {
+    "key": "07-2-fixed",
+    "code": "enum Answer { Yes, No }\nfn main() {\n    let answer = Answer::Yes;\n    match answer {\n        Answer::Yes => println!(\"同意\"),\n        Answer::No => println!(\"不同意\"),\n    }\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "同意\n"
+  },
+  {
+    "key": "12-question",
+    "code": "fn make_pair<T>(first: T, second: T) -> (T, T) {\n    (first, second)\n}\nfn main() {\n    let (left, right) = make_pair(80, \"小林\");\n    println!(\"{left} {right}\");\n    let (left, right) = make_pair(\"小林\", \"小周\");\n    println!(\"{left} {right}\");\n}\n",
+    "kind": "error",
+    "error": "E0308",
+    "output": null
+  },
+  {
+    "key": "13-question",
+    "code": "trait Introduce {\n    fn introduction(&self) -> String;\n}\n\nstruct Student {\n    name: String,\n}\n\nimpl Introduce for Student {\n    fn introduction(&self) -> String {\n        format!(\"学生：{}\", self.name)\n    }\n}\n\nfn show<T: Introduce>(item: &T) {\n    println!(\"{}\", item.introduction());\n}\nstruct Course;\nfn main() { show(&Course); }\n",
+    "kind": "error",
+    "error": "E0277",
+    "output": null
+  },
+  {
+    "key": "13-question-fixed",
+    "code": "trait Introduce {\n    fn introduction(&self) -> String;\n}\n\nstruct Student {\n    name: String,\n}\n\nimpl Introduce for Student {\n    fn introduction(&self) -> String {\n        format!(\"学生：{}\", self.name)\n    }\n}\n\nfn show<T: Introduce>(item: &T) {\n    println!(\"{}\", item.introduction());\n}\nstruct Course;\nimpl Introduce for Course {\n fn introduction(&self) -> String { String::from(\"课程：Rust 基础\") }\n}\nfn main() { show(&Course); }\n",
+    "kind": "run",
+    "error": null,
+    "output": "课程：Rust 基础\n"
+  },
+  {
+    "key": "10-bad-boundary",
+    "code": "fn main() {\n    let text = \"中A\";\n    let chinese = &text[..1];\n    println!(\"{chinese}\");\n}\n",
+    "kind": "panic",
+    "error": null,
+    "output": ""
+  },
+  {
+    "key": "14-4-fixed",
+    "code": "fn longer<'a>(left: &'a str, right: &'a str) -> &'a str {\n    if left.len() >= right.len() { left } else { right }\n}\nfn main() {\n    let first = String::from(\"Lin\");\n    let result;\n    {\n        let second = String::from(\"Zhou\");\n        result = longer(&first, &second);\n        println!(\"{result}\");\n    }\n}\n",
+    "kind": "run",
+    "error": null,
+    "output": "Zhou\n"
+  }
+]
