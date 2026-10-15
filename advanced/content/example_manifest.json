@@ -1,0 +1,506 @@
+[
+  {
+    "key": "01-1",
+    "code": "fn main() {\n    let score: u8 = 80;\n    let wide = score as u32;\n    println!(\"{score} {wide}\");\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "80 80\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "01-2",
+    "code": "fn main() {\n    let large: u16 = 300;\n    let small = large as u8;\n    let rounded = 88.9_f64 as i32;\n    println!(\"{small} {rounded}\");\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "44 88\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "01-3",
+    "code": "fn main() {\n    let score: u8 = 80;\n    let wide_one = u32::from(score);\n    let wide_two: u32 = score.into();\n    let name = String::from(\"小林\");\n    println!(\"{wide_one} {wide_two} {name}\");\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "80 80 小林\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "01-4",
+    "code": "fn main() {\n    let value: u16 = 300;\n    match u8::try_from(value) {\n        Ok(n) => println!(\"转换成功: {n}\"),\n        Err(_) => println!(\"超出范围\"),\n    }\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "超出范围\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "01-5",
+    "code": "fn main() {\n    let input = \"85\";\n    match input.parse::<u32>() {\n        Ok(score) => println!(\"成绩: {score}\"),\n        Err(_) => println!(\"请输入有效整数\"),\n    }\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "成绩: 85\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "01-a",
+    "code": "fn main() {\n    let value: u16 = 300;\n    println!(\"{}\", value as u8);\n    println!(\"{}\", u8::try_from(value).is_err());\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "44\ntrue\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "02-1",
+    "code": "mod grades {\n    pub fn passed(score: u32) -> bool {\n        score >= 60\n    }\n}\nfn main() {\n    println!(\"{}\", grades::passed(80));\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "true\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "02-2",
+    "code": "mod grades {\n    fn passed(score: u32) -> bool { score >= 60 }\n}\nfn main() {\n    println!(\"{}\", grades::passed(80));\n}",
+    "files": null,
+    "kind": "error",
+    "error": "E0603",
+    "output": "编译失败：函数 passed 为私有\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "02-3",
+    "code": "mod grades {\n    pub fn passed(score: u32) -> bool {\n        score >= 60\n    }\n}\nuse crate::grades::passed;\nfn main() {\n    println!(\"{}\", passed(59));\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "false\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "02-4",
+    "code": "mod grades;\nfn main() {\n    println!(\"{}\", grades::passed(80));\n}",
+    "files": {
+      "main.rs": "mod grades;\nfn main() {\n    println!(\"{}\", grades::passed(80));\n}\n",
+      "grades.rs": "pub fn passed(score: u32) -> bool {\n    score >= 60\n}\n"
+    },
+    "kind": "run",
+    "error": null,
+    "output": "true\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "02-5",
+    "code": "mod school {\n    pub struct Student { pub name: String, score: u32 }\n    impl Student {\n        pub fn new(name: String, score: u32) -> Self { Self {name,score} }\n        pub fn score(&self) -> u32 { self.score }\n    }\n}\nfn main() { let s=school::Student::new(String::from(\"小林\"),80); println!(\"{} {}\",s.name,s.score()); }",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "小林 80\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "02-a",
+    "code": "mod grades {\n    pub fn passed(score: u32) -> bool {\n        score >= 60\n    }\n}\nfn main() {\n    println!(\"{}\", grades::passed(80));\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "true\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "03-1",
+    "code": "fn check(score: u32) -> Result<u32, &'static str> {\n    if score <= 100 { Ok(score) }\n    else { Err(\"成绩超过100\") }\n}\nfn main() {\n    println!(\"{:?}\", check(80));\n    println!(\"{:?}\", check(120));\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "Ok(80)\nErr(\"成绩超过100\")\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "03-2",
+    "code": "fn main() {\n    match \"hello\".parse::<u32>() {\n        Ok(score) => println!(\"成绩: {score}\"),\n        Err(_) => println!(\"输入不是有效整数\"),\n    }\n    println!(\"程序继续运行\");\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "输入不是有效整数\n程序继续运行\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "03-3",
+    "code": "use std::num::ParseIntError;\nfn parse_score(text: &str) -> Result<u32, ParseIntError> {\n    let score = text.parse::<u32>()?;\n    Ok(score + 1)\n}\nfn main() {\n    println!(\"{:?}\", parse_score(\"80\"));\n    println!(\"{}\", parse_score(\"abc\").is_err());\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "Ok(81)\ntrue\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "03-4",
+    "code": "fn read_score(text: &str) -> Result<u32, &'static str> {\n    let n = text.parse::<u32>()\n        .map_err(|_| \"请输入整数\")?;\n    if n > 100 { return Err(\"成绩超过100\"); }\n    Ok(n)\n}\nfn main() {\n    println!(\"{:?}\", read_score(\"abc\"));\n    println!(\"{:?}\", read_score(\"120\"));\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "Err(\"请输入整数\")\nErr(\"成绩超过100\")\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "03-5",
+    "code": "fn main() {\n    let score = \"abc\".parse::<u32>().unwrap();\n    println!(\"{score}\");\n}",
+    "files": null,
+    "kind": "panic",
+    "error": null,
+    "output": "运行时 panic（不是编译错误）\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "03-a",
+    "code": "fn read(text: &str) -> Result<u32, &'static str> {\n    let n = text.parse::<u32>().map_err(|_| \"格式错误\")?;\n    Ok(n + 10)\n}\nfn main() {\n    println!(\"{:?}\", read(\"x\"));\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "Err(\"格式错误\")\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "04-1",
+    "code": "fn add_bonus(score: u32, bonus: u32) -> u32 {\n    score + bonus\n}\n#[test]\nfn bonus_is_added() {\n    assert_eq!(add_bonus(80, 5), 85);\n}",
+    "files": null,
+    "kind": "test_pass",
+    "error": null,
+    "output": "test result: ok. 1 passed; 0 failed\n",
+    "filename": "lib.rs"
+  },
+  {
+    "key": "04-2",
+    "code": "fn passed(score: u32) -> bool { score >= 60 }\n#[test]\nfn passing_boundary() {\n    assert!(!passed(59));\n    assert!(passed(60));\n    assert!(passed(61));\n}",
+    "files": null,
+    "kind": "test_pass",
+    "error": null,
+    "output": "test result: ok. 1 passed; 0 failed\n",
+    "filename": "lib.rs"
+  },
+  {
+    "key": "04-3",
+    "code": "fn passed(score: u32) -> bool { score > 60 }\n#[test]\nfn passing_boundary() {\n    assert!(!passed(59));\n    assert!(passed(60));\n    assert!(passed(61));\n}",
+    "files": null,
+    "kind": "test_fail",
+    "error": null,
+    "output": "test result: FAILED. 0 passed; 1 failed\n",
+    "filename": "lib.rs"
+  },
+  {
+    "key": "04-4",
+    "code": "fn passed(score: u32) -> bool { score >= 60 }\n#[cfg(test)]\nmod tests {\n    use super::*;\n    #[test]\n    fn sixty_passes() {\n        assert!(passed(60));\n    }\n}",
+    "files": null,
+    "kind": "test_pass",
+    "error": null,
+    "output": "test result: ok. 1 passed; 0 failed\n",
+    "filename": "lib.rs"
+  },
+  {
+    "key": "04-5",
+    "code": "fn check(score: u32) {\n    assert!(score <= 100, \"成绩不能超过100\");\n}\n#[test]\n#[should_panic(expected = \"成绩不能超过100\")]\nfn rejects_large_score() {\n    check(120);\n}",
+    "files": null,
+    "kind": "test_pass",
+    "error": null,
+    "output": "test result: ok. 1 passed; 0 failed\n",
+    "filename": "lib.rs"
+  },
+  {
+    "key": "04-a",
+    "code": "fn passed(score: u32) -> bool { score >= 60 }\n#[test]\nfn passing_boundary() {\n    assert!(!passed(59));\n    assert!(passed(60));\n    assert!(passed(61));\n}",
+    "files": null,
+    "kind": "test_pass",
+    "error": null,
+    "output": "test result: ok. 1 passed; 0 failed\n",
+    "filename": "lib.rs"
+  },
+  {
+    "key": "05-1",
+    "code": "fn main() {\n    let scores = vec![60, 80];\n    let mut items = scores.iter();\n    println!(\"{:?}\", items.next());\n    println!(\"{:?}\", items.next());\n    println!(\"{:?}\", items.next());\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "Some(60)\nSome(80)\nNone\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "05-2",
+    "code": "fn main() {\n    let scores = vec![60, 80];\n    let updated: Vec<i32> = scores.iter()\n        .map(|score| *score + 5)\n        .collect();\n    println!(\"{updated:?}\");\n    println!(\"{scores:?}\");\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "[65, 85]\n[60, 80]\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "05-3",
+    "code": "fn main() {\n    let scores = vec![50, 60, 80];\n    let result: Vec<i32> = scores.iter().copied()\n        .filter(|score| *score >= 60)\n        .map(|score| score + 1)\n        .collect();\n    println!(\"{result:?}\");\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "[61, 81]\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "05-4",
+    "code": "fn main() {\n    let scores = vec![60, 80];\n    let _pending = scores.iter().map(|score| {\n        println!(\"处理: {score}\");\n        *score + 1\n    });\n    println!(\"只创建了规则\");\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "只创建了规则\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "05-5",
+    "code": "fn main() {\n    let mut scores = vec![60, 80];\n    for score in scores.iter_mut() {\n        *score += 1;\n    }\n    println!(\"{scores:?}\");\n    let total: i32 = scores.into_iter().sum();\n    println!(\"{total}\");\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "[61, 81]\n142\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "05-6",
+    "code": "fn main() {\n    let scores = vec![60, 80];\n    let total: i32 = scores.into_iter().sum();\n    println!(\"{total} {scores:?}\");\n}",
+    "files": null,
+    "kind": "error",
+    "error": "E0382",
+    "output": "编译失败：scores 已被移动\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "05-a",
+    "code": "fn main() {\n    let scores = vec![50, 60, 80];\n    let result: Vec<i32> = scores.iter().copied()\n        .filter(|score| *score >= 60)\n        .map(|score| score + 1)\n        .collect();\n    println!(\"{result:?}\");\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "[61, 81]\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "06-1",
+    "code": "fn main() {\n    let score = Box::new(80);\n    println!(\"{}\", *score);\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "80\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "06-2",
+    "code": "enum List {\n    Item(i32, Box<List>),\n    End,\n}\nfn main() {\n    let list = List::Item(80, Box::new(List::End));\n    if let List::Item(score, _) = list {\n        println!(\"{score}\");\n    }\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "80\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "06-3",
+    "code": "use std::rc::Rc;\nfn main() {\n    let first = Rc::new(String::from(\"小林\"));\n    {\n        let second = Rc::clone(&first);\n        println!(\"{}\", Rc::strong_count(&second));\n    }\n    println!(\"{}\", Rc::strong_count(&first));\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "2\n1\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "06-4",
+    "code": "use std::cell::RefCell;\nfn main() {\n    let score = RefCell::new(80);\n    *score.borrow_mut() += 5;\n    println!(\"{}\", score.borrow());\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "85\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "06-5",
+    "code": "use std::cell::RefCell;\nfn main() {\n    let score = RefCell::new(80);\n    let view = score.borrow();\n    *score.borrow_mut() = 90;\n    println!(\"{view}\");\n}",
+    "files": null,
+    "kind": "panic",
+    "error": null,
+    "output": "运行时 panic：借用发生冲突\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "06-6",
+    "code": "use std::sync::Arc;\nfn main() {\n    let first = Arc::new(String::from(\"小林\"));\n    let second = Arc::clone(&first);\n    println!(\"{first} {second}\");\n    println!(\"{}\", Arc::strong_count(&first));\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "小林 小林\n2\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "06-a",
+    "code": "use std::rc::Rc;\nfn main() {\n    let first = Rc::new(80);\n    {\n        let second = Rc::clone(&first);\n        let third = Rc::clone(&second);\n        println!(\"{}\", Rc::strong_count(&third));\n    }\n    println!(\"{}\", Rc::strong_count(&first));\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "3\n1\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "07-1",
+    "code": "use std::thread;\nfn main() {\n    let job = thread::spawn(|| {\n        println!(\"子线程任务完成\");\n    });\n    job.join().unwrap();\n    println!(\"主线程等待结束\");\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "子线程任务完成\n主线程等待结束\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "07-2",
+    "code": "use std::thread;\nfn main() {\n    let job = thread::spawn(|| println!(\"A\"));\n    println!(\"B\");\n    job.join().unwrap();\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": [
+      "A\nB\n",
+      "B\nA\n"
+    ],
+    "filename": "main.rs"
+  },
+  {
+    "key": "07-3",
+    "code": "use std::thread;\nfn main() {\n    let scores = vec![60, 80];\n    let job = thread::spawn(move || {\n        scores.into_iter().sum::<i32>()\n    });\n    let total = job.join().unwrap();\n    println!(\"{total}\");\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "140\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "07-4",
+    "code": "use std::sync::mpsc;\nuse std::thread;\nfn main() {\n    let (tx, rx) = mpsc::channel();\n    let job = thread::spawn(move || {\n        tx.send(85).unwrap();\n    });\n    println!(\"{}\", rx.recv().unwrap());\n    job.join().unwrap();\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "85\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "07-5",
+    "code": "use std::sync::Mutex;\nfn main() {\n    let score = Mutex::new(80);\n    {\n        let mut guard = score.lock().unwrap();\n        *guard += 5;\n    }\n    println!(\"{}\", *score.lock().unwrap());\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "85\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "07-6",
+    "code": "use std::sync::{Arc, Mutex};\nuse std::thread;\nfn main() {\n    let total = Arc::new(Mutex::new(0));\n    let mut jobs = Vec::new();\n    for _ in 0..2 {\n        let shared = Arc::clone(&total);\n        jobs.push(thread::spawn(move || {\n            for _ in 0..100 { *shared.lock().unwrap() += 1; }\n        }));\n    }\n    for job in jobs { job.join().unwrap(); }\n    println!(\"{}\", *total.lock().unwrap());\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "200\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "07-7",
+    "code": "use std::sync::{Arc, Mutex};\nuse std::thread;\nfn main() {\n    let total = Arc::new(Mutex::new(0));\n    let mut jobs = Vec::new();\n    for _ in 0..2 {\n        let shared = Arc::clone(&total);\n        jobs.push(thread::spawn(move || {\n            for _ in 0..100 { *shared.lock().unwrap() += 1; }\n        }));\n    }\n    for job in jobs { job.join().unwrap(); }\n    println!(\"{}\", *total.lock().unwrap());\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "200\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "07-a",
+    "code": "use std::thread;\nfn main() {\n    let job = thread::spawn(|| println!(\"A\"));\n    println!(\"B\");\n    job.join().unwrap();\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": [
+      "A\nB\n",
+      "B\nA\n"
+    ],
+    "filename": "main.rs"
+  },
+  {
+    "key": "08-1",
+    "code": "fn main() {\n    let scores = vec![80, 85];\n    println!(\"学生人数: {}\", scores.len());\n    assert_eq!(scores[0], 80);\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "学生人数: 2\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "08-2",
+    "code": "macro_rules! show_score {\n    ($value:expr) => {\n        println!(\"成绩: {}\", $value);\n    };\n}\nfn main() {\n    show_score!(85);\n    show_score!(80 + 5);\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "成绩: 85\n成绩: 85\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "08-3",
+    "code": "macro_rules! total {\n    ($($value:expr),* $(,)?) => {\n        0 $(+ $value)*\n    };\n}\nfn main() {\n    println!(\"{}\", total!(4, 5, 6));\n    println!(\"{}\", total!());\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "15\n0\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "08-4",
+    "code": "macro_rules! twice {\n    ($value:expr) => { $value + $value };\n}\nfn main() {\n    let mut count = 0;\n    let result = twice!({ count += 1; count });\n    println!(\"{result} {count}\");\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "3 2\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "08-5",
+    "code": "macro_rules! twice {\n    ($value:expr) => {{\n        let value = $value;\n        value + value\n    }};\n}\nfn main() {\n    let mut count = 0;\n    let result = twice!({ count += 1; count });\n    println!(\"{result} {count}\");\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "2 1\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "08-a",
+    "code": "macro_rules! total {\n    ($($value:expr),* $(,)?) => {\n        0 $(+ $value)*\n    };\n}\nfn main() {\n    println!(\"{}\", total!(4, 5, 6));\n    println!(\"{}\", total!());\n}",
+    "files": null,
+    "kind": "run",
+    "error": null,
+    "output": "15\n0\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "09-1",
+    "code": "fn main() {\n    let scores = vec![80, 85, 90];\n    println!(\"{}\", scores.len());\n}",
+    "files": null,
+    "kind": "clippy_warn",
+    "error": null,
+    "output": "Clippy 提示：useless_vec\n可考虑改用固定数组\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "09-3",
+    "code": "fn main() {\n    let scores = [80, 85, 90];\n    println!(\"{}\", scores.len());\n}",
+    "files": null,
+    "kind": "clippy_clean",
+    "error": null,
+    "output": "Clippy 检查通过\n程序运行结果：3\n",
+    "filename": "main.rs"
+  },
+  {
+    "key": "09-a",
+    "code": "fn main() {\n    let scores = [80, 85, 90];\n    println!(\"{}\", scores.len());\n}",
+    "files": null,
+    "kind": "clippy_clean",
+    "error": null,
+    "output": "Clippy 检查通过\n程序运行结果：3\n",
+    "filename": "main.rs"
+  }
+]

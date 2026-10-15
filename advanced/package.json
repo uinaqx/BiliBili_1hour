@@ -1,0 +1,33 @@
+{
+  "name": "rust-1hour-advanced",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.tsx",
+    "verify": "python scripts/verify_examples.py",
+    "audio": "python scripts/audio.py",
+    "timeline": "python scripts/timeline.py",
+    "stills": "node scripts/stills.mjs",
+    "render": "python scripts/render.py",
+    "check": "python scripts/check.py",
+    "course": "python scripts/build_course.py",
+    "preview": "python scripts/build_course.py && python scripts/preview.py",
+    "typecheck": "tsc --noEmit",
+    "audit": "python scripts/audit_public.py"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.535",
+    "@remotion/cli": "4.0.535",
+    "@remotion/renderer": "4.0.535",
+    "remotion": "4.0.535",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  },
+  "license": "MIT",
+  "description": "Editable Rust course: nine further topics with Remotion and optional Bailian TTS"
+}

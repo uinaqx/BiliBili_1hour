@@ -15,7 +15,10 @@ except (subprocess.CalledProcessError,ValueError):
 failed=[]
 for p in files:
     rel=p.relative_to(ROOT).as_posix()
-    if p.suffix.lower() in {'.mp3','.wav','.aac','.mp4','.zip','.exe','.pyc'} or rel.startswith(('public/audio/','public/audio_original/','public/stills/')) or p.name.startswith('.env') and p.name!='.env.example':
+    parts=p.relative_to(ROOT).parts
+    private_output=any(parts[i]=='public' and parts[i+1] in {'audio','audio_original','stills'} for i in range(len(parts)-1))
+    generated=bool(set(parts)&{'node_modules','build','out','__pycache__'})
+    if generated or private_output or p.suffix.lower() in {'.mp3','.wav','.aac','.mp4','.zip','.exe','.pyc'} or p.name.startswith('.env') and p.name!='.env.example':
         failed.append(rel);continue
     data=p.read_bytes()
     if any(re.search(pattern,data) for pattern in patterns):failed.append(rel)
