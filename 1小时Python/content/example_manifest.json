@@ -1,0 +1,729 @@
+[
+  {
+    "key": "01-1",
+    "source": "print(\"Hello, Python!\")\n",
+    "kind": "run",
+    "expected": "Hello, Python!\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "01-2",
+    "source": "print(\"Hello, Python!\")",
+    "kind": "run",
+    "expected": "Hello, Python!\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "01-q",
+    "source": "print(\"Hello, Python!\"\n",
+    "kind": "syntax_error",
+    "expected": "语法检查失败：左括号没有对应的右括号",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": "'(' was never closed",
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "01-a",
+    "source": "print(\"Hello, Python!\")\n",
+    "kind": "run",
+    "expected": "Hello, Python!\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "02-1",
+    "source": "budget = 30\nprint(budget)\nbudget = 40\nprint(budget)\n",
+    "kind": "run",
+    "expected": "30\n40\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "02-2",
+    "source": "budget = 30\nprice = 8.5\nitem = \"tea\"\nover_budget = False\nprint(budget, price)\nprint(item, over_budget)\n",
+    "kind": "run",
+    "expected": "30 8.5\ntea False\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "02-3",
+    "source": "print(12 + 8)\nprint(\"12\" + \"8\")\nprint(\"spent\", 20)\n",
+    "kind": "run",
+    "expected": "20\n128\nspent 20\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "02-4",
+    "source": "spent = 12\nspent = spent + 8\nprint(spent)\nspent += 5\nprint(spent)\n",
+    "kind": "run",
+    "expected": "20\n25\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "02-q",
+    "source": "a = 12\nb = a\na = 20\nprint(a, b)\n",
+    "kind": "run",
+    "expected": "20 12\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "02-a",
+    "source": "a = 12\nb = a\na = 20\nprint(a, b)\n",
+    "kind": "run",
+    "expected": "20 12\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "03-1",
+    "source": "price = 12\ncount = 2\ntotal = price * count\nremaining = 30 - total\nprint(total, remaining)\nprint((2 + 3) * 4)\n",
+    "kind": "run",
+    "expected": "24 6\n20\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "03-2",
+    "source": "print(7 / 2)\nprint(7 // 2, 7 % 2)\nprint(-7 // 2)\nprint(2 ** 3)\n",
+    "kind": "run",
+    "expected": "3.5\n3 1\n-4\n8\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "03-3",
+    "source": "name = input()\nprint(\"Hello\", name)\n",
+    "kind": "run",
+    "expected": "Hello Ana\n",
+    "stdin": "Ana\n",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "03-4",
+    "source": "text = input()\nspent = int(text)\nprint(spent + 8)\n",
+    "kind": "run",
+    "expected": "20\n",
+    "stdin": "12\n",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "03-5",
+    "source": "budget = 30\nspent = 20\nprint(f\"spent={spent}\")\nprint(f\"remaining={budget - spent}\")\n",
+    "kind": "run",
+    "expected": "spent=20\nremaining=10\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "03-q",
+    "source": "text = input()\nprint(text + \"8\")\nprint(int(text) + 8)\n",
+    "kind": "run",
+    "expected": "128\n20\n",
+    "stdin": "12\n",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "03-a",
+    "source": "text = input()\nprint(text + \"8\")\nprint(int(text) + 8)\n",
+    "kind": "run",
+    "expected": "128\n20\n",
+    "stdin": "12\n",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "04-1",
+    "source": "spent = 25\nbudget = 30\nprint(spent > budget)\nprint(spent == budget)\nprint(spent >= 0 and spent <= budget)\n",
+    "kind": "run",
+    "expected": "False\nFalse\nTrue\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "04-2",
+    "source": "spent = 35\nbudget = 30\nif spent > budget:\n    print(\"over\")\nelse:\n    print(\"within\")\nprint(\"done\")\n",
+    "kind": "run",
+    "expected": "over\ndone\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "04-3",
+    "source": "spent = -5\nbudget = 30\nif spent < 0:\n    print(\"invalid\")\nelif spent <= budget:\n    print(\"within\")\nelse:\n    print(\"over\")\n",
+    "kind": "run",
+    "expected": "invalid\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "04-q",
+    "source": "spent = 30\nbudget = 30\nif spent < budget:\n    print(\"within\")\nelse:\n    print(\"over\")\n",
+    "kind": "run",
+    "expected": "over\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "04-a",
+    "source": "spent = 30\nbudget = 30\nif spent <= budget:\n    print(\"within\")\nelse:\n    print(\"over\")\n",
+    "kind": "run",
+    "expected": "within\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "05-1",
+    "source": "for number in range(1, 4):\n    print(number)\n",
+    "kind": "run",
+    "expected": "1\n2\n3\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "05-2",
+    "source": "total = 0\nfor number in range(1, 4):\n    total += number\nprint(total)\n",
+    "kind": "run",
+    "expected": "6\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "05-3",
+    "source": "remaining = 3\nwhile remaining > 0:\n    print(remaining)\n    remaining -= 1\n",
+    "kind": "run",
+    "expected": "3\n2\n1\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "05-4",
+    "source": "for number in range(1, 6):\n    if number == 4:\n        break\n    print(number)\n",
+    "kind": "run",
+    "expected": "1\n2\n3\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "05-5",
+    "source": "for number in range(1, 6):\n    if number == 3:\n        continue\n    print(number)\n",
+    "kind": "run",
+    "expected": "1\n2\n4\n5\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "05-q",
+    "source": "total = 0\nfor number in range(1, 3):\n    total += number\nprint(total)\n",
+    "kind": "run",
+    "expected": "3\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "05-a",
+    "source": "total = 0\nfor number in range(1, 4):\n    total += number\nprint(total)\n",
+    "kind": "run",
+    "expected": "6\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "06-1",
+    "source": "expenses = [12, 8, 5]\nprint(expenses[0])\nprint(expenses[-1])\nprint(len(expenses))\n",
+    "kind": "run",
+    "expected": "12\n5\n3\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "06-2",
+    "source": "expenses = [12, 8, 5]\nexpenses[1] = 10\nexpenses.append(6)\nlast = expenses.pop()\nprint(expenses)\nprint(last, len(expenses))\n",
+    "kind": "run",
+    "expected": "[12, 10, 5]\n6 3\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "06-3",
+    "source": "expenses = [12, 8, 5, 10]\nprint(expenses[1:3])\nprint(expenses[:2])\nprint(expenses)\n",
+    "kind": "run",
+    "expected": "[8, 5]\n[12, 8]\n[12, 8, 5, 10]\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "06-4",
+    "source": "expenses = [12, 8, 5]\ntotal = 0\nfor amount in expenses:\n    total += amount\nprint(total)\nprint(sum(expenses))\n",
+    "kind": "run",
+    "expected": "25\n25\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "06-5",
+    "source": "a = [12]\nb = a\nb.append(8)\nprint(a)\nc = a.copy()\nc.append(5)\nprint(a)\nprint(c)\n",
+    "kind": "run",
+    "expected": "[12, 8]\n[12, 8]\n[12, 8, 5]\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "06-q",
+    "source": "expenses = [12, 8, 5]\nprint(expenses[len(expenses)])\n",
+    "kind": "runtime_error",
+    "expected": "运行时异常：IndexError，位置 3 不存在",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": "IndexError",
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "06-a",
+    "source": "expenses = [12, 8, 5]\nif len(expenses) > 0:\n    print(expenses[-1])\n",
+    "kind": "run",
+    "expected": "5\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "07-1",
+    "source": "word = \"Python\"\nprint(len(word))\nprint(word[0])\nprint(word[-1])\nprint(word[0:2])\n",
+    "kind": "run",
+    "expected": "6\nP\nn\nPy\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "07-2",
+    "source": "text = \" Tea \"\nclean = text.strip()\nclean = clean.lower()\nprint(f\"[{text}]\")\nprint(clean)\n",
+    "kind": "run",
+    "expected": "[ Tea ]\ntea\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "07-3",
+    "source": "text = \"tea,bread,tea\"\nitems = text.split(\",\")\nprint(items)\nprint(\" | \".join(items))\n",
+    "kind": "run",
+    "expected": "['tea', 'bread', 'tea']\ntea | bread | tea\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "07-q",
+    "source": "text = \"tea\"\ntext.upper()\nprint(text)\n",
+    "kind": "run",
+    "expected": "tea\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "07-a",
+    "source": "text = \"tea\"\nupper_text = text.upper()\nprint(text)\nprint(upper_text)\n",
+    "kind": "run",
+    "expected": "tea\nTEA\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "08-1",
+    "source": "prices = {\"tea\": 8, \"bread\": 12}\nprint(prices[\"tea\"])\nprint(len(prices))\n",
+    "kind": "run",
+    "expected": "8\n2\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "08-2",
+    "source": "prices = {\"tea\": 8, \"bread\": 12}\nprices[\"tea\"] = 10\nprices[\"milk\"] = 6\ndel prices[\"bread\"]\nprint(prices[\"tea\"], prices[\"milk\"])\nprint(len(prices))\n",
+    "kind": "run",
+    "expected": "10 6\n2\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "08-3",
+    "source": "prices = {\"tea\": 8}\nprint(\"cake\" in prices)\nprint(prices.get(\"cake\"))\nprint(prices.get(\"cake\", 0))\n",
+    "kind": "run",
+    "expected": "False\nNone\n0\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "08-4",
+    "source": "point = (3, 5)\nprint(point[0], point[1])\ntags = {\"tea\", \"bread\", \"tea\"}\nprint(len(tags))\nprint(\"tea\" in tags)\nempty = set()\nprint(len(empty))\n",
+    "kind": "run",
+    "expected": "3 5\n2\nTrue\n0\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "08-q",
+    "source": "prices = {\"tea\": 8}\nprices[\"tea\"] = 10\nprices[\"bread\"] = 12\nprint(len(prices))\nprint(prices[\"tea\"])\n",
+    "kind": "run",
+    "expected": "2\n10\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "08-a",
+    "source": "prices = {\"tea\": 8}\nprices[\"tea\"] = 10\nprices[\"bread\"] = 12\nprint(len(prices))\nprint(prices[\"tea\"])\n",
+    "kind": "run",
+    "expected": "2\n10\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "09-1",
+    "source": "def show_title():\n    print(\"Budget\")\n\nshow_title()\nshow_title()\n",
+    "kind": "run",
+    "expected": "Budget\nBudget\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "09-2",
+    "source": "def add(left, right):\n    return left + right\n\ntotal = add(12, 8)\nprint(total)\n",
+    "kind": "run",
+    "expected": "20\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "09-3",
+    "source": "def within(spent, budget=30):\n    return spent <= budget\n\nprint(within(25))\nprint(within(35))\nprint(within(35, 40))\n",
+    "kind": "run",
+    "expected": "True\nFalse\nTrue\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "09-4",
+    "source": "fee = 99\n\ndef add_fee(amount):\n    fee = 2\n    return amount + fee\n\nprint(add_fee(12))\nprint(fee)\n",
+    "kind": "run",
+    "expected": "14\n99\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "09-q",
+    "source": "def add_fee(amount):\n    amount += 2\n    return amount\n\nspent = 12\nadd_fee(spent)\nprint(spent)\n",
+    "kind": "run",
+    "expected": "12\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "09-a",
+    "source": "def add_fee(amount):\n    amount += 2\n    return amount\n\nspent = 12\nspent = add_fee(spent)\nprint(spent)\n",
+    "kind": "run",
+    "expected": "14\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "10-1",
+    "source": "import math\n\nprint(math.sqrt(9))\nprint(math.ceil(12.3))\nfrom math import sqrt\nprint(sqrt(16))\n",
+    "kind": "run",
+    "expected": "3.0\n13\n4.0\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "10-2",
+    "source": "from budget_tools import within\n\nprint(within(25, 30))",
+    "kind": "run",
+    "expected": "True\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {
+      "budget_tools.py": "def within(spent, budget):\n    return spent <= budget\n"
+    },
+    "files": {}
+  },
+  {
+    "key": "10-3",
+    "source": "with open(\"expenses.txt\", \"w\", encoding=\"utf-8\") as file:\n    file.write(\"12\\n8\\n\")\nprint(\"saved\")\n",
+    "kind": "run",
+    "expected": "saved\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {
+      "expenses.txt": "12\n8\n"
+    }
+  },
+  {
+    "key": "10-4",
+    "source": "total = 0\nwith open(\"expenses.txt\", \"r\", encoding=\"utf-8\") as file:\n    for line in file:\n        amount = int(line.strip())\n        total += amount\nprint(total)\n",
+    "kind": "run",
+    "expected": "20\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {
+      "expenses.txt": "12\n8\n"
+    },
+    "files": {}
+  },
+  {
+    "key": "10-q",
+    "source": "with open(\"expenses.txt\", \"w\", encoding=\"utf-8\") as file:\n    file.write(\"8\\n\")\nwith open(\"expenses.txt\", \"r\", encoding=\"utf-8\") as file:\n    print(file.read().strip())\n",
+    "kind": "run",
+    "expected": "8\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {
+      "expenses.txt": "12\n"
+    },
+    "files": {
+      "expenses.txt": "8\n"
+    }
+  },
+  {
+    "key": "10-a",
+    "source": "with open(\"expenses.txt\", \"a\", encoding=\"utf-8\") as file:\n    file.write(\"8\\n\")\nwith open(\"expenses.txt\", \"r\", encoding=\"utf-8\") as file:\n    print(file.read().strip())\n",
+    "kind": "run",
+    "expected": "12\n8\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {
+      "expenses.txt": "12\n"
+    },
+    "files": {
+      "expenses.txt": "12\n8\n"
+    }
+  },
+  {
+    "key": "11-1",
+    "source": "text = input()\ntry:\n    amount = int(text)\n    print(amount)\nexcept ValueError:\n    print(\"not an integer\")\nprint(\"done\")\n",
+    "kind": "run",
+    "expected": "not an integer\ndone\n",
+    "stdin": "abc\n",
+    "runs": [
+      {
+        "stdin": "abc\n",
+        "expected": "not an integer\ndone\n"
+      },
+      {
+        "stdin": "12\n",
+        "expected": "12\ndone\n"
+      }
+    ],
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "11-2",
+    "source": "def require_amount(amount):\n    if amount < 0:\n        raise ValueError(\"negative amount\")\n    return amount\ntry:\n    print(require_amount(-5))\nexcept ValueError as error:\n    print(error)\n",
+    "kind": "run",
+    "expected": "negative amount\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "11-q",
+    "source": "try:\n    print(\"A\")\n    int(\"abc\")\n    print(\"B\")\nexcept ValueError:\n    print(\"C\")\nprint(\"D\")\n",
+    "kind": "run",
+    "expected": "A\nC\nD\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "11-a",
+    "source": "try:\n    print(\"A\")\n    int(\"12\")\n    print(\"B\")\nexcept ValueError:\n    print(\"C\")\nprint(\"D\")\n",
+    "kind": "run",
+    "expected": "A\nB\nD\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  },
+  {
+    "key": "12-2",
+    "source": "def within(spent, budget):\n    return spent <= budget\n\nexpenses = [12, 8, 5]\nbudget = 30\ntotal = sum(expenses)\nprint(f\"total={total}\")\nif within(total, budget):\n    print(f\"remaining={budget - total}\")\nelse:\n    print(\"over\")\n",
+    "kind": "run",
+    "expected": "total=25\nremaining=5\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null,
+    "fixtures": {},
+    "files": {}
+  }
+]

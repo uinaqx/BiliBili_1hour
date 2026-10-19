@@ -1,0 +1,589 @@
+[
+  {
+    "key": "01-1",
+    "source": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, Java!\");\n    }\n}",
+    "kind": "run",
+    "expected": "Hello, Java!\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "01-2",
+    "source": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, Java!\");\n    }\n}",
+    "kind": "run",
+    "expected": "Hello, Java!\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "01-q",
+    "source": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, Java!\")\n    }\n}",
+    "kind": "compile_error",
+    "expected": "编译失败：显示语句末尾缺少分号",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": "';' expected"
+  },
+  {
+    "key": "01-a",
+    "source": "public class Main {\n    public static void main(String[] args) {\n        System.out.println(\"Hello, Java!\");\n    }\n}",
+    "kind": "run",
+    "expected": "Hello, Java!\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "02-1",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint score = 80;\nSystem.out.println(score);\nscore = 85;\nSystem.out.println(score);\n}\n}\n",
+    "kind": "run",
+    "expected": "80\n85\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "02-2",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint count = 3;\ndouble average = 82.5;\nboolean passed = true;\nSystem.out.println(count);\nSystem.out.println(average);\nSystem.out.println(passed);\n}\n}\n",
+    "kind": "run",
+    "expected": "3\n82.5\ntrue\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "02-3",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nString name = \"Ana\";\nchar grade = 'A';\nSystem.out.println(name);\nSystem.out.println(grade);\n}\n}\n",
+    "kind": "run",
+    "expected": "Ana\nA\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "02-4",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nfinal int passLine = 60;\nint score = 80;\nboolean passed = score >= passLine;\nSystem.out.println(passed);\n}\n}\n",
+    "kind": "run",
+    "expected": "true\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "02-q",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint a = 3;\nint b = 8;\na = b;\nb = 9;\nSystem.out.println(a + \" \" + b);\n}\n}\n",
+    "kind": "run",
+    "expected": "8 9\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "02-a",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint a = 3;\nint b = 8;\na = b;\nb = 9;\nSystem.out.println(a + \" \" + b);\n}\n}\n",
+    "kind": "run",
+    "expected": "8 9\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "03-1",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint price = 12;\nint count = 3;\nint total = price * count;\nSystem.out.println(total);\nSystem.out.println((2 + 3) * 4);\n}\n}\n",
+    "kind": "run",
+    "expected": "36\n20\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "03-2",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nSystem.out.println(7 / 2);\nSystem.out.println(7.0 / 2);\ndouble result = 7 / 2;\nSystem.out.println(result);\nSystem.out.println(7 % 2);\n}\n}\n",
+    "kind": "run",
+    "expected": "3\n3.5\n3.0\n1\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "03-3",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint score = 80;\nboolean passed = score >= 60;\nboolean valid = score >= 0 && score <= 100;\nSystem.out.println(passed);\nSystem.out.println(valid);\nSystem.out.println(score == 100);\n}\n}\n",
+    "kind": "run",
+    "expected": "true\ntrue\nfalse\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "03-4",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint score = 80;\nscore += 5;\nscore++;\nSystem.out.println(\"score=\" + score);\nSystem.out.println(\"sum=\" + (3 + 5));\n}\n}\n",
+    "kind": "run",
+    "expected": "score=86\nsum=8\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "03-q",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint a = 3, b = 5;\nSystem.out.println(\"sum=\" + a + b);\nSystem.out.println(\"sum=\" + (a + b));\n}\n}\n",
+    "kind": "run",
+    "expected": "sum=35\nsum=8\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "03-a",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint a = 3, b = 5;\nSystem.out.println(\"sum=\" + a + b);\nSystem.out.println(\"sum=\" + (a + b));\n}\n}\n",
+    "kind": "run",
+    "expected": "sum=35\nsum=8\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "04-1",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nScanner sc = new Scanner(System.in);\nint score = sc.nextInt();\nSystem.out.println(\"score=\" + score);\n}\n}\n",
+    "kind": "run",
+    "expected": "score=80\n",
+    "stdin": "80\n",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "04-2",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nScanner sc = new Scanner(System.in);\nString name = sc.nextLine();\nSystem.out.println(\"name=\" + name);\n}\n}\n",
+    "kind": "run",
+    "expected": "name=Ana Lee\n",
+    "stdin": "Ana Lee\n",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "04-3",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nScanner sc = new Scanner(System.in);\nint score = sc.nextInt();\nsc.nextLine();\nString name = sc.nextLine();\nSystem.out.println(name + \" \" + score);\n}\n}\n",
+    "kind": "run",
+    "expected": "Ana Lee 80\n",
+    "stdin": "80\nAna Lee\n",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "04-q",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nScanner sc = new Scanner(System.in);\nint score = sc.nextInt();\nscore += 5;\nSystem.out.println(score);\n}\n}\n",
+    "kind": "run",
+    "expected": "85\n",
+    "stdin": "80\n",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "04-a",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nScanner sc = new Scanner(System.in);\nint score = sc.nextInt();\nscore += 5;\nSystem.out.println(score);\n}\n}\n",
+    "kind": "run",
+    "expected": "85\n",
+    "stdin": "80\n",
+    "runs": [
+      {
+        "stdin": "80\n",
+        "expected": "85\n",
+        "exitCode": 0
+      },
+      {
+        "stdin": "60\n",
+        "expected": "65\n",
+        "exitCode": 0
+      }
+    ],
+    "diagnostic": null
+  },
+  {
+    "key": "05-1",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint score = 80;\nif (score >= 60) {\n    System.out.println(\"pass\");\n}\nSystem.out.println(\"done\");\n}\n}\n",
+    "kind": "run",
+    "expected": "pass\ndone\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "05-2",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint score = 55;\nif (score >= 60) {\n    System.out.println(\"pass\");\n} else {\n    System.out.println(\"retry\");\n}\n}\n}\n",
+    "kind": "run",
+    "expected": "retry\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "05-3",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint score = 80;\nif (score >= 90) {\n    System.out.println(\"excellent\");\n} else if (score >= 60) {\n    System.out.println(\"pass\");\n} else {\n    System.out.println(\"retry\");\n}\n}\n}\n",
+    "kind": "run",
+    "expected": "pass\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "05-4",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint choice = 2;\nswitch (choice) {\n    case 1: System.out.println(\"add\"); break;\n    case 2: System.out.println(\"list\"); break;\n    default: System.out.println(\"invalid\");\n}\n}\n}\n",
+    "kind": "run",
+    "expected": "list\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "05-q",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint score = 60;\nif (score > 60) {\n    System.out.println(\"pass\");\n} else {\n    System.out.println(\"retry\");\n}\n}\n}\n",
+    "kind": "run",
+    "expected": "retry\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "05-a",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint score = 60;\nif (score >= 60) {\n    System.out.println(\"pass\");\n} else {\n    System.out.println(\"retry\");\n}\n}\n}\n",
+    "kind": "run",
+    "expected": "pass\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "06-1",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nfor (int i = 1; i <= 3; i++) {\n    System.out.println(i);\n}\n}\n}\n",
+    "kind": "run",
+    "expected": "1\n2\n3\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "06-2",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint total = 0;\nfor (int i = 1; i <= 3; i++) {\n    total += i;\n}\nSystem.out.println(total);\n}\n}\n",
+    "kind": "run",
+    "expected": "6\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "06-3",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint n = 3;\nwhile (n > 0) {\n    System.out.println(n);\n    n--;\n}\n}\n}\n",
+    "kind": "run",
+    "expected": "3\n2\n1\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "06-4",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint n = 0;\ndo {\n    System.out.println(\"zero\");\n} while (n > 0);\n}\n}\n",
+    "kind": "run",
+    "expected": "zero\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "06-5",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nfor (int i = 1; i <= 5; i++) {\n    if (i == 3) {\n        continue;\n    }\n    System.out.print(i + \" \");\n}\nSystem.out.println();\n}\n}\n",
+    "kind": "run",
+    "expected": "1 2 4 5 \n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "06-q",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint total = 0;\nfor (int i = 1; i < 3; i++) {\n    total += i;\n}\nSystem.out.println(total);\n}\n}\n",
+    "kind": "run",
+    "expected": "3\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "06-a",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint total = 0;\nfor (int i = 1; i <= 3; i++) {\n    total += i;\n}\nSystem.out.println(total);\n}\n}\n",
+    "kind": "run",
+    "expected": "6\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "07-1",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint[] scores = {60, 80, 100};\nSystem.out.println(scores[0]);\nscores[1] = 85;\nSystem.out.println(scores[1]);\n}\n}\n",
+    "kind": "run",
+    "expected": "60\n85\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "07-2",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint[] scores = {60, 80, 100};\nSystem.out.println(scores.length);\nSystem.out.println(scores[scores.length - 1]);\nint[] empty = new int[3];\nSystem.out.println(empty[0]);\n}\n}\n",
+    "kind": "run",
+    "expected": "3\n100\n0\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "07-3",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint[] scores = {60, 80, 100};\nint total = 0;\nfor (int i = 0; i < scores.length; i++) {\n    total += scores[i];\n}\ndouble average = total / 3.0;\nSystem.out.println(total);\nSystem.out.println(average);\n}\n}\n",
+    "kind": "run",
+    "expected": "240\n80.0\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "07-4",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nString name = \"Ana\";\nSystem.out.println(name.length());\nSystem.out.println(name.charAt(0));\nSystem.out.println(name.substring(1, 3));\n}\n}\n",
+    "kind": "run",
+    "expected": "3\nA\nna\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "07-5",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nString name = \"Ana\";\nSystem.out.println(name.equals(\"Ana\"));\nString upper = name.toUpperCase();\nSystem.out.println(name);\nSystem.out.println(upper);\n}\n}\n",
+    "kind": "run",
+    "expected": "true\nAna\nANA\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "07-q",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint[] scores = {60, 80, 100};\nSystem.out.println(scores[scores.length]);\n}\n}\n",
+    "kind": "runtime_error",
+    "expected": "运行时异常：ArrayIndexOutOfBoundsException",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": "ArrayIndexOutOfBoundsException"
+  },
+  {
+    "key": "07-a",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint[] scores = {60, 80, 100};\nif (scores.length > 0) {\n    int last = scores.length - 1;\n    System.out.println(scores[last]);\n}\n}\n}\n",
+    "kind": "run",
+    "expected": "100\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "08-1",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\nstatic void greet() {\n    System.out.println(\"Hello!\");\n}\npublic static void main(String[] args) {\ngreet(); greet();\n}\n}\n",
+    "kind": "run",
+    "expected": "Hello!\nHello!\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "08-2",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\nstatic int add(int a, int b) {\n    return a + b;\n}\npublic static void main(String[] args) {\nint result=add(3,5); System.out.println(result);\n}\n}\n",
+    "kind": "run",
+    "expected": "8\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "08-3",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\nstatic boolean isPassed(int score) {\n    return score >= 60;\n}\npublic static void main(String[] args) {\nSystem.out.println(isPassed(59)); System.out.println(isPassed(60));\n}\n}\n",
+    "kind": "run",
+    "expected": "false\ntrue\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "08-4",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nint score = 80;\nif (score >= 60) {\n    int bonus = 5;\n    System.out.println(score + bonus);\n}\nSystem.out.println(bonus);\n}\n}\n",
+    "kind": "compile_error",
+    "expected": "编译失败：bonus 在外层语句中不可用",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": "cannot find symbol"
+  },
+  {
+    "key": "08-q",
+    "source": "public class Main {\nstatic void addFive(int value) {\n    value += 5;\n}\npublic static void main(String[] args) {\n    int score = 80;\n    addFive(score);\n    System.out.println(score);\n}\n}",
+    "kind": "run",
+    "expected": "80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "08-a",
+    "source": "public class Main {\nstatic int addFive(int value) {\n    return value + 5;\n}\npublic static void main(String[] args) {\n    int score = 80;\n    score = addFive(score);\n    System.out.println(score);\n}\n}",
+    "kind": "run",
+    "expected": "85\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "09-1",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\nclass Student {\n    String name;\n    int score;\n    void show() {\n        System.out.println(name + \" \" + score);\n    }\n}\npublic class Main {\n\npublic static void main(String[] args) {\nStudent s=new Student(); s.name=\"Ana\"; s.score=80; s.show();\n}\n}\n",
+    "kind": "run",
+    "expected": "Ana 80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "09-2",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\nclass Student {\n    String name;\n    int score;\n    void show() {\n        System.out.println(name + \" \" + score);\n    }\n}\npublic class Main {\n\npublic static void main(String[] args) {\nStudent a = new Student();\nStudent b = new Student();\na.name = \"Ana\"; a.score = 80;\nb.name = \"Bo\"; b.score = 90;\na.score = 85;\nSystem.out.println(a.score + \" \" + b.score);\n}\n}\n",
+    "kind": "run",
+    "expected": "85 90\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "09-3",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\nclass Student {\n    int score;\n    Student(int initialScore) {\n        score = initialScore;\n    }\n    int getScore() { return score; }\n}\npublic class Main {\n\npublic static void main(String[] args) {\nStudent s=new Student(80); System.out.println(s.getScore());\n}\n}\n",
+    "kind": "run",
+    "expected": "80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "09-4",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\nclass Student {\n    private int score;\n    Student(int score) { this.score = score; }\n    public int getScore() { return score; }\n    public void setScore(int score) {\n        this.score = score;\n    }\n}\npublic class Main {\n\npublic static void main(String[] args) {\nStudent s=new Student(80); s.setScore(85); System.out.println(s.getScore());\n}\n}\n",
+    "kind": "run",
+    "expected": "85\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "09-q",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\nclass Student {\n    private int score;\n    Student(int score) { this.score = score; }\n    public int getScore() { return score; }\n    public void setScore(int score) {\n        this.score = score;\n    }\n}\npublic class Main {\n\npublic static void main(String[] args) {\nStudent a = new Student(80);\nStudent b = a;\nb.setScore(90);\nSystem.out.println(a.getScore());\n}\n}\n",
+    "kind": "run",
+    "expected": "90\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "09-a",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\nclass Student {\n    private int score;\n    Student(int score) { this.score = score; }\n    public int getScore() { return score; }\n    public void setScore(int score) {\n        this.score = score;\n    }\n}\npublic class Main {\n\npublic static void main(String[] args) {\nStudent a = new Student(80);\nStudent b = new Student(a.getScore());\nb.setScore(90);\nSystem.out.println(a.getScore() + \" \" + b.getScore());\n}\n}\n",
+    "kind": "run",
+    "expected": "80 90\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "10-1",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nArrayList<String> names = new ArrayList<>();\nnames.add(\"Ana\");\nnames.add(\"Bo\");\nSystem.out.println(names.size());\nSystem.out.println(names.get(0));\n}\n}\n",
+    "kind": "run",
+    "expected": "2\nAna\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "10-2",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nArrayList<Integer> scores = new ArrayList<>();\nscores.add(80);\nscores.add(90);\nscores.set(0, 85);\nSystem.out.println(scores.get(0));\nSystem.out.println(scores.size());\n}\n}\n",
+    "kind": "run",
+    "expected": "85\n2\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "10-3",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nHashMap<String, Integer> scores = new HashMap<>();\nscores.put(\"Ana\", 80);\nscores.put(\"Bo\", 90);\nSystem.out.println(scores.get(\"Ana\"));\nSystem.out.println(scores.size());\n}\n}\n",
+    "kind": "run",
+    "expected": "80\n2\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "10-4",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nHashMap<String, Integer> scores = new HashMap<>();\nscores.put(\"Ana\", 80);\nscores.put(\"Ana\", 85);\nSystem.out.println(scores.size() + \" \" + scores.get(\"Ana\"));\nSystem.out.println(scores.containsKey(\"Cy\"));\nSystem.out.println(scores.getOrDefault(\"Cy\", 0));\n}\n}\n",
+    "kind": "run",
+    "expected": "1 85\nfalse\n0\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "10-q",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nArrayList<String> names = new ArrayList<>();\nnames.add(\"Ana\");\nnames.add(\"Bo\");\nnames.remove(0);\nSystem.out.println(names.get(0));\nSystem.out.println(names.size());\n}\n}\n",
+    "kind": "run",
+    "expected": "Bo\n1\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "10-a",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nArrayList<String> names = new ArrayList<>();\nnames.add(\"Ana\");\nnames.add(\"Bo\");\nnames.remove(0);\nnames.add(\"Cy\");\nSystem.out.println(names.get(0) + \" \" + names.get(1));\nSystem.out.println(names.size());\n}\n}\n",
+    "kind": "run",
+    "expected": "Bo Cy\n2\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "11-1",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\nString text = \"abc\";\ntry {\n    int value = Integer.parseInt(text);\n    System.out.println(value);\n} catch (NumberFormatException e) {\n    System.out.println(\"not a number\");\n}\nSystem.out.println(\"continue\");\n}\n}\n",
+    "kind": "run",
+    "expected": "not a number\ncontinue\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "11-2",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\nstatic int requireScore(int value) {\n    if (value < 0 || value > 100) {\n        throw new IllegalArgumentException(\"bad score\");\n    }\n    return value;\n}\npublic static void main(String[] args) {\ntry { System.out.println(requireScore(120)); } catch (IllegalArgumentException e) { System.out.println(e.getMessage()); }\n}\n}\n",
+    "kind": "run",
+    "expected": "bad score\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "11-q",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\ntry {\n    System.out.print(\"A \");\n    Integer.parseInt(\"abc\");\n    System.out.print(\"B \");\n} catch (NumberFormatException e) {\n    System.out.print(\"C \");\n}\nSystem.out.println(\"D\");\n}\n}\n",
+    "kind": "run",
+    "expected": "A C D\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "11-a",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\n\npublic static void main(String[] args) {\ntry {\n    System.out.print(\"A \");\n    Integer.parseInt(\"80\");\n    System.out.print(\"B \");\n} catch (NumberFormatException e) {\n    System.out.print(\"C \");\n}\nSystem.out.println(\"D\");\n}\n}\n",
+    "kind": "run",
+    "expected": "A B D\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "12-2",
+    "source": "import java.util.Scanner;\nimport java.util.ArrayList;\nimport java.util.HashMap;\n\npublic class Main {\nstatic String level(double average) { if (average >= 60) { return \"pass\"; } else { return \"retry\"; } }\npublic static void main(String[] args) {\nint[] scores = {60, 80, 100};\nint total = 0;\nfor (int i = 0; i < scores.length; i++) {\n    total += scores[i];\n}\ndouble average = (double) total / scores.length;\nSystem.out.println(\"average=\" + average);\nSystem.out.println(level(average));\n}\n}\n",
+    "kind": "run",
+    "expected": "average=80.0\npass\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  }
+]
