@@ -1,0 +1,386 @@
+[
+  {
+    "key": "01-01",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> a{72, 88, 95, 81};\nint sum = 0;\nfor (int x : a) {\n    sum += x;\n}\ncout << sum << \"\\n\";\n}\n",
+    "expected": "336\n",
+    "question": false
+  },
+  {
+    "key": "01-02",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nint n = 4;\nint count = 0;\nfor (int i = 0; i < n; ++i) {\n    for (int j = 0; j < n; ++j) {\n        ++count;\n    }\n}\ncout << count << \"\\n\";\n}\n",
+    "expected": "16\n",
+    "question": false
+  },
+  {
+    "key": "01-03",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nint n = 16;\nint steps = 0;\nwhile (n > 1) {\n    n /= 2;\n    ++steps;\n}\ncout << steps << \"\\n\";\n}\n",
+    "expected": "4\n",
+    "question": false
+  },
+  {
+    "key": "01-04",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> a{3, 5, 7};\nvector<int> b = a;\nb[0] = 99;\ncout << a[0] << \" \" << b[0] << \"\\n\";\n}\n",
+    "expected": "3 99\n",
+    "question": false
+  },
+  {
+    "key": "01-q",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nint n = 4, count = 0;\nfor (int i = 0; i < n; ++i) ++count;\nfor (int j = 0; j < n; ++j) ++count;\ncout << count << \"\\n\";\n}\n",
+    "expected": "8\n",
+    "question": true
+  },
+  {
+    "key": "01-a",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nint n = 4, count = 0;\nfor (int i = 0; i < n; ++i) ++count;\nfor (int j = 0; j < n; ++j) ++count;\ncout << count << \"\\n\";\n}\n",
+    "expected": "8\n",
+    "question": false
+  },
+  {
+    "key": "02-01",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nint scores[]{72, 88, 95, 81};\ncout << scores[2] << \"\\n\";\ncout << sizeof(scores) / sizeof(scores[0]);\ncout << \"\\n\";\n}\n",
+    "expected": "95\n4\n",
+    "question": false
+  },
+  {
+    "key": "02-02",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> scores{72, 88, 95};\nscores.push_back(81);\ncout << scores.size() << \"\\n\";\nscores.pop_back();\ncout << scores.size() << \"\\n\";\n}\n",
+    "expected": "4\n3\n",
+    "question": false
+  },
+  {
+    "key": "02-03",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> a{10, 20, 30};\na.insert(a.begin() + 1, 15);\nfor (int x : a) cout << x << \" \";\ncout << \"\\n\";\na.erase(a.begin() + 2);\nfor (int x : a) cout << x << \" \";\ncout << \"\\n\";\n}\n",
+    "expected": "10 15 20 30 \n10 15 30 \n",
+    "question": false
+  },
+  {
+    "key": "02-04",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> a;\na.reserve(100);\ncout << a.size() << \"\\n\";\na.push_back(80);\ncout << a.size() << \"\\n\";\n}\n",
+    "expected": "0\n1\n",
+    "question": false
+  },
+  {
+    "key": "02-05",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> a{10, 20, 30};\ntry {\n    cout << a.at(3) << \"\\n\";\n} catch (const out_of_range&) {\n    cout << \"out_of_range\\n\";\n}\n}\n",
+    "expected": "out_of_range\n",
+    "question": false
+  },
+  {
+    "key": "02-q",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> a{10, 20, 30};\na.insert(a.begin() + 1, 99);\ncout << a[2] << \" \" << a.size() << \"\\n\";\n}\n",
+    "expected": "20 4\n",
+    "question": true
+  },
+  {
+    "key": "02-a",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> a{10, 20, 30};\na.insert(a.begin() + 1, 99);\ncout << a[2] << \" \" << a.size() << \"\\n\";\n}\n",
+    "expected": "20 4\n",
+    "question": false
+  },
+  {
+    "key": "03-01",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Node { int value; Node* next; };\n\nint main(){\nNode c{30, nullptr};\nNode b{20, &c};\nNode a{10, &b};\nNode* head = &a;\nfor (Node* p = head; p; p = p->next) {\n    cout << p->value << \" \";\n}\ncout << \"\\n\";\n}\n",
+    "expected": "10 20 30 \n",
+    "question": false
+  },
+  {
+    "key": "03-02",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Node { int value; Node* next; };\n\nint main(){\nNode c{30, nullptr}, b{20, &c}, a{10, &b};\nNode* p = &a;\np = p->next;\np = p->next;\ncout << p->value << \"\\n\";\n}\n",
+    "expected": "30\n",
+    "question": false
+  },
+  {
+    "key": "03-03",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Node { int value; Node* next; };\nvoid clear(Node* p) { while(p) { Node* next=p->next; delete p; p=next; } }\n\nint main(){\nNode* head = new Node{10, new Node{30, nullptr}};\nNode* p = head;\nNode* node = new Node{20, p->next};\np->next = node;\nfor (Node* q = head; q; q = q->next)\n    cout << q->value << \" \";\ncout << \"\\n\";\nclear(head);\n}\n",
+    "expected": "10 20 30 \n",
+    "question": false
+  },
+  {
+    "key": "03-04",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Node { int value; Node* next; };\nvoid clear(Node* p) { while(p) { Node* next=p->next; delete p; p=next; } }\n\nint main(){\nNode* head = new Node{10,\n    new Node{20, new Node{30, nullptr}}};\nNode* p = head;\nNode* old = p->next;\np->next = old->next;\ndelete old;\nfor (Node* q = head; q; q = q->next)\n    cout << q->value << \" \";\ncout << \"\\n\";\nclear(head);\n}\n",
+    "expected": "10 30 \n",
+    "question": false
+  },
+  {
+    "key": "03-q",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Node { int value; Node* next; };\n\nint main(){\nNode c{30, nullptr}, b{20, &c}, a{10, &b};\nNode* p = &a;\np->next = p->next->next;\nfor (Node* q = &a; q; q = q->next)\n    cout << q->value << \" \";\ncout << \"\\n\";\n}\n",
+    "expected": "10 30 \n",
+    "question": true
+  },
+  {
+    "key": "03-a",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Node { int value; Node* next; };\n\nint main(){\nNode c{30, nullptr}, b{20, &c}, a{10, &b};\nNode* p = &a;\np->next = p->next->next;\nfor (Node* q = &a; q; q = q->next)\n    cout << q->value << \" \";\ncout << \"\\n\";\n}\n",
+    "expected": "10 30 \n",
+    "question": false
+  },
+  {
+    "key": "04-01",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nstack<int> s;\ns.push(10);\ns.push(20);\ncout << s.top() << \"\\n\";\ns.pop();\ncout << s.top() << \"\\n\";\n}\n",
+    "expected": "20\n10\n",
+    "question": false
+  },
+  {
+    "key": "04-02",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nbool balanced(const string& text) {\n    stack<char> s;\n    for (char c : text) {\n        if (c == '(') s.push(c);\n        else if (c == ')') {\n            if (s.empty()) return false;\n            s.pop();\n        }\n    }\n    return s.empty();\n}\nint main(){\ncout << boolalpha << balanced(\"(())\") << \" \" << balanced(\"(()\") << \"\\n\";\n}\n",
+    "expected": "true false\n",
+    "question": false
+  },
+  {
+    "key": "04-03",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nqueue<int> q;\nq.push(10);\nq.push(20);\ncout << q.front() << \"\\n\";\nq.pop();\ncout << q.front() << \"\\n\";\n}\n",
+    "expected": "10\n20\n",
+    "question": false
+  },
+  {
+    "key": "04-04",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nint a[3]{}, head=0, tail=0, count=0;\na[tail]=10; tail=(tail+1)%3; ++count;\na[tail]=20; tail=(tail+1)%3; ++count;\nhead=(head+1)%3; --count;\na[tail]=30; tail=(tail+1)%3; ++count;\na[tail]=40; tail=(tail+1)%3; ++count;\nfor(int i=0; i<count; ++i)\n    cout << a[(head+i)%3] << \" \";\ncout << \"\\n\";\n}\n",
+    "expected": "20 30 40 \n",
+    "question": false
+  },
+  {
+    "key": "04-q",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nstack<int> s;\nqueue<int> q;\ns.push(3); s.push(7);\nq.push(3); q.push(7);\ns.pop(); q.pop();\ncout << s.top() << \" \" << q.front() << \"\\n\";\n}\n",
+    "expected": "3 7\n",
+    "question": true
+  },
+  {
+    "key": "04-a",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nstack<int> s;\nqueue<int> q;\ns.push(3); s.push(7);\nq.push(3); q.push(7);\ns.pop(); q.pop();\ncout << s.top() << \" \" << q.front() << \"\\n\";\n}\n",
+    "expected": "3 7\n",
+    "question": false
+  },
+  {
+    "key": "05-01",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nunordered_map<string, int> grades;\ngrades[\"Lin\"] = 88;\ngrades[\"Mei\"] = 95;\ncout << grades.at(\"Lin\") << \"\\n\";\ncout << grades.size() << \"\\n\";\n}\n",
+    "expected": "88\n2\n",
+    "question": false
+  },
+  {
+    "key": "05-02",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<vector<int>> buckets(4);\nfor (int x : {10, 14, 7})\n    buckets[x % 4].push_back(x);\nfor (int x : buckets[2]) cout << x << \" \";\ncout << \"\\n\";\n}\n",
+    "expected": "10 14 \n",
+    "question": false
+  },
+  {
+    "key": "05-03",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nunordered_map<string,int> grades{{\"Lin\",88}};\nauto it = grades.find(\"Mei\");\ncout << (it == grades.end()) << \"\\n\";\ncout << grades.size() << \"\\n\";\ncout << grades[\"Missing\"] << \"\\n\";\ncout << grades.size() << \"\\n\";\n}\n",
+    "expected": "1\n1\n0\n2\n",
+    "question": false
+  },
+  {
+    "key": "05-04",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> scores{80, 90, 80, 70, 90, 80};\nunordered_map<int,int> count;\nfor (int x : scores) ++count[x];\ncout << count.at(80) << \" \" << count.at(90);\ncout << \"\\n\";\n}\n",
+    "expected": "3 2\n",
+    "question": false
+  },
+  {
+    "key": "05-q",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nunordered_map<string,int> m{{\"A\",3}};\ncout << m[\"B\"] << \"\\n\";\ncout << m.size() << \"\\n\";\n}\n",
+    "expected": "0\n2\n",
+    "question": true
+  },
+  {
+    "key": "05-a",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nunordered_map<string,int> m{{\"A\",3}};\ncout << m[\"B\"] << \"\\n\";\ncout << m.size() << \"\\n\";\n}\n",
+    "expected": "0\n2\n",
+    "question": false
+  },
+  {
+    "key": "06-01",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Tree { int value; Tree* left; Tree* right; };\nvoid inorder(Tree* p) { if(!p) return; inorder(p->left); cout << p->value << \" \"; inorder(p->right); }\nvoid preorder(Tree* p) { if(!p) return; cout << p->value << \" \"; preorder(p->left); preorder(p->right); }\nvoid postorder(Tree* p) { if(!p) return; postorder(p->left); postorder(p->right); cout << p->value << \" \"; }\n\nint main(){\nTree a{2,nullptr,nullptr}, b{6,nullptr,nullptr};\nTree c{10,nullptr,nullptr}, d{14,nullptr,nullptr};\nTree l{4,&a,&b}, r{12,&c,&d}, root{8,&l,&r};\ncout << root.value << \" \";\ncout << root.left->value << \" \";\ncout << root.right->value << \"\\n\";\n}\n",
+    "expected": "8 4 12\n",
+    "question": false
+  },
+  {
+    "key": "06-02",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Tree { int value; Tree* left; Tree* right; };\nvoid inorder(Tree* p) { if(!p) return; inorder(p->left); cout << p->value << \" \"; inorder(p->right); }\nvoid preorder(Tree* p) { if(!p) return; cout << p->value << \" \"; preorder(p->left); preorder(p->right); }\nvoid postorder(Tree* p) { if(!p) return; postorder(p->left); postorder(p->right); cout << p->value << \" \"; }\n\nint countNodes(Tree* p) {\n    if (!p) return 0;\n    return 1 + countNodes(p->left)\n             + countNodes(p->right);\n}\nint main(){\nTree a{2,nullptr,nullptr}, b{6,nullptr,nullptr};\nTree c{10,nullptr,nullptr}, d{14,nullptr,nullptr};\nTree l{4,&a,&b}, r{12,&c,&d}, root{8,&l,&r};\ncout << countNodes(&root) << \"\\n\";\n}\n",
+    "expected": "7\n",
+    "question": false
+  },
+  {
+    "key": "06-03",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Tree { int value; Tree* left; Tree* right; };\nvoid inorder(Tree* p) { if(!p) return; inorder(p->left); cout << p->value << \" \"; inorder(p->right); }\nvoid preorder(Tree* p) { if(!p) return; cout << p->value << \" \"; preorder(p->left); preorder(p->right); }\nvoid postorder(Tree* p) { if(!p) return; postorder(p->left); postorder(p->right); cout << p->value << \" \"; }\n\nvoid visitInorder(Tree* p) {\n    if (!p) return;\n    visitInorder(p->left);\n    cout << p->value << \" \";\n    visitInorder(p->right);\n}\nint main(){\nTree a{2,nullptr,nullptr}, b{6,nullptr,nullptr};\nTree c{10,nullptr,nullptr}, d{14,nullptr,nullptr};\nTree l{4,&a,&b}, r{12,&c,&d}, root{8,&l,&r};\nvisitInorder(&root); cout << \"\\n\";\n}\n",
+    "expected": "2 4 6 8 10 12 14 \n",
+    "question": false
+  },
+  {
+    "key": "06-04",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Tree { int value; Tree* left; Tree* right; };\nvoid inorder(Tree* p) { if(!p) return; inorder(p->left); cout << p->value << \" \"; inorder(p->right); }\nvoid preorder(Tree* p) { if(!p) return; cout << p->value << \" \"; preorder(p->left); preorder(p->right); }\nvoid postorder(Tree* p) { if(!p) return; postorder(p->left); postorder(p->right); cout << p->value << \" \"; }\n\nbool contains(Tree* p, int target) {\n    while (p) {\n        if (target == p->value) return true;\n        p = target < p->value ? p->left : p->right;\n    }\n    return false;\n}\nint main(){\nTree a{2,nullptr,nullptr}, b{6,nullptr,nullptr};\nTree c{10,nullptr,nullptr}, d{14,nullptr,nullptr};\nTree l{4,&a,&b}, r{12,&c,&d}, root{8,&l,&r};\ncout << boolalpha << contains(&root,10) << \" \" << contains(&root,9) << \"\\n\";\n}\n",
+    "expected": "true false\n",
+    "question": false
+  },
+  {
+    "key": "06-05",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Tree { int value; Tree* left; Tree* right; };\nvoid inorder(Tree* p) { if(!p) return; inorder(p->left); cout << p->value << \" \"; inorder(p->right); }\nvoid preorder(Tree* p) { if(!p) return; cout << p->value << \" \"; preorder(p->left); preorder(p->right); }\nvoid postorder(Tree* p) { if(!p) return; postorder(p->left); postorder(p->right); cout << p->value << \" \"; }\n\nint main(){\nTree d{4,nullptr,nullptr};\nTree c{3,nullptr,&d};\nTree b{2,nullptr,&c};\nTree a{1,nullptr,&b};\nint steps = 0;\nfor (Tree* p=&a; p; p=p->right) ++steps;\ncout << steps << \"\\n\";\n}\n",
+    "expected": "4\n",
+    "question": false
+  },
+  {
+    "key": "06-q",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Tree { int value; Tree* left; Tree* right; };\nvoid inorder(Tree* p) { if(!p) return; inorder(p->left); cout << p->value << \" \"; inorder(p->right); }\nvoid preorder(Tree* p) { if(!p) return; cout << p->value << \" \"; preorder(p->left); preorder(p->right); }\nvoid postorder(Tree* p) { if(!p) return; postorder(p->left); postorder(p->right); cout << p->value << \" \"; }\n\nint main(){\nTree left{4,nullptr,nullptr};\nTree right{12,nullptr,nullptr};\nTree root{8,&left,&right};\ninorder(&root);\ncout << \"\\n\";\n}\n",
+    "expected": "4 8 12 \n",
+    "question": true
+  },
+  {
+    "key": "06-a",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Tree { int value; Tree* left; Tree* right; };\nvoid inorder(Tree* p) { if(!p) return; inorder(p->left); cout << p->value << \" \"; inorder(p->right); }\nvoid preorder(Tree* p) { if(!p) return; cout << p->value << \" \"; preorder(p->left); preorder(p->right); }\nvoid postorder(Tree* p) { if(!p) return; postorder(p->left); postorder(p->right); cout << p->value << \" \"; }\n\nint main(){\nTree left{4,nullptr,nullptr};\nTree right{12,nullptr,nullptr};\nTree root{8,&left,&right};\ninorder(&root);\ncout << \"\\n\";\n}\n",
+    "expected": "4 8 12 \n",
+    "question": false
+  },
+  {
+    "key": "07-01",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\npriority_queue<int> pq;\npq.push(75);\npq.push(90);\npq.push(82);\ncout << pq.top() << \"\\n\";\npq.pop();\ncout << pq.top() << \"\\n\";\n}\n",
+    "expected": "90\n82\n",
+    "question": false
+  },
+  {
+    "key": "07-02",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> heap{90, 75, 82, 60, 65};\nint i = 1;\nint left = 2*i + 1, right = 2*i + 2;\ncout << heap[left] << \" \" << heap[right];\ncout << \"\\n\";\ncout << (i - 1) / 2 << \"\\n\";\n}\n",
+    "expected": "60 65\n0\n",
+    "question": false
+  },
+  {
+    "key": "07-03",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\npriority_queue<int> pq;\nfor (int x : {75, 90, 82}) pq.push(x);\nwhile (!pq.empty()) {\n    cout << pq.top() << \" \";\n    pq.pop();\n}\ncout << \"\\n\";\n}\n",
+    "expected": "90 82 75 \n",
+    "question": false
+  },
+  {
+    "key": "07-q",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\npriority_queue<int> pq;\nfor (int x : {4, 9, 6}) pq.push(x);\npq.pop();\npq.push(8);\ncout << pq.top() << \"\\n\";\n}\n",
+    "expected": "8\n",
+    "question": true
+  },
+  {
+    "key": "07-a",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\npriority_queue<int> pq;\nfor (int x : {4, 9, 6}) pq.push(x);\npq.pop();\npq.push(8);\ncout << pq.top() << \"\\n\";\n}\n",
+    "expected": "8\n",
+    "question": false
+  },
+  {
+    "key": "08-01",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<vector<int>> g{{1,2},{0,3},{0,3},\n                      {1,2,4},{3}};\nfor (int v : g[0])\n    cout << char('A' + v) << \" \";\ncout << \"\\n\";\n}\n",
+    "expected": "B C\n",
+    "question": false
+  },
+  {
+    "key": "08-02",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<vector<int>> g{{1,2},{0,3},{0,3},\n                      {1,2,4},{3}};\nint entries = 0;\nfor (const auto& list : g) entries += list.size();\ncout << g.size() << \" \" << entries / 2 << \"\\n\";\n}\n",
+    "expected": "5 5\n",
+    "question": false
+  },
+  {
+    "key": "08-03",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nvector<vector<int>> g{{1,2},{0,3},{0,3},{1,2,4},{3}};\n\nint main(){\nqueue<int> q;\nvector<int> seen(5);\nseen[0]=1; q.push(0);\nwhile (!q.empty()) {\n    int u=q.front(); q.pop();\n    cout << char('A'+u) << \" \";\n    for (int v : g[u]) if (!seen[v]) {\n        seen[v]=1;\n        q.push(v);\n    }\n}\ncout << \"\\n\";\n}\n",
+    "expected": "A B C D E \n",
+    "question": false
+  },
+  {
+    "key": "08-04",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nvector<vector<int>> g{{1,2},{0,3},{0,3},{1,2,4},{3}};\n\nint main(){\nvector<int> dist(5, -1);\nqueue<int> q;\ndist[0]=0; q.push(0);\nwhile (!q.empty()) {\n    int u=q.front(); q.pop();\n    for (int v : g[u]) if (dist[v]==-1) {\n        dist[v]=dist[u]+1;\n        q.push(v);\n    }\n}\ncout << dist[4] << \"\\n\";\n}\n",
+    "expected": "3\n",
+    "question": false
+  },
+  {
+    "key": "08-05",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nvector<vector<int>> g{{1,2},{0,3},{0,3},{1,2,4},{3}};\n\nvoid dfs(int u, vector<int>& seen) {\n    seen[u]=1;\n    cout << char('A'+u) << \" \";\n    for (int v : g[u])\n        if (!seen[v]) dfs(v, seen);\n}\nint main(){\nvector<int> seen(5); dfs(0,seen); cout << \"\\n\";\n}\n",
+    "expected": "A B D C E \n",
+    "question": false
+  },
+  {
+    "key": "08-q",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nvector<vector<int>> g{{1,2},{0,3},{0,3},{1,2,4},{3}};\nint hops(int start,int target) {\n    vector<int> d(g.size(),-1); queue<int> q;\n    d[start]=0; q.push(start);\n    while(!q.empty()) { int u=q.front();q.pop();\n        for(int v:g[u]) if(d[v]==-1) { d[v]=d[u]+1;q.push(v); }\n    }\n    return d[target];\n}\n\nint main(){\n// A=0, B=1, C=2, D=3, E=4\n// A-B, A-C, B-D, C-D, D-E\ncout << hops(0, 4) << \"\\n\";\n}\n",
+    "expected": "3\n",
+    "question": true
+  },
+  {
+    "key": "08-a",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nvector<vector<int>> g{{1,2},{0,3},{0,3},{1,2,4},{3}};\nint hops(int start,int target) {\n    vector<int> d(g.size(),-1); queue<int> q;\n    d[start]=0; q.push(start);\n    while(!q.empty()) { int u=q.front();q.pop();\n        for(int v:g[u]) if(d[v]==-1) { d[v]=d[u]+1;q.push(v); }\n    }\n    return d[target];\n}\n\nint main(){\n// A=0, B=1, C=2, D=3, E=4\n// A-B, A-C, B-D, C-D, D-E\ncout << hops(0, 4) << \"\\n\";\n}\n",
+    "expected": "3\n",
+    "question": false
+  },
+  {
+    "key": "09-01",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nint findIndex(const vector<int>& a, int target) {\n    int lo=0, hi=static_cast<int>(a.size());\n    while (lo < hi) {\n        int mid=lo+(hi-lo)/2;\n        if (a[mid] < target) lo=mid+1;\n        else hi=mid;\n    }\n    if (lo < static_cast<int>(a.size())\n        && a[lo] == target) return lo;\n    return -1;\n}\nint main(){\nvector<int> a{3,8,12,20,27,31,40};\ncout << findIndex(a,27) << \"\\n\";\ncout << findIndex(a,9) << \"\\n\";\n}\n",
+    "expected": "4\n-1\n",
+    "question": false
+  },
+  {
+    "key": "09-02",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint findIndex(const vector<int>& a, int target) {\n    int lo=0, hi=static_cast<int>(a.size());\n    while (lo < hi) {\n        int mid=lo+(hi-lo)/2;\n        if (a[mid] < target) lo=mid+1;\n        else hi=mid;\n    }\n    if (lo < static_cast<int>(a.size())\n        && a[lo] == target) return lo;\n    return -1;\n}\nint main(){\nvector<int>a{3,8,12,20,27,31,40}; cout << findIndex(a,27) << \"\\n\";\n}\n",
+    "expected": "4\n",
+    "question": false
+  },
+  {
+    "key": "09-03",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nint findIndex(const vector<int>& a, int target) {\n    int lo=0, hi=static_cast<int>(a.size());\n    while (lo < hi) {\n        int mid=lo+(hi-lo)/2;\n        if (a[mid] < target) lo=mid+1;\n        else hi=mid;\n    }\n    if (lo < static_cast<int>(a.size())\n        && a[lo] == target) return lo;\n    return -1;\n}\nint main(){\nvector<int> empty;\nvector<int> a{1,2,2,2,5};\ncout << findIndex(empty,2) << \"\\n\";\ncout << findIndex(a,2) << \"\\n\";\ncout << findIndex(a,9) << \"\\n\";\n}\n",
+    "expected": "-1\n1\n-1\n",
+    "question": false
+  },
+  {
+    "key": "09-q",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nint findIndex(const vector<int>& a, int target) {\n    int lo=0, hi=static_cast<int>(a.size());\n    while (lo < hi) {\n        int mid=lo+(hi-lo)/2;\n        if (a[mid] < target) lo=mid+1;\n        else hi=mid;\n    }\n    if (lo < static_cast<int>(a.size())\n        && a[lo] == target) return lo;\n    return -1;\n}\nint main(){\nvector<int> a{1,2,2,2,5};\ncout << findIndex(a,2) << \"\\n\";\n}\n",
+    "expected": "1\n",
+    "question": true
+  },
+  {
+    "key": "09-a",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nint findIndex(const vector<int>& a, int target) {\n    int lo=0, hi=static_cast<int>(a.size());\n    while (lo < hi) {\n        int mid=lo+(hi-lo)/2;\n        if (a[mid] < target) lo=mid+1;\n        else hi=mid;\n    }\n    if (lo < static_cast<int>(a.size())\n        && a[lo] == target) return lo;\n    return -1;\n}\nint main(){\nvector<int> a{1,2,2,2,5};\ncout << findIndex(a,2) << \"\\n\";\n}\n",
+    "expected": "1\n",
+    "question": false
+  },
+  {
+    "key": "10-01",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> a{5,2,4,1};\nfor (int i=0; i<(int)a.size(); ++i) {\n    int best=i;\n    for (int j=i+1; j<(int)a.size(); ++j)\n        if (a[j]<a[best]) best=j;\n    swap(a[i],a[best]);\n}\nfor (int x:a) cout << x << \" \";\ncout << \"\\n\";\n}\n",
+    "expected": "1 2 4 5 \n",
+    "question": false
+  },
+  {
+    "key": "10-02",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> a{5,2,4,1};\nfor (int i=1; i<(int)a.size(); ++i) {\n    int key=a[i], j=i-1;\n    while (j>=0 && a[j]>key) {\n        a[j+1]=a[j];\n        --j;\n    }\n    a[j+1]=key;\n}\nfor (int x:a) cout << x << \" \";\ncout << \"\\n\";\n}\n",
+    "expected": "1 2 4 5 \n",
+    "question": false
+  },
+  {
+    "key": "10-03",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nvoid mergeRange(vector<int>& a,int l,int m,int r) {\n    vector<int> temp;temp.reserve(r-l);int i=l,j=m;\n    while(i<m && j<r) temp.push_back(a[i]<=a[j]?a[i++]:a[j++]);\n    while(i<m) temp.push_back(a[i++]);\n    while(j<r) temp.push_back(a[j++]);\n    copy(temp.begin(),temp.end(),a.begin()+l);\n}\n\nvoid mergeSort(vector<int>& a, int l, int r) {\n    if (r-l <= 1) return;\n    int mid=l+(r-l)/2;\n    mergeSort(a,l,mid);\n    mergeSort(a,mid,r);\n    mergeRange(a,l,mid,r);\n}\nint main(){\nvector<int>a{5,2,4,1}; mergeSort(a,0,a.size()); for(int x:a)cout<<x<<\" \";cout<<\"\\n\";\n}\n",
+    "expected": "1 2 4 5 \n",
+    "question": false
+  },
+  {
+    "key": "10-04",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint partitionOnce(vector<int>& a, int l, int r) {\n    int pivot=a[r-1], i=l;\n    for (int j=l; j<r-1; ++j) {\n        if (a[j]<pivot) swap(a[i++],a[j]);\n    }\n    swap(a[i],a[r-1]);\n    return i;\n}\nint main(){\nvector<int>a{5,2,1,4};cout<<partitionOnce(a,0,a.size())<<\"\\n\";for(int x:a)cout<<x<<\" \";cout<<\"\\n\";\n}\n",
+    "expected": "2\n2 1 4 5 \n",
+    "question": false
+  },
+  {
+    "key": "10-05",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> a{5,2,4,1};\nsort(a.begin(), a.end());\nfor (int x : a) cout << x << \" \";\ncout << \"\\n\";\n}\n",
+    "expected": "1 2 4 5 \n",
+    "question": false
+  },
+  {
+    "key": "10-06",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\nstruct Student { string name;int score; };\nbool lowerScore(const Student& a,const Student& b) { return a.score<b.score; }\n\nint main(){\nvector<Student> a{{\"A\",80},{\"B\",70},{\"C\",80}};\nstable_sort(a.begin(), a.end(), lowerScore);\nfor (const Student& s : a)\n    cout << s.name << \":\" << s.score << \" \";\ncout << \"\\n\";\n}\n",
+    "expected": "B:70 A:80 C:80 \n",
+    "question": false
+  },
+  {
+    "key": "10-q",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> a{4,1,3,2};\nint best=0;\nfor (int j=1; j<(int)a.size(); ++j)\n    if (a[j]<a[best]) best=j;\nswap(a[0],a[best]);\nfor (int x:a) cout << x << \" \";\ncout << \"\\n\";\n}\n",
+    "expected": "1 4 3 2 \n",
+    "question": true
+  },
+  {
+    "key": "10-a",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> a{4,1,3,2};\nint best=0;\nfor (int j=1; j<(int)a.size(); ++j)\n    if (a[j]<a[best]) best=j;\nswap(a[0],a[best]);\nfor (int x:a) cout << x << \" \";\ncout << \"\\n\";\n}\n",
+    "expected": "1 4 3 2 \n",
+    "question": false
+  },
+  {
+    "key": "11-02",
+    "source": "#include <iostream>\n#include <vector>\n#include <string>\n#include <queue>\n#include <stack>\n#include <unordered_map>\n#include <unordered_set>\n#include <algorithm>\n#include <functional>\n#include <stdexcept>\n#include <utility>\n#include <cassert>\nusing namespace std;\n\nint main(){\nvector<int> scores{80,95,80,72,90};\nunordered_map<int,int> frequency;\npriority_queue<int> top;\nfor (int x:scores) {\n    ++frequency[x];\n    top.push(x);\n}\ncout << frequency.at(80) << \"\\n\";\ncout << top.top() << \" \"; top.pop();\ncout << top.top() << \"\\n\";\n}\n",
+    "expected": "2\n95 90\n",
+    "question": false
+  }
+]

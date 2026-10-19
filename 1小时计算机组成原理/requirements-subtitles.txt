@@ -1,0 +1,7 @@
+# Optional, installed separately; no voice service or credentials needed.
+funasr==1.4.16
+torchaudio==2.11.0
+kaldi-native-fbank>=1.22
+soundfile>=0.12
+pypinyin>=0.55
+transformers==5.20.1

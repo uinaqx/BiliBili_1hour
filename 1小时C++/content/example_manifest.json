@@ -1,0 +1,580 @@
+[
+  {
+    "key": "00-2",
+    "source": "#include <iostream>\nint main() { std::cout << \"Hello, C++!\\n\"; return 0; }",
+    "kind": "run",
+    "expected": "Hello, C++!\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "01-1",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nint main() {\nint score = 0;\nif (!(cin >> score)) return 1;\ncout << \"score=\" << score << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "score=80\n",
+    "stdin": "80\n",
+    "runs": [
+      {
+        "stdin": "80\n",
+        "expected": "score=80\n",
+        "exitCode": 0
+      },
+      {
+        "stdin": "x\n",
+        "expected": "",
+        "exitCode": 1
+      }
+    ],
+    "diagnostic": null
+  },
+  {
+    "key": "01-2",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nint add(int a, int b) {\n    return a + b;\n}\nint main() {\ncout << add(3, 5) << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "8\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "01-3",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nint main() {\nint score = 80;\nint& alias = score;\nalias += 5;\ncout << score << \" \" << alias << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "85 85\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "01-4",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nvoid bonus(int& score) {\n    score += 5;\n}\nint read(const int& score) {\n    return score;\n}\nint main() {\nint score = 80; bonus(score); cout << read(score) << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "85\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "01-q",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nint main() {\nint a = 3, b = 8;\nint& r = a;\nr = b;\nb = 9;\ncout << a << \" \" << r << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "8 8\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "01-a",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nint main() {\nint a = 3, b = 8;\nint& r = a;\nr = b;\nb = 9;\ncout << a << \" \" << r << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "8 8\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "02-1",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Score {\nprivate:\n    int value_ = 0;\npublic:\n    void set(int n) { value_ = n; }\n    int get() const { return value_; }\n};\nint main() {\nScore s; s.set(80); cout << s.get() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "02-2",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Score {\nprivate:\n    int value_ = 0;\npublic:\n    void set(int n) { value_ = n; }\n    int get() const { return value_; }\n};\nint main() {\nScore a, b;\na.set(80);\nb.set(90);\ncout << a.get() << \" \" << b.get() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "80 90\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "02-3",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Score {\nprivate:\n    int value_ = 0;\npublic:\n    void set(int n) { value_ = n; }\n    int get() const { return value_; }\n};\nint main() {\nScore s;\ns.value_ = 80;\n}\n",
+    "kind": "compile_error",
+    "expected": "编译失败：类外不能直接访问 private 成员。",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": "private"
+  },
+  {
+    "key": "02-4",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Record {\nprivate:\n    int secret_ = 7;\nprotected:\n    int score_ = 80;\npublic:\n    int read() const { return secret_ + score_; }\n};\nint main() {\nRecord r; cout << r.read() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "87\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "02-q",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Score {\nprivate:\n    int value_ = 0;\npublic:\n    void set(int n) { value_ = n; }\n    int get() const { return value_; }\n};\nint main() {\nScore a, b;\na.set(80);\nb.set(90);\na.set(85);\ncout << b.get() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "90\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "02-a",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Score {\nprivate:\n    int value_ = 0;\npublic:\n    void set(int n) { value_ = n; }\n    int get() const { return value_; }\n};\nint main() {\nScore a, b;\na.set(80);\nb.set(90);\na.set(85);\ncout << b.get() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "90\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "03-1",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Score {\n    int value_;\npublic:\n    Score(int n) : value_(n) {}\n    int get() const { return value_; }\n};\nint main() {\nScore s(80); cout << s.get() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "03-2",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Score {\n    int value_;\npublic:\n    Score() : value_(0) {}\n    Score(int n) : value_(n) {}\n    int get() const { return value_; }\n};\nint main() {\nScore a; Score b(80); cout << a.get() << \" \" << b.get() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "0 80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "03-3",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Limit {\n    const int limit_;\npublic:\n    Limit(int n) : limit_(n) {}\n    int get() const { return limit_; }\n};\nint main() {\nLimit rule(60); cout << rule.get() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "60\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "03-4",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Trace {\npublic:\n    Trace() { cout << \"begin \"; }\n    ~Trace() { cout << \"end \"; }\n};\nint main() {\n{ Trace t; } cout << \"after\\n\";\n}\n",
+    "kind": "run",
+    "expected": "begin end after\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "03-q",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Score {\n    int value_;\npublic:\n    Score(int n) : value_(n) {}\n    int get() const { return value_; }\n};\nint main() {\nScore s;\ncout << s.get() << '\\n';\n}\n",
+    "kind": "compile_error",
+    "expected": "编译失败：没有可用的无参数构造函数。",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": "no matching function"
+  },
+  {
+    "key": "03-a",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Score {\n    int value_;\npublic:\n    Score(int n) : value_(n) {}\n    int get() const { return value_; }\n};\nint main() {\nScore s(80);\ncout << s.get() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "04-1",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Score {\n    int value = 0;\npublic:\n    void set(int value) { this->value = value; }\n    int get() const { return value; }\n};\nint main() {\nScore s; s.set(80); cout << s.get() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "04-2",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Score {\n    int value_;\npublic:\n    Score(int n) : value_(n) {}\n    int get() const { return value_; }\n    void set(int n) { value_ = n; }\n};\nint main() {\nconst Score s(80);\ncout << s.get() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "04-3",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Counter {\n    static int count_;\npublic:\n    Counter() { ++count_; }\n    static int created() { return count_; }\n};\nint Counter::count_ = 0;\nint main() {\nCounter a, b; cout << Counter::created() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "2\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "04-4",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Counter {\n    static int count_;\npublic:\n    Counter() { ++count_; }\n    static int created() { return count_; }\n};\nint Counter::count_ = 0;\nint main() {\ncout << Counter::created() << \" \";\nCounter a;\ncout << Counter::created() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "0 1\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "04-5",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Score {\n    int value_;\npublic:\n    Score(int n) : value_(n) {}\n    friend int inspect(const Score& s);\n};\nint inspect(const Score& s) { return s.value_; }\nint main() {\nScore s(80); cout << inspect(s) << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "04-6",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Score {\n    int value_ = 80;\n    friend class Auditor;\n};\nclass Auditor {\npublic:\n    int read(const Score& s) const { return s.value_; }\n};\nint main() {\nScore s; Auditor a; cout << a.read(s) << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "04-q",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Score {\n    int value_;\npublic:\n    Score(int n) : value_(n) {}\n    int get() const { return value_; }\n    void set(int n) { value_ = n; }\n};\nint main() {\nconst Score s(80);\ns.set(90);\n}\n",
+    "kind": "compile_error",
+    "expected": "编译失败：不能用 const 对象调用此非 const 成员函数。",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": "discards qualifiers"
+  },
+  {
+    "key": "04-a",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Score {\n    int value_;\npublic:\n    Score(int n) : value_(n) {}\n    int get() const { return value_; }\n    void set(int n) { value_ = n; }\n};\nint main() {\nconst Score s(80);\ncout << s.get() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "05-1",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Name {\n    string text_;\npublic:\n    Name(string text) : text_(text) {}\n    const string& get() const { return text_; }\n};\nclass Student {\n    Name name_;\npublic:\n    Student() : name_(\"Ana\") {}\n    void show() const { cout << name_.get() << '\\n'; }\n};\nint main() {\nStudent s; s.show();\n}\n",
+    "kind": "run",
+    "expected": "Ana\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "05-2",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Part {\n    char name_;\npublic:\n    Part(char name) : name_(name) { cout << name_ << \" \"; }\n    ~Part() { cout << \"~\" << name_ << \" \"; }\n};\nclass Box {\n    Part first_;\n    Part second_;\npublic:\n    Box() : second_('B'), first_('A') { cout << \"Box \"; }\n};\nint main() {\n{ Box b; } cout << '\\n';\n}\n",
+    "kind": "reorder_warning",
+    "expected": "A B Box ~B ~A \n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "05-3",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Part {\n    char name_;\npublic:\n    Part(char name) : name_(name) { cout << name_ << \" \"; }\n    ~Part() { cout << \"~\" << name_ << \" \"; }\n};\nclass Box {\n    Part first_;\n    Part second_;\npublic:\n    Box() : first_('A'), second_('B') { cout << \"Box \"; }\n    ~Box() { cout << \"~Box \"; }\n};\nint main() {\n{ Box b; } cout << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "A B Box ~Box ~B ~A \n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "05-q",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Part {\n    char name_;\npublic:\n    Part(char name) : name_(name) { cout << name_ << \" \"; }\n    ~Part() { cout << \"~\" << name_ << \" \"; }\n};\nclass Box {\n    Part first_;\n    Part second_;\npublic:\n    Box() : second_('B'), first_('A') { cout << \"Box \"; }\n};\nint main() {\n{ Box b; } cout << '\\n';\n}\n",
+    "kind": "reorder_warning",
+    "expected": "A B Box ~B ~A \n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "05-a",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Part {\n    char name_;\npublic:\n    Part(char name) : name_(name) { cout << name_ << \" \"; }\n    ~Part() { cout << \"~\" << name_ << \" \"; }\n};\nclass Box {\n    Part first_;\n    Part second_;\npublic:\n    Box() : first_('A'), second_('B') { cout << \"Box \"; }\n};\nint main() {\n{ Box b; } cout << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "A B Box ~B ~A \n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "06-1",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Person {\n    string name_;\npublic:\n    Person(string name) : name_(name) {}\n    void show() const { cout << name_ << '\\n'; }\n};\nclass Student : public Person {\n    int score_;\npublic:\n    Student(string name, int score)\n        : Person(name), score_(score) {}\n    int score() const { return score_; }\n};\nint main() {\nStudent s(\"Ana\",80); s.show(); cout << s.score() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "Ana\n80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "06-2",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Person {\n    string name_;\npublic:\n    Person(string name) : name_(name) {}\n    void show() const { cout << name_ << '\\n'; }\n};\nclass Student : public Person {\npublic:\n    Student() : Person(\"Ana\") {}\n    void test() { cout << name_; }\n};\nint main() {\nStudent s; s.test();\n}\n",
+    "kind": "compile_error",
+    "expected": "编译失败：name_ 是 Person 的私有成员",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": "private"
+  },
+  {
+    "key": "06-3",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Person {\npublic:\n    Person() { cout << \"Person \"; }\n    ~Person() { cout << \"~Person \"; }\n};\nclass Student : public Person {\npublic:\n    Student() { cout << \"Student \"; }\n    ~Student() { cout << \"~Student \"; }\n};\nint main() {\n{ Student s; } cout << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "Person Student ~Student ~Person \n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "06-4",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Person {\n    string name_;\npublic:\n    Person(string name) : name_(name) {}\n    void show() const { cout << name_ << '\\n'; }\n};\nclass Student : public Person {\n    int score_;\npublic:\n    Student(string name, int score)\n        : Person(name), score_(score) {}\n    int score() const { return score_; }\n};\nint main() {\nStudent s(\"Ana\",80);\nPerson& ref = s;\nref.show();\nPerson copy = s;\ncopy.show();\ncout << s.score() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "Ana\nAna\n80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "06-q",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Person {\n    string name_;\npublic:\n    Person(string name) : name_(name) {}\n    void show() const { cout << name_ << '\\n'; }\n};\nclass Student : public Person {\n    int score_;\npublic:\n    Student(string name, int score)\n        : Person(name), score_(score) {}\n    int score() const { return score_; }\n};\nint main() {\nStudent s(\"Ana\",80);\nPerson& ref = s;\nPerson copy = s;\nref.show();\ncopy.show();\n}\n",
+    "kind": "run",
+    "expected": "Ana\nAna\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "06-a",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Person {\n    string name_;\npublic:\n    Person(string name) : name_(name) {}\n    void show() const { cout << name_ << '\\n'; }\n};\nclass Student : public Person {\n    int score_;\npublic:\n    Student(string name, int score)\n        : Person(name), score_(score) {}\n    int score() const { return score_; }\n};\nint main() {\nStudent s(\"Ana\",80);\nPerson& ref = s;   // 使用原对象\nPerson copy = s;   // 新的基类对象\nref.show();\ncopy.show();\n}\n",
+    "kind": "run",
+    "expected": "Ana\nAna\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "07-1",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Named {\npublic:\n    void name() const { cout << \"Ana \"; }\n};\nclass Graded {\npublic:\n    int score() const { return 80; }\n};\nclass Student : public Named, public Graded {};\nint main() {\nStudent s; s.name(); cout << s.score() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "Ana 80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "07-2",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass A { public: A() { cout << \"A \"; } };\nclass B { public: B() { cout << \"B \"; } };\nclass C : public A, public B {\npublic:\n    C() : B(), A() { cout << \"C\\n\"; }\n};\nint main() {\nC c;\n}\n",
+    "kind": "reorder_warning",
+    "expected": "A B C\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "07-q",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass A { public: A() { cout << \"A \"; } };\nclass B { public: B() { cout << \"B \"; } };\nclass C : public A, public B {\npublic:\n    C() : B(), A() { cout << \"C\\n\"; }\n};\nint main() {\nC c;\n}\n",
+    "kind": "reorder_warning",
+    "expected": "A B C\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "07-a",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass A { public: A() { cout << \"A \"; } };\nclass B { public: B() { cout << \"B \"; } };\nclass C : public A, public B {\npublic:\n    C() : A(), B() { cout << \"C\\n\"; }\n};\nint main() {\nC c;\n}\n",
+    "kind": "run",
+    "expected": "A B C\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "08-1",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nint twice(int x) { return x * 2; }\ndouble twice(double x) { return x * 2; }\nint main() {\ncout << twice(3) << '\\n'; cout << twice(3.5) << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "6\n7\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "08-2",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nint read() { return 1; }\ndouble read() { return 1.5; }\nint main() {\ncout << read();\n}\n",
+    "kind": "compile_error",
+    "expected": "编译失败：仅返回类型不同，不能重载",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": "ambiguating"
+  },
+  {
+    "key": "08-3",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nstruct Point {\n    int x;\n    int y;\n    Point operator+(const Point& other) const {\n        return {x + other.x, y + other.y};\n    }\n};\nint main() {\nPoint a{1,2},b{3,4}; Point c=a+b; cout << c.x << \" \" << c.y << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "4 6\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "08-4",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nstruct Point {\n    int x;\n    int y;\n    Point operator+(const Point& other) const {\n        return {x + other.x, y + other.y};\n    }\n};\nint main() {\nPoint a{1,2};\nPoint b{3,4};\nPoint c = a.operator+(b);\ncout << c.x << \" \" << c.y << '\\n';\ncout << a.x << \" \" << a.y << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "4 6\n1 2\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "08-q",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nstruct Point {\n    int x;\n    int y;\n    Point operator+(const Point& other) const {\n        return {x + other.x, y + other.y};\n    }\n};\nint main() {\nPoint a{1,2}, b{3,4};\nPoint c = a + b;\ncout << c.x << \" \" << c.y << '\\n';\ncout << a.x << \" \" << a.y << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "4 6\n1 2\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "08-a",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nstruct Point {\n    int x;\n    int y;\n    Point operator+(const Point& other) const {\n        return {x + other.x, y + other.y};\n    }\n};\nint main() {\nPoint a{1,2}, b{3,4};\nPoint c = a + b;\ncout << c.x << \" \" << c.y << '\\n';\ncout << a.x << \" \" << a.y << '\\n';\na = a + b;\ncout << a.x << \" \" << a.y << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "4 6\n1 2\n4 6\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "09-1",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Base {\npublic:\n    void show(int n) const { cout << n << '\\n'; }\n};\nclass Derived : public Base {\npublic:\n    void show() const { cout << \"Derived\\n\"; }\n};\nint main() {\nDerived d; d.show(7);\n}\n",
+    "kind": "compile_error",
+    "expected": "编译失败：Derived 的 show 隐藏了基类同名函数",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": "no matching function"
+  },
+  {
+    "key": "09-2",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Base {\npublic:\n    void show(int n) const { cout << n << '\\n'; }\n};\nclass Derived : public Base {\npublic:\n    using Base::show;\n    void show() const { cout << \"Derived\\n\"; }\n};\nint main() {\nDerived d; d.show(); d.show(7);\n}\n",
+    "kind": "run",
+    "expected": "Derived\n7\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "09-3",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Base {\npublic:\n    void speak() const { cout << \"Base\\n\"; }\n};\nclass Derived : public Base {\npublic:\n    void speak() const { cout << \"Derived\\n\"; }\n};\nint main() {\nDerived d; d.speak(); Base& ref=d; ref.speak();\n}\n",
+    "kind": "run",
+    "expected": "Derived\nBase\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "09-4",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Base {\npublic:\n    virtual void speak() const { cout << \"Base\\n\"; }\n    virtual ~Base() = default;\n};\nclass Derived : public Base {\npublic:\n    void speak() const override { cout << \"Derived\\n\"; }\n};\nint main() {\nDerived d; Base& ref=d; ref.speak();\n}\n",
+    "kind": "run",
+    "expected": "Derived\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "09-5",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Base {\npublic:\n    virtual void speak() const { cout << \"Base\\n\"; }\n    virtual ~Base() = default;\n};\nclass Derived : public Base {\npublic:\n    void speak() override { cout << \"Derived\\n\"; }\n};\nint main() {\nDerived d;\n}\n",
+    "kind": "compile_error",
+    "expected": "编译失败：缺少 const，override 检查不通过",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": "does not override"
+  },
+  {
+    "key": "09-6",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Shape {\npublic:\n    virtual int area() const = 0;\n    virtual ~Shape() = default;\n};\nclass Square : public Shape {\n    int side_;\npublic:\n    Square(int side) : side_(side) {}\n    int area() const override { return side_ * side_; }\n};\nint main() {\nSquare s(4); const Shape& shape=s; cout << shape.area() << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "16\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "09-q",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Base {\npublic:\n    virtual void speak() const { cout << \"Base\\n\"; }\n    virtual ~Base() = default;\n};\nclass Derived : public Base {\npublic:\n    void speak() const override { cout << \"Derived\\n\"; }\n};\nint main() {\nDerived d;\nBase& ref = d;\nBase copy = d;\nref.speak();\ncopy.speak();\n}\n",
+    "kind": "run",
+    "expected": "Derived\nBase\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "09-a",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\nclass Base {\npublic:\n    virtual void speak() const { cout << \"Base\\n\"; }\n    virtual ~Base() = default;\n};\nclass Derived : public Base {\npublic:\n    void speak() const override { cout << \"Derived\\n\"; }\n};\nint main() {\nDerived d;\nBase& ref = d;\nBase copy = d;\nref.speak();   // 原对象是 Derived\ncopy.speak();  // copy 自己是 Base\n}\n",
+    "kind": "run",
+    "expected": "Derived\nBase\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "10-1",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\ndouble divide(double a, double b) {\n    if (b == 0) {\n        throw std::invalid_argument(\"zero divisor\");\n    }\n    return a / b;\n}\nint main() {\ncout << divide(8,2) << '\\n';\n}\n",
+    "kind": "run",
+    "expected": "4\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "10-2",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\ndouble divide(double a, double b) {\n    if (b == 0) {\n        throw std::invalid_argument(\"zero divisor\");\n    }\n    return a / b;\n}\nint main() {\ntry {\n    cout << divide(8,0) << '\\n';\n    cout << \"after divide\\n\";\n} catch (const std::exception& e) {\n    cout << \"caught\\n\";\n}\ncout << \"continue\\n\";\n}\n",
+    "kind": "run",
+    "expected": "caught\ncontinue\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "10-3",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\ndouble divide(double a, double b) {\n    if (b == 0) {\n        throw std::invalid_argument(\"zero divisor\");\n    }\n    return a / b;\n}\nint main() {\ntry {\n    cout << divide(8,2) << '\\n';\n    cout << \"after divide\\n\";\n} catch (const std::exception& e) {\n    cout << \"caught\\n\";\n}\ncout << \"continue\\n\";\n}\n",
+    "kind": "run",
+    "expected": "4\nafter divide\ncontinue\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "10-4",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nint main() {\ntry {\n    throw std::invalid_argument(\"bad score\");\n} catch (const std::invalid_argument& e) {\n    cout << \"argument error\\n\";\n} catch (const std::exception& e) {\n    cout << \"other standard error\\n\";\n}\n}\n",
+    "kind": "run",
+    "expected": "argument error\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "10-q",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\ndouble divide(double a, double b) {\n    if (b == 0) {\n        throw std::invalid_argument(\"zero divisor\");\n    }\n    return a / b;\n}\nint main() {\ntry {\n    cout << \"A \";\n    divide(8,0);\n    cout << \"B \";\n} catch (const std::exception& e) {\n    cout << \"C \";\n}\ncout << \"D\\n\";\n}\n",
+    "kind": "run",
+    "expected": "A C D\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "10-a",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nstruct Guard {\n    ~Guard() { cout << \"cleanup \"; }\n};\nvoid work() {\n    Guard g;\n    throw std::runtime_error(\"failed\");\n}\nint main() {\ntry { work(); } catch (const std::exception& e) { cout << \"caught\\n\"; }\n}\n",
+    "kind": "run",
+    "expected": "cleanup caught\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  },
+  {
+    "key": "11-2",
+    "source": "#include <iostream>\n#include <string>\n#include <stdexcept>\nusing std::cout;\nusing std::cin;\nusing std::string;\n\nclass Score {\n    int value_;\npublic:\n    explicit Score(int value) : value_(value) {}\n    int get() const { return value_; }\n};\nvoid print(const Score& score) {\n    cout << score.get() << '\\n';\n}\nint main() {\nScore score(80); print(score);\n}\n",
+    "kind": "run",
+    "expected": "80\n",
+    "stdin": "",
+    "runs": null,
+    "diagnostic": null
+  }
+]

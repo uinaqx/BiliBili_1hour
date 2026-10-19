@@ -1,0 +1,44 @@
+[
+  {
+    "id": "riscv_unprivileged",
+    "url": "https://docs.riscv.org/reference/isa/unpriv/rv32.html",
+    "status": 200,
+    "title": "Redirecting to isa v20260120",
+    "checked": "2026-10-15"
+  },
+  {
+    "id": "riscv_privileged",
+    "url": "https://docs.riscv.org/reference/isa/priv/supervisor.html",
+    "status": 200,
+    "title": "Redirecting to isa v20260120",
+    "checked": "2026-10-15"
+  },
+  {
+    "id": "ieee754",
+    "url": "https://standards.ieee.org/ieee/754/6210/",
+    "status": 200,
+    "title": "IEEE SA - IEEE 754-2019",
+    "checked": "2026-10-15"
+  },
+  {
+    "id": "mit6004",
+    "url": "https://ocw.mit.edu/courses/6-004-computation-structures-spring-2017/",
+    "status": 200,
+    "title": "Computation Structures | Electrical Engineering and Computer Science | MIT OpenCourseWare",
+    "checked": "2026-10-15"
+  },
+  {
+    "id": "cs61c",
+    "url": "https://cs61c.org/",
+    "status": 200,
+    "title": "Home | CS61C Fall 2026",
+    "checked": "2026-10-15"
+  },
+  {
+    "id": "nand2tetris",
+    "url": "https://www.nand2tetris.org/course",
+    "status": 200,
+    "title": "Projects | nand2tetris",
+    "checked": "2026-10-15"
+  }
+]

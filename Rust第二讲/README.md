@@ -34,7 +34,7 @@
 从仓库根目录进入本工程：
 
 ```powershell
-cd advanced
+cd Rust第二讲
 npm ci
 python -m pip install -r requirements.txt
 npm run preview

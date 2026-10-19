@@ -1,0 +1,697 @@
+[
+  {
+    "key": "00-2",
+    "source": "#include <stdio.h>\nint main(void) {\n    printf(\"Hello, C!\\n\");\n    return 0;\n}",
+    "kind": "run",
+    "output": "Hello, C!\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "01-1",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 80;\n    printf(\"%d\\n\", score);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "80\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "01-2",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 80;\n    score = score + 5;\n    printf(\"%d\\n\", score);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "85\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "01-3",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int count = 3;\n    double average = 81.5;\n    printf(\"%d %.1f\\n\", count, average);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "3 81.5\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "01-4",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    char grade = 'A';\n    printf(\"%c\\n\", grade);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "A\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "01-5",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    const int pass = 60;\n    int score = 80;\n    printf(\"pass=%d score=%d\\n\", pass, score);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "pass=60 score=80\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "01-q",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int a = 3;\n    int b = a;\n    a = 8;\n    printf(\"%d %d\\n\", a, b);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "8 3\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "01-a",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int a = 3;\n    int b = a;\n    a = 8;\n    printf(\"%d %d\\n\", a, b);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "8 3\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "02-1",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int a = 7, b = 2;\n    printf(\"%d\\n\", a / b);\n    printf(\"%d\\n\", a % b);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "3\n1\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "02-2",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    double a = 7.0 / 2;\n    double b = 7 / 2;\n    printf(\"%.1f %.1f\\n\", a, b);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "3.5 3.0\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "02-3",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 80;\n    printf(\"%d\\n\", score >= 60);\n    printf(\"%d\\n\", score == 60);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "1\n0\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "02-4",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 80;\n    int valid = (score >= 0) && (score <= 100);\n    printf(\"%d\\n\", valid);\n    printf(\"%d\\n\", (2 + 3) * 2);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "1\n10\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "02-q",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int total = 7;\n    int count = 2;\n    double average = total / count;\n    printf(\"%.1f\\n\", average);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "3.0\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "02-a",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int total = 7;\n    int count = 2;\n    double average = total * 1.0 / count;\n    printf(\"%.1f\\n\", average);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "3.5\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "03-1",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 80;\n    char grade = 'B';\n    double average = 81.5;\n    printf(\"score=%d grade=%c\\n\", score, grade);\n    printf(\"average=%.1f\\n\", average);\n    printf(\"progress=100%%\\n\");\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "score=80 grade=B\naverage=81.5\nprogress=100%\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "03-2",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 0;\n    int result = scanf(\"%d\", &score);\n    printf(\"read=%d score=%d\\n\", result, score);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "read=1 score=80\n",
+    "stdin": "80\n",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "03-3",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 0;\n    if (scanf(\"%d\", &score) != 1) {\n        printf(\"invalid input\\n\");\n        return 1;\n    }\n    printf(\"score=%d\\n\", score);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "invalid input\n",
+    "stdin": "x\n",
+    "runs": [
+      {
+        "stdin": "x\n",
+        "output": "invalid input\n",
+        "exitCode": 1
+      },
+      {
+        "stdin": "80\n",
+        "output": "score=80\n",
+        "exitCode": 0
+      }
+    ],
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "03-4",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    double average = 0.0;\n    char grade = '?';\n    if (scanf(\"%lf %c\", &average, &grade) != 2) {\n        return 1;\n    }\n    printf(\"%.1f %c\\n\", average, grade);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "81.5 A\n",
+    "stdin": "81.5 A\n",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "03-q",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 0;\n    if (scanf(\"%d\", &score) != 1) return 1;\n    printf(\"%d\\n\", score);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "60\n",
+    "stdin": "60\n",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "03-a",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 0;\n    if (scanf(\"%d\", &score) != 1) return 1;\n    printf(\"%d\\n\", score);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "60\n",
+    "stdin": "60\n",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "04-1",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 58;\n    if (score >= 60) {\n        printf(\"pass\\n\");\n    } else {\n        printf(\"fail\\n\");\n    }\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "fail\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "04-2",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 85;\n    if (score >= 90) {\n        printf(\"excellent\\n\");\n    } else if (score >= 60) {\n        printf(\"pass\\n\");\n    } else {\n        printf(\"fail\\n\");\n    }\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "pass\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "04-3",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int choice = 2;\n    switch (choice) {\n    case 1: printf(\"score\\n\"); break;\n    case 2: printf(\"average\\n\"); break;\n    default: printf(\"invalid\\n\"); break;\n    }\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "average\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "04-4",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int choice = 1;\n    switch (choice) {\n    case 1: printf(\"A\\n\");\n    case 2: printf(\"B\\n\"); break;\n    default: printf(\"C\\n\"); break;\n    }\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "A\nB\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "04-q",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 60;\n    if (score > 60) {\n        printf(\"pass\\n\");\n    } else {\n        printf(\"fail\\n\");\n    }\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "fail\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "04-a",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 60;\n    if (score >= 60) {\n        printf(\"pass\\n\");\n    } else {\n        printf(\"fail\\n\");\n    }\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "pass\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "05-1",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    for (int i = 1; i <= 3; i++) {\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "1\n2\n3\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "05-2",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int sum = 0;\n    for (int i = 1; i <= 3; i++) {\n        sum = sum + i;\n    }\n    printf(\"%d\\n\", sum);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "6\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "05-3",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int n = 3;\n    while (n > 0) {\n        printf(\"%d\\n\", n);\n        n = n - 1;\n    }\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "3\n2\n1\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "05-4",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int n = 0;\n    do {\n        printf(\"%d\\n\", n);\n        n--;\n    } while (n > 0);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "0\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "05-5",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    for (int i = 1; i <= 5; i++) {\n        if (i == 2) continue;\n        if (i == 5) break;\n        printf(\"%d\\n\", i);\n    }\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "1\n3\n4\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "05-q",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int sum = 0;\n    for (int i = 0; i < 3; i++) {\n        sum++;\n    }\n    printf(\"%d\\n\", sum);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "3\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "05-a",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int sum = 0;\n    for (int i = 0; i < 3; i++) {\n        sum++;\n    }\n    printf(\"%d\\n\", sum);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "3\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "06-1",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int scores[3] = {60, 80, 90};\n    printf(\"%d %d\\n\", scores[0], scores[2]);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "60 90\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "06-2",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int scores[3] = {60, 80, 90};\n    int total = 0;\n    for (int i = 0; i < 3; i++) {\n        total += scores[i];\n    }\n    printf(\"total=%d\\n\", total);\n    printf(\"average=%.1f\\n\", total * 1.0 / 3);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "total=230\naverage=76.7\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "06-3",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    char name[] = \"Ana\";\n    printf(\"%s\\n\", name);\n    printf(\"%c\\n\", name[1]);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "Ana\nn\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "06-4",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    char name[16];\n    if (scanf(\"%15s\", name) != 1) {\n        return 1;\n    }\n    printf(\"%s\\n\", name);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "Ana\n",
+    "stdin": "Ana\n",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "06-5",
+    "source": "#include <stdio.h>\n#include <string.h>\nint main(void) {\n    char name[16] = \"Ana\";\n    printf(\"%zu %zu\\n\", strlen(name), sizeof name);\n    return 0;\n}",
+    "kind": "run",
+    "output": "3 16\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "06-q",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    char word[4] = \"cat\";\n    printf(\"%s\\n\", word);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "cat\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "06-a",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    char word[4] = \"cat\";\n    printf(\"%s\\n\", word);\n    printf(\"%d\\n\", word[3] == '\\0');\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "cat\n1\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "07-1",
+    "source": "#include <stdio.h>\nint add(int a, int b) {\n    return a + b;\n}\nint main(void) {\n    int result = add(3, 5);\n    printf(\"%d\\n\", result);\n    return 0;\n}",
+    "kind": "run",
+    "output": "8\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "07-2",
+    "source": "#include <stdio.h>\nint passed(int score) {\n    return score >= 60;\n}\nint main(void) {\n    printf(\"%d %d\\n\", passed(59), passed(60));\n    return 0;\n}",
+    "kind": "run",
+    "output": "0 1\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "07-3",
+    "source": "#include <stdio.h>\nvoid bonus(int score) {\n    score += 5;\n    printf(\"inside=%d\\n\", score);\n}\nint main(void) {\n    int score = 80;\n    bonus(score);\n    printf(\"outside=%d\\n\", score);\n    return 0;\n}",
+    "kind": "run",
+    "output": "inside=85\noutside=80\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "07-4",
+    "source": "#include <stdio.h>\nint sum_to(int n) {\n    if (n == 0) return 0;\n    return n + sum_to(n - 1);\n}\nint main(void) {\n    printf(\"%d\\n\", sum_to(3));\n    return 0;\n}",
+    "kind": "run",
+    "output": "6\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "07-5",
+    "source": "#include <stdio.h>\nint sum_to(int n) {\n    if (n == 0) return 0;\n    int smaller = sum_to(n - 1);\n    return n + smaller;\n}\nint main(void) {\n    printf(\"%d\\n\", sum_to(3));\n    return 0;\n}",
+    "kind": "run",
+    "output": "6\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "07-q",
+    "source": "#include <stdio.h>\nint add_one(int n) { return n + 1; }\nint main(void) {\n    int x = 4;\n    add_one(x);\n    printf(\"%d\\n\", x);\n    return 0;\n}",
+    "kind": "run",
+    "output": "4\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "07-a",
+    "source": "#include <stdio.h>\nint add_one(int n) { return n + 1; }\nint main(void) {\n    int x = 4;\n    x = add_one(x);\n    printf(\"%d\\n\", x);\n    return 0;\n}",
+    "kind": "run",
+    "output": "5\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "08-1",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 80;\n    int *p = &score;\n    printf(\"%d\\n\", p == &score);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "1\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "08-2",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 80;\n    int *p = &score;\n    printf(\"%d\\n\", *p);\n    *p = 85;\n    printf(\"%d\\n\", score);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "80\n85\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "08-3",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int score = 80;\n    int *p = NULL;\n    p = &score;\n    if (p != NULL) {\n        printf(\"%d\\n\", *p);\n    }\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "80\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "08-4",
+    "source": "#include <stdio.h>\nvoid swap(int *a, int *b) {\n    int temp = *a;\n    *a = *b;\n    *b = temp;\n}\nint main(void) {\n    int x = 3, y = 8;\n    swap(&x, &y);\n    printf(\"%d %d\\n\", x, y);\n    return 0;\n}",
+    "kind": "run",
+    "output": "8 3\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "08-5",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int scores[3] = {60, 80, 90};\n    int *p = scores;\n    printf(\"%d %d\\n\", *p, *(p + 1));\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "60 80\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "08-q",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int x = 10;\n    int y = x;\n    int *p = &x;\n    *p = 20;\n    printf(\"%d %d\\n\", x, y);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "20 10\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "08-a",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    int x = 10;\n    int y = x;\n    int *p = &x;\n    *p = 20;\n    printf(\"%d %d\\n\", x, y);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "20 10\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "09-1",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    struct Student {\n        char name[16];\n        int score;\n    };\n    struct Student s = {\"Ana\", 80};\n    printf(\"%s %d\\n\", s.name, s.score);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "Ana 80\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "09-2",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    struct Student { char name[16]; int score; };\n    struct Student students[2] = {{\"Ana\", 80}, {\"Ben\", 90}};\n    for (int i = 0; i < 2; i++) {\n        printf(\"%s %d\\n\", students[i].name, students[i].score);\n    }\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "Ana 80\nBen 90\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "09-3",
+    "source": "#include <stdio.h>\nstruct Student { char name[16]; int score; };\nvoid bonus(struct Student *p) {\n    p->score += 5;\n}\nint main(void) {\n    struct Student s = {\"Ana\", 80};\n    bonus(&s);\n    printf(\"%s %d\\n\", s.name, s.score);\n    return 0;\n}",
+    "kind": "run",
+    "output": "Ana 85\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "09-q",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    struct Student { char name[16]; int score; };\n    struct Student a = {\"Ana\", 80};\n    struct Student b = a;\n    b.score = 90;\n    printf(\"%d %d\\n\", a.score, b.score);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "80 90\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "09-a",
+    "source": "#include <stdio.h>\n#include <string.h>\n#include <stdbool.h>\nint main(void) {\n    struct Student { char name[16]; int score; };\n    struct Student a = {\"Ana\", 80};\n    struct Student b = a;\n    b.score = 90;\n    printf(\"%d %d\\n\", a.score, b.score);\n    return 0;\n}\n",
+    "kind": "run",
+    "output": "80 90\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "10-1",
+    "source": "#include <stdio.h>\nint main(void) {\n    FILE *fp = fopen(\"scores.txt\", \"w\");\n    if (fp == NULL) { printf(\"open failed\\n\"); return 1; }\n    if (fprintf(fp, \"%d\\n\", 80) < 0) { fclose(fp); return 1; }\n    if (fclose(fp) != 0) return 1;\n    printf(\"saved\\n\");\n    return 0;\n}",
+    "kind": "run",
+    "output": "saved\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {
+      "scores.txt": "80\n"
+    }
+  },
+  {
+    "key": "10-2",
+    "source": "#include <stdio.h>\nint main(void) {\n    FILE *fp = fopen(\"scores.txt\", \"r\");\n    if (fp == NULL) return 1;\n    int score = 0;\n    int read = fscanf(fp, \"%d\", &score);\n    int closed = fclose(fp);\n    if (read != 1 || closed != 0) return 1;\n    printf(\"%d\\n\", score);\n    return 0;\n}",
+    "kind": "run",
+    "output": "80\n",
+    "stdin": "",
+    "runs": null,
+    "files": {
+      "scores.txt": "80\n"
+    },
+    "expectedFiles": {}
+  },
+  {
+    "key": "10-3",
+    "source": "#include <stdio.h>\nint main(void) {\n    FILE *fp = fopen(\"scores.txt\", \"a\");\n    if (fp == NULL) return 1;\n    if (fprintf(fp, \"%d\\n\", 90) < 0) { fclose(fp); return 1; }\n    if (fclose(fp) != 0) return 1;\n    printf(\"appended\\n\");\n    return 0;\n}",
+    "kind": "run",
+    "output": "appended\n",
+    "stdin": "",
+    "runs": null,
+    "files": {
+      "scores.txt": "80\n"
+    },
+    "expectedFiles": {
+      "scores.txt": "80\n90\n"
+    }
+  },
+  {
+    "key": "10-4",
+    "source": "#include <stdio.h>\nint main(void) {\n    FILE *fp = fopen(\"not_created_dir/scores.txt\", \"r\");\n    if (fp == NULL) { printf(\"open failed\\n\"); return 1; }\n    if (fclose(fp) != 0) return 1;\n    return 0;\n}",
+    "kind": "run",
+    "output": "open failed\n",
+    "stdin": "",
+    "runs": [
+      {
+        "stdin": "",
+        "output": "open failed\n",
+        "exitCode": 1
+      }
+    ],
+    "files": {},
+    "expectedFiles": {}
+  },
+  {
+    "key": "10-q",
+    "source": "#include <stdio.h>\nint main(void) {\n    FILE *fp = fopen(\"scores.txt\", \"w\");\n    if (fp == NULL) return 1;\n    if (fprintf(fp, \"%d\\n\", 90) < 0) { fclose(fp); return 1; }\n    if (fclose(fp) != 0) return 1;\n    printf(\"written\\n\");\n    return 0;\n}",
+    "kind": "run",
+    "output": "written\n",
+    "stdin": "",
+    "runs": null,
+    "files": {
+      "scores.txt": "80\n"
+    },
+    "expectedFiles": {
+      "scores.txt": "90\n"
+    }
+  },
+  {
+    "key": "10-a",
+    "source": "#include <stdio.h>\nint main(void) {\n    FILE *fp = fopen(\"scores.txt\", \"a\");\n    if (fp == NULL) return 1;\n    if (fprintf(fp, \"%d\\n\", 90) < 0) { fclose(fp); return 1; }\n    if (fclose(fp) != 0) return 1;\n    printf(\"appended\\n\");\n    return 0;\n}",
+    "kind": "run",
+    "output": "appended\n",
+    "stdin": "",
+    "runs": null,
+    "files": {
+      "scores.txt": "80\n"
+    },
+    "expectedFiles": {
+      "scores.txt": "80\n90\n"
+    }
+  },
+  {
+    "key": "11-1",
+    "source": "#include <stdio.h>\nstruct Student { char name[16]; int score; };\nint passed(int score) { return score >= 60; }\nint main(void) {\n    struct Student students[2] = {{\"Ana\", 80}, {\"Ben\", 59}};\n    FILE *fp = fopen(\"report.txt\", \"w\");\n    if (fp == NULL) return 1;\n    for (int i = 0; i < 2; i++) {\n        int ok = passed(students[i].score);\n        printf(\"%s %d\\n\", students[i].name, ok);\n        if (fprintf(fp, \"%s %d\\n\", students[i].name, ok) < 0) {\n            fclose(fp); return 1;\n        }\n    }\n    if (fclose(fp) != 0) return 1;\n    return 0;\n}",
+    "kind": "run",
+    "output": "Ana 1\nBen 0\n",
+    "stdin": "",
+    "runs": null,
+    "files": {},
+    "expectedFiles": {
+      "report.txt": "Ana 1\nBen 0\n"
+    }
+  }
+]

@@ -1,123 +1,24 @@
-# Rust_1hour：一小时学习 Rust
+# BiliBili_1hour：编程与计算机基础视频工程
 
-面向已了解 C/C++ 基础语法的初学者和大学生，用学生姓名、成绩等例子循序渐进讲解 Rust。工程采用 **Remotion 代码动画 + 中文讲稿 + 独立字幕 + 可选阿里云百炼男声**，包含 14 个主题、14 道原创课堂练习，以及正常、编译错误、运行时 panic 和修正示例。
+七套可独立编辑、验证和重制的课程工程。首页按课程分为七个文件夹，Rust 两讲和旧版计组分别保留。
 
-这是可编辑的制作工程，采用 [MIT 许可证](LICENSE)，允许修改、再分发和用于其他语言的课程制作。仓库包含源码和教学内容。阿里云接口代码使用通用参数，所有调用都需要使用者自己的账号。
-
-## 两部课程工程
-
-| 工程 | 内容 | 入口 |
-|---|---|---|
-| 第一部：Rust 基础 | 14 个主题，变量、所有权、特征、生命周期等 | 当前目录，下方说明 |
-| 第二部：Rust 进阶基础 | 9 个主题，类型转换、模块、错误处理、测试、迭代器、智能指针、多线程、宏、Clippy | [advanced/ 制作与改造说明](advanced/README.md) |
-
-第二部原始成片为 **57 分 57 秒**，采用正规章节标题，运行结果放在左侧代码下方并使用 32px 字号，句号之间额外停顿 **0.1 秒**、逗号不变。第二部工程独立安装和运行，输出在 `advanced/out/`。公开仓库不附账号信息、配音、语音服务返回记录或成片；两部均可先生成不调用语音服务的画面编辑预览。
-
-以下命令和 14 主题内容介绍适用于第一部；第二部请进入 `advanced/` 按其说明操作。两部共用本文后面的百炼开通与免费额度教程。
-
-## 课程内容
-
-| 中文 | 英文 |
+| 文件夹 | 内容 |
 |---|---|
-| 变量 | variables |
-| 基本数据类型 | primitive_types |
-| 函数 | functions |
-| 条件判断 | if |
-| 移动语义与所有权 | move_semantics |
-| 结构体 | structs |
-| 枚举 | enums |
-| Option 可选值类型 | options |
-| 动态数组 | vecs |
-| 字符串 | strings |
-| 哈希表 | hashmaps |
-| 泛型 | generics |
-| 特征 | traits |
-| 生命周期 | lifetimes |
+| [1小时数据结构](1小时数据结构/README.md) | 完整讲稿、示例或教学模型、Remotion 画面与制作脚本 |
+| [1小时计算机组成原理](1小时计算机组成原理/README.md) | 完整讲稿、示例或教学模型、Remotion 画面与制作脚本 |
+| [1小时C语言](1小时C语言/README.md) | 完整讲稿、示例或教学模型、Remotion 画面与制作脚本 |
+| [1小时C++](1小时C++/README.md) | 完整讲稿、示例或教学模型、Remotion 画面与制作脚本 |
+| [Rust第一讲](Rust第一讲/README.md) | Rust 基础十四个主题 |
+| [Rust第二讲](Rust第二讲/README.md) | Rust 进阶基础九个主题 |
+| [旧版计算机组成原理](旧版计算机组成原理/README.md) | 原两小时互动课程与配音工程 |
 
-导学与综合回顾另设章节。默认画面为 1920×1080、30fps，代码字号 34px，每屏最多 16 个可见代码行。示例采用 Rust 2024 Edition，原始课程示例在 rustc 1.98.1 上验证；本仓库修改后应重新运行验证。
+各目录独立安装依赖；新四部工程先运行 `npm run preview` 再打开 Studio。预览不调用语音服务，正式配音和导出流程见各目录 README。源码沿用[仓库许可证](LICENSE)，可据此修改或扩展其他语言。
 
-## 先看画面：不需要语音账号
+仓库不包含原作者 API Key、Workspace ID、私密配置、配音缓存、语音服务返回记录、模型权重、node_modules 或成片视频。`out/`、`build/`、音频和画面缓存均被忽略。修改语音时使用自己的账号；免费额度和模型权限需要自行确认。
 
-本工程的制作和画面检查以 Windows 为主。安装 Node.js 24、Python 3.11+、FFmpeg（含 ffprobe），并准备 Microsoft YaHei 和 Cascadia Code 字体。验证 Rust 示例还需要安装 Rust。其他系统可以运行内容处理脚本，但字体路径、字体名称和例题执行方式需要适配。
+## 阿里云百炼开通与免费额度
 
-```powershell
-git clone https://github.com/uinaqx/Rust_1hour.git
-cd Rust_1hour
-npm ci
-python -m pip install -r requirements.txt
-npm run preview
-npm run studio
-```
-
-`npm run preview` 会从讲稿生成课程和**无声的画面预览时间轴**，不读取账号、不调用语音服务、不产生语音费用。Studio 中可以查看代码高亮、提示、图示和估计字幕。这个时间轴只用于编辑画面，不能当作正式成片的配音同步时间轴。
-
-```powershell
-npm run typecheck
-npm run verify
-python scripts/audio.py --dry-run
-```
-
-最后一条仅显示计划生成的片段数和文字量，没有网络请求。
-
-## 生成自己的有声视频
-
-先完成下面的百炼开通、额度检查与费用保护教程。不要直接运行全课程语音生成来测试账号。
-
-脚本只读取进程环境变量。`.env.example` 是变量清单，**不会自动加载**。在自己的终端设置自己的信息，不要写入源码或提交 Git。
-
-```powershell
-$env:DASHSCOPE_API_KEY = '<自己的百炼 API Key>'
-$env:SFM_WORKSPACE_ID = '<同一业务空间的 Workspace ID>'
-$env:TTS_MODEL = 'qwen-audio-3.0-tts-plus'
-$env:TTS_VOICE = 'longanlufeng'
-
-# 确认具体模型的额度、有效期及费用保护后，先用一小段测试
-python scripts/audio.py --test --confirm-quota
-
-# 测试成功且额度/费用足够，再生成全课程
-python scripts/audio.py --workers 2 --confirm-quota
-python scripts/fit_duration.py
-python scripts/timeline.py
-npx remotion browser ensure
-node scripts/stills.mjs --qa
-python scripts/qa_sheets.py
-node scripts/stills.mjs
-python scripts/render.py --preview
-python scripts/render.py --workers 2
-python scripts/check.py
-```
-
-`--confirm-quota` 是使用者已检查费用的声明，**脚本不会查询额度，也不保证免费**。`longanlufeng` 是系统音色名称，不是原作者的个人音色。默认模型为 plus；flash 是可配置候选，本项目未实测 flash 的音色和字级时间戳兼容性。更换模型时应先小段验证。
-
-产物位于 `out/`：MP4、SRT、章节目录、讲稿、示例与验证报告。配音放在 `public/audio/`，原始输出保留在 `public/audio_original/`；这些目录和生成记录均被 Git 忽略。再次运行会按内容缓存并分章续作。新增或修改旁白可能产生新的调用费用。
-
-`fit_duration.py` 只在整课不满足 58～63 分钟目标时做温和的语速调整，保留原文和音高；无法温和调整时会停止，需要修改文案或目标参数。字幕使用服务的字级时间戳，并按语速比例换算，加上相同的 400ms 场景前导。换用没有字级时间戳的服务，需要实现自己的对齐步骤。
-
-## 工程结构与二次改造
-
-| 文件 | 用途 |
-|---|---|
-| `project.json` | 课程标题、封面、语言标签、章节中文与英文名称 |
-| `content/审核通过文案.md` | 完整旁白、分镜、代码、停顿、课堂练习 |
-| `content/approved_examples.json` | 带完整上下文的独立 Rust 程序、预期输出或错误编号 |
-| `scripts/build_course.py` | 解析讲稿，关联片段、画面、代码与旁白 |
-| `scripts/preview.py` | 无需语音服务的估计画面时间轴 |
-| `scripts/audio.py` | 可选的百炼语音合成适配器 |
-| `scripts/timeline.py` | 根据实测配音生成字幕、章节和动画事件 |
-| `src/video.tsx` | 布局、代码高亮、图示与字幕 |
-| `scripts/stills.mjs` | Remotion 动画关键帧渲染 |
-| `scripts/render.py` | FFmpeg 分章编码、连续音频及章节合成 |
-| `scripts/verify_examples.py` | Rust 正常、编译错误、panic 示例验证 |
-| `scripts/check.py` | 当前 Rust 一小时课的成片检查 |
-| `docs/扩展到其他语言.md` | 修改课程、编译验证、图示和语音服务的方法 |
-
-生成文件 `public/course.json` 和 `public/timeline.json` 不提交到仓库，首次预览时自动生成。`build/`、`out/` 和依赖也不提交。
-
-本工程提供可复用的制作流程；当前讲稿解析、练习数量检查、语法着色和部分图示仍为这门 Rust 课设计。替换为 Python、Java 或 C++ 时，请按照扩展说明同步修改内容、验证器和显示规则，不要只改封面。正式渲染不接受无声预览时间轴。
-
-## 阿里云语音申请免费额度教程
-
-以下入口和规则以控制台及官方文档为准。**开通服务不等于所有语音调用免费。**
+以下教程供所有课程共用。账号开通不保证后续调用免费。
 
 ### 一、开通账号与百炼服务
 
@@ -180,10 +81,11 @@ python scripts/check.py
 
 ```powershell
 git add .
-npm run audit
+python audit_public.py
 git diff --cached --stat
 ```
 
 审计脚本检查待跟踪文件中的凭证格式、Workspace ID、个人路径、音视频及生成目录，不显示匹配到的秘密内容。不要提交包含自己的配音与服务返回数据的压缩包。请在改动代码或文案后重新验证示例与画面。
 
-Rust 内容参考 [Rust 官方教材](https://doc.rust-lang.org/book/)，重点参照[引用与借用](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html)及[生命周期](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html)。Remotion 和语音服务遵循其各自许可与服务条款。
+Rust 部分内容参考 [Rust 官方教材](https://doc.rust-lang.org/book/)，重点参照[引用与借用](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html)及[生命周期](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html)。Remotion 和语音服务遵循其各自许可与服务条款。
+

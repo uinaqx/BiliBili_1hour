@@ -1,0 +1,15 @@
+production/audio_original/
+production/audio/
+production/build/
+production/stills/
+production/voiced.html
+production/timeline.json
+output/*.mp4
+output/*.wav
+output/*.mp3
+node_modules/
+__pycache__/
+*.pyc
+.env
+.env.*
+*credentials*
