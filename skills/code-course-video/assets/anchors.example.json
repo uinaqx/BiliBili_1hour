@@ -1,0 +1,12 @@
+{
+  "scenes": {
+    "arrays-demo": {
+      "audioMeta": "words.example.json",
+      "initialCodeLines": [1],
+      "cues": [
+        {"phrase":"先保存两个数","lines":[1]},
+        {"phrase":"再输出第一个数","lines":[2]}
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "timeBase": "final-audio",
+  "timeUnit": "seconds",
+  "words": [
+    {"text":"先保存","start":0.0,"end":0.8},
+    {"text":"两个数","start":0.8,"end":1.6},
+    {"text":"再输出","start":2.0,"end":2.7},
+    {"text":"第一个数","start":2.7,"end":3.6}
+  ]
+}

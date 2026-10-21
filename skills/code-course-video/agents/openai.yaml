@@ -1,0 +1,4 @@
+interface:
+  display_name: "编程与计算机课程视频"
+  short_description: "制作与修复一小时课程视频，处理讲稿、语音同步、持续高亮、字幕和工程交付"
+  default_prompt: "使用 $code-course-video 制作或修复编程课程视频，沿用指定视觉风格并验证语音与画面同步。"

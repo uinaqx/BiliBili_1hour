@@ -1,0 +1,20 @@
+{
+  "title": "时间轴格式示例（不是完整课程）",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "totalFrames": 360,
+  "includeCaptions": false,
+  "scenes": [{
+    "key": "arrays-demo",
+    "startFrame": 0,
+    "durationFrames": 360,
+    "leadFrames": 12,
+    "code": "values = [10, 20]\nprint(values[0])",
+    "initialCodeLines": [1],
+    "codeCues": [{"beginFrame":72,"endFrame":120,"lines":[2],"cue":"再输出第一个数"}],
+    "captions": [{"start":0.0,"end":1.6,"text":"先保存两个数。"},{"start":2.0,"end":3.6,"text":"再输出第一个数。"}],
+    "noSwitchReason": "格式示例，仅有保存与读取两步。"
+  }],
+  "chapters": [{"key":"01","title":"数组示例","startFrame":0}]
+}
