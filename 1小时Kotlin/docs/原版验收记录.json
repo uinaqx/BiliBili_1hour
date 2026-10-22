@@ -1,0 +1,11 @@
+{
+  "allPassed": true,
+  "scope": "encoded display states plus structural integrity; does not claim manual listening to every minute",
+  "timelineSha256": "d2130e06624aeaa38ed61e854bbef6e06ba8de3bfe7a8046be10a7bb74a145e0",
+  "courseSha256": "611bb9f9ead92f2b0c469e90de68168462f48dbcc8d91ae1804b58fc22c44b4d",
+  "scenes": 66,
+  "renderedStatesChecked": 294,
+  "encodedStatesChecked": 294,
+  "duration": 3509.9666666666667,
+  "videoSha256": "d5edf830babf0628314f01201cbf3931f2ee38bc5cb4f9c252ee385d9c1d259e"
+}

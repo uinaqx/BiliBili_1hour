@@ -1,0 +1,24 @@
+node_modules/
+build/
+public/stills/
+public/audio/
+public/audio_original/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+*.local
+
+# Regenerable synchronized video frames
+/public/sync-stills/
+
+out/
+public/course.json
+public/timeline.json
+*.mp4
+*.mp3
+*.wav
+*.zip
+*.log
+*.exe
