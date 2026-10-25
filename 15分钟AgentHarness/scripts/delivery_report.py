@@ -1,0 +1,56 @@
+"""Bind a human-readable review record to the actual final artifact."""
+import json,pathlib,shutil
+from check import digest
+ROOT=pathlib.Path(__file__).resolve().parents[1];BUILD=ROOT/'build';DEL=ROOT/'out'
+def load(p):return json.loads(p.read_text(encoding='utf8'))
+def main():
+    r=load(BUILD/'final-validation.json');a=load(BUILD/'audio-placement.json');p=load(BUILD/'preview-validation.json');speech=load(BUILD/'speech-spotcheck.json');v=load(BUILD/'visual-verification.json');d=load(BUILD/'demo-verification.json');speed=load(BUILD/'original-speed-check.json');video=DEL/'15分钟讲清AgentHarness_底层原理_正常语速版.mp4'
+    assert all(x['allPassed'] for x in [r,a,p,v,d])
+    assert r['videoSha256']==a['videoSha256']==speech['videoSha256']==digest(video)
+    assert r['timelineSha256']==a['timelineSha256']==p['timelineSha256']==digest(ROOT/'public/timeline.json')
+    assert speed['allPassed'] and speed['timelineSha256']==r['timelineSha256'] and speed['wholeCourseTempo']==1.0
+    whole,ms=divmod(round(r['duration']*1000),1000);minutes,seconds=divmod(whole,60);duration=f'00:{minutes:02}:{seconds:02}.{ms:03}'
+    text=f'''# Agent Harness 视频验收记录
+
+正常语速版成片 **{duration}**，10章、20页、39段旁白。面向了解大模型聊天、初次接触智能体运行时的学生，以购物车总价修复贯穿职责、循环、工具、上下文、权限、恢复、调度、追踪和最小控制流。
+
+本次恢复原始1.0倍速，取消按目标时长自动调速。直接复用39段原始配音，不调用在线语音服务；完整讲稿、图示设计及持续状态机制保持不变，重新按正常语速PCM对齐全部操作与章节。
+
+## 画面与声音
+
+1920×1080，H.264/AAC，中文系统男声，无底部字幕、无背景音乐。19类视图、76个连续运动区间，共{r['continuousMotionSeconds']:.2f}秒连续运动；其余时间保留当前图示状态。连续动画逐帧落在30fps时间网格，静止段采用VFR长停帧。不会把静止段称为每秒都更新画面的恒定30fps。
+
+每个动画操作由人工选定的旁白短语触发，按最终PCM对齐。句号停顿额外0.1秒，逗号未改；10道问题各保留4秒思考。动画到达节点时立即确认，状态持续至后续操作或下一段实际声学起点，句尾与思考期间不闪灭。
+
+## 检查证据
+
+- **原始语速**：39段语音均与原始1.0倍速MP3独立解码后的PCM逐采样一致，最终20页PCM可由这些原样语音加既有停顿精确重建。无加速、减速或重新配音。以后改变语速须先说明并征得用户同意。
+- **内容与案例**：核对8组官方一手资料，20页均有来源对照；图片、讲稿与教学例子原创组织。固定模型替身与真实文件读写/测试明确区分。
+- **实际运行**：{d['tests']}项本地运行时测试通过；第一版补丁实际输出`FAIL expected=30 actual=10`，第二版实际输出`PASS expected=30 actual=30`。
+- **图示与状态**：10组有向拓扑、76个区间的实际四分位画面变化、38个持续状态检查通过；另核对补丁不提前出现、并行读取B在合流前确认、外部操作未核对前不伪造完成记录。
+- **试片**：严格90秒、2700帧；比较{p['actualSamples']}个实际编码帧，包含调用序列、压缩、检查点、4秒倒计时、案例和代码状态。
+- **成片画面**：全部{r['plannedEventsPresent']}个计划显示事件均出现在最终MP4时间戳中。按实际显示帧取图，比较{r['encodedFramesCompared']}个样本，覆盖每个旁白段、换页、操作前后、保持、全部思考题及答案起点。76个运动区间均另查最终编码后的四分位画面确实变化。
+- **成片音轨**：39段旁白的开头和末段共{a['waveformSamples']}个实际AAC波形位置匹配通过，最大偏差{a['maxSecondsDeviation']:.6f}秒，最低相关系数{a['minimumCorrelation']:.4f}。这证明合成位置，不声称独立验证每个词的声学时间。
+- **语音抽样**：实际AAC前段、中段、末段各18秒，共54秒进行本地ASR抽查，结果与参考保存在speech-spotcheck.json；技术术语可能误识别。未宣称人工逐分钟听完整片。
+- **格式与完整性**：音视频完整解码通过，10个内嵌章节及原起点一致，无字幕轨；实际底部像素抽查无烧录字幕。图示区与计划图像最大平均绝对差{r['maxDiagramMAE']:.3f}，侧栏{r['maxNotesMAE']:.3f}，属于有损编码后的RGB像素差。
+
+内部试片与各章关键画面已人工抽看。源图约束、波形位置、局部识别及解码是不同证据；这些检查不等于人工听看每一分钟，也不构成特定厂商的性能评测。
+
+## 配套和复现
+
+交付完整讲稿、原始章节目录、逐页目录、机制速查、图示与参考资料、真实案例记录以及可编辑工程。工程保留最终音频和清理过的可复用语音缓存，既有版本可离线重渲染。真实账号值、API Key、Workspace ID、私有加载器和原始服务请求标识均不入包；ZIP另做模式扫描、路径与完整性检查。
+
+## 版本绑定
+
+- 视频SHA-256：`{r['videoSha256']}`
+- 时间轴SHA-256：`{r['timelineSha256']}`
+- 课程SHA-256：`{r['courseSha256']}`
+- 绘图SHA-256：`{r['drawingSourceSha256']}`
+- 拓扑SHA-256：`{r['topologySourceSha256']}`
+
+修改任何对应输入后，旧报告必须视为过期并重新检查。
+'''
+    (ROOT/'docs/验收记录.md').write_text(text,encoding='utf8');shutil.copy2(ROOT/'docs/验收记录.md',DEL/'验收记录.md');out=DEL/'检查记录';out.mkdir(exist_ok=True)
+    for name in ['final-validation.json','visual-verification.json','demo-verification.json','audio-placement.json','speech-spotcheck.json','preview-validation.json','original-speed-check.json']:shutil.copy2(BUILD/name,out/name)
+    print('DELIVERY_REPORT_READY',flush=True)
+if __name__=='__main__':main()

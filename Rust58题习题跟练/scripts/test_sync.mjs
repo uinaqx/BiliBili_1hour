@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import assert from 'node:assert/strict';
+import ts from 'typescript';
+const source=fs.readFileSync(new URL('../src/sync.ts',import.meta.url),'utf8');
+const js=ts.transpileModule(source,{compilerOptions:{target:ts.ScriptTarget.ES2020,module:ts.ModuleKind.ES2020}}).outputText;
+const {codeLinesAt}=await import('data:text/javascript;base64,'+Buffer.from(js).toString('base64'));
+const cues=[{beginFrame:10,endFrame:20,lines:[3],cue:'first'},{beginFrame:40,endFrame:50,lines:[2,4],cue:'second'},{beginFrame:70,endFrame:80,lines:[1],cue:'back'}];
+for(const [frame,want] of [[0,[2]],[9,[2]],[10,[3]],[20,[3]],[39,[3]],[40,[2,4]],[60,[2,4]],[70,[1]],[100,[1]]])assert.deepEqual(codeLinesAt(cues,frame,[2]),want);
+assert.deepEqual(codeLinesAt([],0,[5]),[5]);
+assert.deepEqual(codeLinesAt([],100,[5]),[5]);
+console.log('SYNC_IMPLEMENTATION_TESTS_PASSED 11');

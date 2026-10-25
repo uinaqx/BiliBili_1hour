@@ -1,0 +1,31 @@
+{
+  "name": "rust-exercises-follow-along",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "studio": "remotion studio src/index.tsx",
+    "verify": "python scripts/verify_exercises.py",
+    "audio": "python scripts/voice.py",
+    "align": "python scripts/prepare_audio.py",
+    "timeline": "python scripts/timeline.py",
+    "stills": "node scripts/stills.mjs",
+    "render": "python scripts/render.py",
+    "check": "python scripts/check.py",
+    "course": "python scripts/build_course.py",
+    "package": "python scripts/package.py"
+  },
+  "dependencies": {
+    "@remotion/bundler": "4.0.535",
+    "@remotion/cli": "4.0.535",
+    "@remotion/renderer": "4.0.535",
+    "remotion": "4.0.535",
+    "react": "19.1.0",
+    "react-dom": "19.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0"
+  }
+}

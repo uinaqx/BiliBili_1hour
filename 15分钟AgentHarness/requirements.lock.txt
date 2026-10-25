@@ -1,0 +1,7 @@
+# Python 3.11 / Windows; FFmpeg and system fonts are separate prerequisites.
+requests==2.32.5
+numpy==2.3.4
+scipy==1.16.3
+Pillow==12.0.0
+openai-whisper==20250625
+torch==2.11.0
