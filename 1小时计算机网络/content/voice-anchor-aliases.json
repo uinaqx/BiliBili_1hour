@@ -1,0 +1,6 @@
+[
+  {"scene":"net-05-05","part":0,"authoredPhrase":"路由器把源地址改成公网地址202.1.1.1","spokenPhrase":"路由器把源地址改成公网地址","reason":"百炼把IP地址转换为中文读法；使用数字之前的同一句唯一短语定位，保留原动画与讲稿。"},
+  {"scene":"net-06-02","part":1,"authoredPhrase":"所以走192.168.1.64斜杠27","spokenPhrase":"所以走一九二点一六八点一点六四斜杠二十七","reason":"百炼词时间返回IP和前缀长度的实际中文读法；逐项人工对应。"},
+  {"scene":"net-08-03","part":0,"authoredPhrase":"窗口大小是 4000 字节","spokenPhrase":"窗口大小是四千字节","reason":"百炼词时间把4000展开为四千；逐项人工对应。"},
+  {"scene":"net-09-02","part":0,"authoredPhrase":"慢启动阶段从 1 个 MSS 开始","spokenPhrase":"慢启动阶段从一个M S S开始","reason":"百炼词时间把1个展开为一个，MSS返回为空格分隔字母；逐项人工对应。"}
+]

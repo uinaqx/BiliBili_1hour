@@ -1,0 +1,36 @@
+{
+  "originalProject": "计算机网络一小时制作工程",
+  "originalCourseSha256": "dd381c2aa9c4f0287d060c7679d80de7823c2029c2dc7a71f632811cec67e537",
+  "originalVideoSha256": "21c8a6b4897d7fbd0b61aef8bf97ffc7670d3e5eb54585605fbde4cb1e972621",
+  "chapterContentSha256": "3d3de2eca04226a0c666b53c7ae0eeaf913844c662e779fb91dadacc77beae33",
+  "preservedFiles": {
+    "scripts/draw.py": "ae4a4a8964c85655aece8284b7d06c74a8cb833469cde6e9b87c31081706b8d6",
+    "scripts/diagrams.py": "a1cc921556f334f4cdb171ca5f8affcb08558b6c22dec1de8ae6dc6ce2dcac59",
+    "scripts/examples.py": "6a1a03e1e3f4572e47fa2272b4eb05e198a139283529896318389168e9b35d40",
+    "content/chapters_a.py": "ec4ba55862ec65aaf3a92af5ece9977a3c0de1362179c4e6e687193365bf7ba3",
+    "content/chapters_b.py": "3c84f5a6b01204ef7283bea7b6a34aabcda14dde24d9c034fe68c6cdefb5ee79",
+    "content/chapters_c.py": "d22c9a515f7e6b3d24078a82e676fd619b5873e2af68e261977b67545c07b5ec",
+    "content/chapters_d.py": "8c73111e2837535547ef29e0902390731085ed6c99fbeac1168126cb89ed3194",
+    "content/完整讲稿.md": "0945ae5e3bc14cbd6c6e36172591f9c9a621e357a552419f54a907e9a082439e"
+  },
+  "requestedVoice": {
+    "model": "qwen-audio-3.1-tts-plus",
+    "voice": "xunanchuan_v3.1",
+    "nativeSynthesisRate": 1.05,
+    "postProcessingTempo": 1.0,
+    "sentencePauseSeconds": 0.1,
+    "commaPauseUnchanged": true
+  },
+  "originalEditionUntouched": true,
+  "publicSourceFiles": {
+    "scripts/draw.py": "ae4a4a8964c85655aece8284b7d06c74a8cb833469cde6e9b87c31081706b8d6",
+    "scripts/diagrams.py": "a1cc921556f334f4cdb171ca5f8affcb08558b6c22dec1de8ae6dc6ce2dcac59",
+    "scripts/examples.py": "6a1a03e1e3f4572e47fa2272b4eb05e198a139283529896318389168e9b35d40",
+    "content/chapters_a.py": "ec4ba55862ec65aaf3a92af5ece9977a3c0de1362179c4e6e687193365bf7ba3",
+    "content/chapters_b.py": "3c84f5a6b01204ef7283bea7b6a34aabcda14dde24d9c034fe68c6cdefb5ee79",
+    "content/chapters_c.py": "d22c9a515f7e6b3d24078a82e676fd619b5873e2af68e261977b67545c07b5ec",
+    "content/chapters_d.py": "8c73111e2837535547ef29e0902390731085ed6c99fbeac1168126cb89ed3194",
+    "content/完整讲稿.md": "a59630ef9582c04b57958056ba7526e3f46f389dca1bb05334955dcae0eaa84e"
+  },
+  "publicSourceHashPolicy": "Public Git sources normalize CRLF to LF; original local hashes are retained separately for reference."
+}
