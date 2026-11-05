@@ -48,6 +48,7 @@ description: 制作或修复编程与计算机课程视频，使用代码或图�
 - [assets/persistent-sync.ts](assets/persistent-sync.ts)：持续高亮、分幕隔离与图示状态函数；测试运行渲染所用的同一实现。
 - [assets/CourseFrame.tsx](assets/CourseFrame.tsx)：深色画面骨架，左代码/图示、左下输出、右注解、独立字幕；无字幕开关不导致重排。
 - [assets/course.example.json](assets/course.example.json)、[assets/anchors.example.json](assets/anchors.example.json)、[assets/words.example.json](assets/words.example.json)：最小格式示例。
+- `python scripts/subtitle_workflow.py build --project PROJECT --video SUBTITLE_FREE.mp4 --out OUTPUT`：从最终配音生成版本绑定的字幕；`burn --plan OUTPUT/subtitle-plan.json --output NEW.mp4` 嵌入字幕。适配范围和验收见[同步规范](references/synchronization.md#字幕构建与烧录入口)。
 - `python scripts/timeline_tools.py validate COURSE.json`：检查时间、行号、初始高亮、分幕、字幕与练习停顿；覆盖不足只报告，不编造语义。
 - `python scripts/timeline_tools.py resolve COURSE.json ANCHORS.json --root PROJECT --output RESOLVED.json`：解析已人工选择的短语；重复短语明确出现次数，失败不写部分结果。
 - `python scripts/media_qa.py extract VIDEO.mp4 --times 12.5,18.2 --output FRAMES`：提取 VFR 中该时刻正在显示的帧，防止误取未来画面。
