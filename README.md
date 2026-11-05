@@ -34,13 +34,13 @@
 
 ## 课程视频制作 Skill
 
-[code-course-video](skills/code-course-video/SKILL.md) 汇总了本系列课程的制作流程与修复经验，可用于新课程制作、语音与画面同步修复、无字幕导出、审查及工程交付。
+[code-course-video](00_skills/code-course-video/SKILL.md) 汇总了本系列课程的制作流程与修复经验，可用于新课程制作、语音与画面同步修复、无字幕导出、审查及工程交付。
 
 - `references/`：教学设计、同步规范、渲染验收和制作总结与反思。
 - `assets/`：持续高亮逻辑、Remotion 画面组件及时间轴示例。
 - `scripts/`：时间轴检查、成片抽帧与媒体验证、安全扫描和行为测试。
 
-使用时将整个 `skills/code-course-video/` 目录复制到本机 `~/.codex/skills/code-course-video/`，在新会话中使用 `$code-course-video` 并说明课程内容、受众、时长、字幕形式和参考风格。其他 agent 也可从 `SKILL.md` 开始读取，按阶段使用附带文档与工具。该目录提供方法和模板，制作新课程仍需编写完整内容、配置依赖并验证最终成片。
+使用时将整个 `00_skills/code-course-video/` 目录复制到本机 `~/.codex/skills/code-course-video/`，在新会话中使用 `$code-course-video` 并说明课程内容、受众、时长、字幕形式和参考风格。其他 agent 也可从 `SKILL.md` 开始读取，按阶段使用附带文档与工具。该目录提供方法和模板，制作新课程仍需编写完整内容、配置依赖并验证最终成片。
 
 技能本身不含 API Key、Workspace ID、私人音色或配音缓存。需要重新配音时，使用自己的账号和未提交的本地配置；开通与额度说明见下文。
 
