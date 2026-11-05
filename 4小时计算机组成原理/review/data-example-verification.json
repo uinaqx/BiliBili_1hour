@@ -1,0 +1,1507 @@
+{
+  "allPassed": true,
+  "checks": 289,
+  "scope": "independent numeric representations, stated IEEE binary32/binary64 models, exhaustive finite Hamming and CRC codewords; does not execute legacy C source or certify all compiler modes",
+  "moduleSha256": {
+    "module_02.json": "62a1f4fe2e95ce04044f57b5d5492f3ea2a74324bec46833af02d6ec851d1c7f",
+    "module_03.json": "c66ea943b4f66a7cb15d193697e440f461fb2890c43fa790f33adda0fa36ff9c"
+  },
+  "crcModels": [
+    {
+      "generator": "1011",
+      "dataBits": 4,
+      "parityBits": 3,
+      "length": 7,
+      "codewordsEnumerated": 16,
+      "minimumDistance": 3,
+      "singleAndDoubleDisjoint": false
+    },
+    {
+      "generator": "11101",
+      "dataBits": 3,
+      "parityBits": 4,
+      "length": 7,
+      "codewordsEnumerated": 8,
+      "minimumDistance": 4,
+      "singleAndDoubleDisjoint": true
+    },
+    {
+      "generator": "1101111",
+      "dataBits": 16,
+      "parityBits": 6,
+      "length": 22,
+      "codewordsEnumerated": 65536,
+      "minimumDistance": 4,
+      "singleAndDoubleDisjoint": true
+    }
+  ],
+  "items": [
+    {
+      "name": "ASCII_0",
+      "actual": 48,
+      "expected": 48
+    },
+    {
+      "name": "ASCII_5",
+      "actual": 53,
+      "expected": 53
+    },
+    {
+      "name": "GB2312_middle_example",
+      "actual": [
+        214,
+        208
+      ],
+      "expected": [
+        214,
+        208
+      ]
+    },
+    {
+      "name": "GB2312_region_to_internal",
+      "actual": [
+        214,
+        208
+      ],
+      "expected": [
+        214,
+        208
+      ]
+    },
+    {
+      "name": "32x32_monochrome_glyph_bytes",
+      "actual": 128,
+      "expected": 128
+    },
+    {
+      "name": "hex_F96_decimal",
+      "actual": 3990,
+      "expected": 3990
+    },
+    {
+      "name": "binary10011100_integer_oct",
+      "actual": "0o234",
+      "expected": "0o234"
+    },
+    {
+      "name": "2010_binary",
+      "actual": "11111011010",
+      "expected": "11111011010"
+    },
+    {
+      "name": "17_over_128",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "0.6_first8_binary",
+      "actual": "10011001",
+      "expected": "10011001"
+    },
+    {
+      "name": "1TB_in_GiB_round1",
+      "actual": 931.3,
+      "expected": 931.3
+    },
+    {
+      "name": "2.5TiB_byte_address_bits",
+      "actual": 42,
+      "expected": 42
+    },
+    {
+      "name": "8bit_twos_minus3",
+      "actual": 253,
+      "expected": 253
+    },
+    {
+      "name": "8bit_signed_values",
+      "actual": [
+        127,
+        -128,
+        -127,
+        1
+      ],
+      "expected": [
+        127,
+        -128,
+        -127,
+        1
+      ]
+    },
+    {
+      "name": "double_sign_add_fixed",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "double_sign_sub_fixed",
+      "actual": 16,
+      "expected": 16
+    },
+    {
+      "name": "sign_extended_sum",
+      "actual": 21855,
+      "expected": 21855
+    },
+    {
+      "name": "biased_plus21",
+      "actual": "110101",
+      "expected": "110101"
+    },
+    {
+      "name": "biased_minus21",
+      "actual": "001011",
+      "expected": "001011"
+    },
+    {
+      "name": "BCD8_plus7_corrected",
+      "actual": 21,
+      "expected": 21
+    },
+    {
+      "name": "float3.3_bits",
+      "actual": "40533333",
+      "expected": "40533333"
+    },
+    {
+      "name": "float1.1_bits",
+      "actual": "3F8CCCCD",
+      "expected": "3F8CCCCD"
+    },
+    {
+      "name": "double3.3_over1.1",
+      "actual": 2.9999999999999996,
+      "expected": 2.9999999999999996
+    },
+    {
+      "name": "double_ratio_int",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "binary32_div_round",
+      "actual": 3.0,
+      "expected": 3.0
+    },
+    {
+      "name": "wider_div_then_int",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "binary32_min_subnormal",
+      "actual": 1.401298464324817e-45,
+      "expected": 1.401298464324817e-45
+    },
+    {
+      "name": "binary64_min_subnormal",
+      "actual": 5e-324,
+      "expected": 5e-324
+    },
+    {
+      "name": "integer_float_counterexample",
+      "actual": 16777216,
+      "expected": 16777216
+    },
+    {
+      "name": "float_integer_counterexample",
+      "actual": 1.0,
+      "expected": 1.0
+    },
+    {
+      "name": "NaN_double_negation_equality",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "cancellation_counterexample",
+      "actual": 0.0,
+      "expected": 0.0
+    },
+    {
+      "name": "hamming_1101_code",
+      "actual": "1100110",
+      "expected": "1100110"
+    },
+    {
+      "name": "hamming_min_distance",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 25,
+      "expected": 25
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 25,
+      "expected": 25
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 25,
+      "expected": 25
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 25,
+      "expected": 25
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 25,
+      "expected": 25
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 25,
+      "expected": 25
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 25,
+      "expected": 25
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 42,
+      "expected": 42
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 42,
+      "expected": 42
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 42,
+      "expected": 42
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 42,
+      "expected": 42
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 42,
+      "expected": 42
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 42,
+      "expected": 42
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 42,
+      "expected": 42
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 45,
+      "expected": 45
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 45,
+      "expected": 45
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 45,
+      "expected": 45
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 45,
+      "expected": 45
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 45,
+      "expected": 45
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 45,
+      "expected": 45
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 45,
+      "expected": 45
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 51,
+      "expected": 51
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 51,
+      "expected": 51
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 51,
+      "expected": 51
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 51,
+      "expected": 51
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 51,
+      "expected": 51
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 51,
+      "expected": 51
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 51,
+      "expected": 51
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 52,
+      "expected": 52
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 52,
+      "expected": 52
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 52,
+      "expected": 52
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 52,
+      "expected": 52
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 52,
+      "expected": 52
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 52,
+      "expected": 52
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 52,
+      "expected": 52
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 75,
+      "expected": 75
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 75,
+      "expected": 75
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 75,
+      "expected": 75
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 75,
+      "expected": 75
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 75,
+      "expected": 75
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 75,
+      "expected": 75
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 75,
+      "expected": 75
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 76,
+      "expected": 76
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 76,
+      "expected": 76
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 76,
+      "expected": 76
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 76,
+      "expected": 76
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 76,
+      "expected": 76
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 76,
+      "expected": 76
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 76,
+      "expected": 76
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 82,
+      "expected": 82
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 82,
+      "expected": 82
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 82,
+      "expected": 82
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 82,
+      "expected": 82
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 82,
+      "expected": 82
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 82,
+      "expected": 82
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 82,
+      "expected": 82
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 85,
+      "expected": 85
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 85,
+      "expected": 85
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 85,
+      "expected": 85
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 85,
+      "expected": 85
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 85,
+      "expected": 85
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 85,
+      "expected": 85
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 85,
+      "expected": 85
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 97,
+      "expected": 97
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 97,
+      "expected": 97
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 97,
+      "expected": 97
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 97,
+      "expected": 97
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 97,
+      "expected": 97
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 97,
+      "expected": 97
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 97,
+      "expected": 97
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 102,
+      "expected": 102
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 102,
+      "expected": 102
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 102,
+      "expected": 102
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 102,
+      "expected": 102
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 102,
+      "expected": 102
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 102,
+      "expected": 102
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 102,
+      "expected": 102
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 120,
+      "expected": 120
+    },
+    {
+      "name": "hamming_valid_syndrome",
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 127,
+      "expected": 127
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 127,
+      "expected": 127
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 127,
+      "expected": 127
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 127,
+      "expected": 127
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 127,
+      "expected": 127
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 127,
+      "expected": 127
+    },
+    {
+      "name": "hamming_single_error_position",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "hamming_single_error_restoration",
+      "actual": 127,
+      "expected": 127
+    },
+    {
+      "name": "extended_hamming_min_distance",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "CRC1100_1011",
+      "actual": "1100010",
+      "expected": "1100010"
+    },
+    {
+      "name": "CRC1101_1011",
+      "actual": "1101001",
+      "expected": "1101001"
+    },
+    {
+      "name": "CRC_all_codewords_divisible",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "CRC_linear_minimum_weight",
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "name": "CRC_all_single_distinct",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "CRC_single_double_overlap",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "CRC_all_codewords_divisible",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "CRC_linear_minimum_weight",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "CRC_all_single_distinct",
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "name": "CRC_single_double_overlap",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "CRC_all_codewords_divisible",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "CRC_linear_minimum_weight",
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "name": "CRC_all_single_distinct",
+      "actual": 22,
+      "expected": 22
+    },
+    {
+      "name": "CRC_single_double_overlap",
+      "actual": false,
+      "expected": false
+    }
+  ]
+}

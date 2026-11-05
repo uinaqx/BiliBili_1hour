@@ -1,0 +1,139 @@
+{
+  "allPassed": true,
+  "checks": 32,
+  "boothInputCombinations": 256,
+  "sourceSlidesCovered": 259,
+  "scenes": 65,
+  "beats": 140,
+  "narrationCharacters": 16985,
+  "items": [
+    {
+      "name": "4-bit Booth full signed input enumeration",
+      "combinations": 256
+    },
+    {
+      "name": "Booth4a",
+      "result": "-33"
+    },
+    {
+      "name": "Booth4a fixed fraction bits",
+      "result": "111011111"
+    },
+    {
+      "name": "Booth4b",
+      "result": "-39"
+    },
+    {
+      "name": "Booth4b fixed fraction bits",
+      "result": "111011001"
+    },
+    {
+      "name": "Booth5",
+      "result": "-115"
+    },
+    {
+      "name": "Booth5 fixed fraction bits",
+      "result": "11110001101"
+    },
+    {
+      "name": "raw4a",
+      "result": "182"
+    },
+    {
+      "name": "raw4b",
+      "result": "130"
+    },
+    {
+      "name": "raw4c",
+      "result": "143"
+    },
+    {
+      "name": "raw4d",
+      "result": "39"
+    },
+    {
+      "name": "raw_two_bit",
+      "result": "3591"
+    },
+    {
+      "name": "restoring 11/13",
+      "result": "(13, 7)"
+    },
+    {
+      "name": "nonrestoring 11/13",
+      "result": "(13, 7)"
+    },
+    {
+      "name": "restoring 9/11",
+      "result": "(13, 1)"
+    },
+    {
+      "name": "nonrestoring 9/11",
+      "result": "(13, 1)"
+    },
+    {
+      "name": "restoring 22/31",
+      "result": "(22, 22)"
+    },
+    {
+      "name": "nonrestoring 22/31",
+      "result": "(22, 22)"
+    },
+    {
+      "name": "restoring 21/27",
+      "result": "(24, 24)"
+    },
+    {
+      "name": "nonrestoring 21/27",
+      "result": "(24, 24)"
+    },
+    {
+      "name": "19/128 fixed ten fraction bits",
+      "result": "0010011000"
+    },
+    {
+      "name": "-58 fixed eleven bits",
+      "result": "11111000110"
+    },
+    {
+      "name": "15-24 eight bits",
+      "result": "247"
+    },
+    {
+      "name": "overflow -97-41 eight bits",
+      "result": "118"
+    },
+    {
+      "name": "signed right shift -26 by2",
+      "result": "-7"
+    },
+    {
+      "name": "float 002-095 exact",
+      "result": "-27/8"
+    },
+    {
+      "name": "float 002-099 exact",
+      "result": "37/8"
+    },
+    {
+      "name": "float 002-101 exact",
+      "result": "-19/256"
+    },
+    {
+      "name": "float 008-115 exact",
+      "result": "-469/8"
+    },
+    {
+      "name": "float 008-116 encoded truncate",
+      "result": "-235/4"
+    },
+    {
+      "name": "float 008-116 nearest even",
+      "result": "-117/2"
+    },
+    {
+      "name": "IEEE exact subnormal difference",
+      "result": "4194304"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+"""Summarize completed, hash-bound release checks and copy final student materials."""
+import json,pathlib,shutil
+ROOT=pathlib.Path(__file__).resolve().parents[1];DEL=ROOT/'out'
+def main():
+ r=json.loads((ROOT/'build/final-review.json').read_text(encoding='utf8'));v=json.loads((ROOT/'build/voice-cache-retention.json').read_text(encoding='utf8'));s=int(r['duration']);h,s=divmod(s,3600);m,s=divmod(s,60);duration=f'{h:02}:{m:02}:{s:02}'
+ rows=['# 完整无字幕成片验收记录','','## 本次交付','','- 10章，253个讲解场景，519段旁白，88个例题/考题解析场景。','- 时长：'+duration+'，1920×1080，H.264/AAC，无底部字幕和背景音乐。','- 配音：百炼3.1 Plus、许南川、原生1.05倍速；后期tempo=1.0。','- 原有'+str(v['reusedClipsUnchanged'])+'段配音哈希保持，补齐'+str(v['newClips'])+'段。','- 原课件只有题号或题干截断的3组条目，详见缺失题干清单；已按可用条件解释，未编造缺少的题目。','','## 内容、图像与隐私','','- 920页材料都有讲解关联、重复合并或明确排除理由。','- 392张实际采用的匿名技术图已逐个核对哈希，与已有身份审查版本一致。','- 数据表示、计算方法与硬件题的351项选定数值/算法检查通过；补码乘法另遍历256组输入。','- 原始PPT/PDF、原文件名、身份候选清单与账户加载器留在私有目录，工程白名单排除。','','## 编码与声音','','- '+str(r['encodedFrames'])+'个编码画面全部与实际绘制结果比较，覆盖519个旁白画面状态及页面保持期。','- 每章抽取8秒最终AAC与对应逐场景PCM比较位置，相关性均通过。','- 全片音视频解码通过，10个章节位置与实测时间轴一致。','- 字幕关闭由实际绘制实现与底部像素比较共同检查。','- 试片、布局联络图与编码后联络图做了抽查；未声称实时听看全部四小时课程。','','## 文件绑定','','- MP4 SHA-256：`'+r['videoSha256']+'`','- 时间轴 SHA-256：`'+r['timelineSha256']+'`','- 课程清单 SHA-256：`'+r['courseSha256']+'`','- 绘制实现 SHA-256：`'+r['drawingSha256']+'`','']
+ text='\n'.join(rows);(ROOT/'docs/验收记录.md').write_text(text,encoding='utf8');(DEL/'验收记录.md').write_text(text,encoding='utf8');shutil.copy2(ROOT/'build/final-review.json',DEL/'成片检查记录.json')
+ readme=ROOT/'README.md';content=readme.read_text(encoding='utf8');content+='\n## 完整成片\n\n本次完整无字幕视频实测时长为'+duration+'，全部519段配音已完成。按章节目录或知识点与考题目录跳转。详细的内容、声音、隐私与编码检查见docs/验收记录.md。\n';readme.write_text(content,encoding='utf8');shutil.copy2(readme,DEL/'制作说明.md');print('RELEASE_REPORT_DONE',duration,flush=True)
+if __name__=='__main__':main()

@@ -1,0 +1,11 @@
+build/
+out/
+public/audio/
+public/audio_original/
+__pycache__/
+.cache/
+.env
+.env.*
+!.env.example
+!public/course.json
+!public/timeline.json

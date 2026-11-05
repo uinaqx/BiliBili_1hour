@@ -1,0 +1,17 @@
+{
+  "audience": "大学生，从必要基础逐步讲起",
+  "sourceDocuments": 13,
+  "sourceSlides": 920,
+  "runtime": "不限，覆盖全部实质知识点、例题和考题；重复内容可合并，行政与身份信息排除",
+  "subtitles": false,
+  "voice": {
+    "model": "qwen-audio-3.1-tts-plus",
+    "voice": "xunanchuan_v3.1",
+    "nativeRate": 1.05,
+    "postTempo": 1.0,
+    "sentenceExtraPause": 0.1
+  },
+  "privacy": "原始课件、源文件名、学校、教师姓名、联系信息与作者元数据均不进入交付；技术内容采用中性编号，原始材料只留本地私有缓存",
+  "language": "自然、直接、循序渐进的老师口吻；优先肯定式解释事实、步骤、结论；精简重复限定与预设误解",
+  "delivery": "完整无字幕MP4、实测章节目录、全部题解、讲稿、覆盖表和可编辑工程"
+}

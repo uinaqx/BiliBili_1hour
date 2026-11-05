@@ -1,0 +1,138 @@
+{
+  "allPassed": true,
+  "scope": "Independent manual visual privacy review inherited from all 34 embedded-image pages in the previous final snapshot. Current snapshot removes one photographed question stem and masks one non-technical watermark/photo region; both changes were inspected. Current used embedded-image set contains 33 pages. Three earlier layout contact sheets plus the updated m06-016 first-beat full frame were sampled. No external OCR or upload; this does not claim full encoded-video audit.",
+  "courseSha256": "88476caeee068e8b87436b3b099c3a0a0c86cccbbb142a14a0d23c4f7282adbf",
+  "sourceAssetCount": 392,
+  "embeddedImagePageCount": 33,
+  "reviewedImagePages": [
+    "input_002-084",
+    "input_003-010",
+    "input_003-011",
+    "input_003-020",
+    "input_003-038",
+    "input_003-039",
+    "input_006-012",
+    "input_006-020",
+    "input_006-023",
+    "input_006-117",
+    "input_007-011",
+    "input_008-024",
+    "input_008-028",
+    "input_008-055",
+    "input_008-065",
+    "input_008-073",
+    "input_008-074",
+    "input_008-082",
+    "input_008-094",
+    "input_008-097",
+    "input_008-099",
+    "input_008-126",
+    "input_010-007",
+    "input_011-010",
+    "input_011-013",
+    "input_012-026",
+    "input_012-027",
+    "input_012-036",
+    "input_013-021",
+    "input_013-065",
+    "input_013-071",
+    "input_013-095",
+    "input_013-126"
+  ],
+  "incrementalImagePages": [
+    "input_008-082",
+    "input_008-099",
+    "input_008-126",
+    "input_013-021",
+    "input_013-065",
+    "input_013-071",
+    "input_013-075",
+    "input_013-095",
+    "input_013-126"
+  ],
+  "retainedPreviouslyReviewedPages": [
+    "input_010-007",
+    "input_011-010",
+    "input_011-013",
+    "input_006-012",
+    "input_006-020",
+    "input_006-023",
+    "input_006-117",
+    "input_007-011",
+    "input_008-024",
+    "input_008-028",
+    "input_008-055",
+    "input_008-073",
+    "input_008-074",
+    "input_008-065",
+    "input_008-094",
+    "input_008-097",
+    "input_002-084",
+    "input_012-026",
+    "input_012-027",
+    "input_012-036",
+    "input_003-010",
+    "input_003-011",
+    "input_003-020",
+    "input_003-038",
+    "input_003-039"
+  ],
+  "contactSheets": [
+    "build/privacy-contacts/contact-01.jpg",
+    "build/privacy-contacts/contact-02.jpg",
+    "build/privacy-contacts/contact-03.jpg",
+    "build/privacy-contacts-final/contact-01.jpg"
+  ],
+  "layoutContactSheetsViewed": [
+    "build/layout/contact-005.jpg",
+    "build/layout/contact-024.jpg",
+    "build/layout/contact-041.jpg"
+  ],
+  "findings": [],
+  "resolvedFindings": [
+    {
+      "page": "input_011-019",
+      "category": "historical-person-name-and-portrait",
+      "resolution": "Root replaced the source image with a neutral board; asset is absent from final sourceAssets."
+    },
+    {
+      "page": "input_013-075",
+      "category": "photographed-truncated-question-stem",
+      "resolution": "Removed from used sourceAssets; first beat replaced with a neutral condition board."
+    },
+    {
+      "page": "input_013-071",
+      "category": "nontechnical-photo-watermark",
+      "resolution": "Specified right-lower rectangle masked in the public slide; masking viewed."
+    }
+  ],
+  "layoutObservations": [
+    "Sampled Chinese, Latin register names, formulas and arrows display without visible missing-glyph boxes.",
+    "Sampled summary bullets remain within the right panel; no clipping or overlap was observed in the three contact sheets.",
+    "Some original technical slides contain dense tables and timing labels; this review makes no claim of frame-by-frame readability of every source slide."
+  ],
+  "identityRebuiltOutsideImportedAssets": [
+    "input_006-111",
+    "input_006-112",
+    "input_006-115",
+    "input_006-087",
+    "input_007-009"
+  ],
+  "unresolvedCount": 0,
+  "incrementalRepairReview": {
+    "previousCourseSha256": "5b96cc49d35e6dfd7b71bcfe5279fbfcd5424b68e3ddffd51ef2a0d973b839f6",
+    "currentCourseSha256": "88476caeee068e8b87436b3b099c3a0a0c86cccbbb142a14a0d23c4f7282adbf",
+    "removedImagePage": "input_013-075",
+    "replacement": "m06-016 first beat is a neutral condition board; viewed build/layout/m06-016-0.jpg.",
+    "maskedImagePage": "input_013-071",
+    "maskRect": [
+      0.695,
+      0.58,
+      1,
+      0.89
+    ],
+    "maskedAssetSha256": "8c7ace109ff3c2bb13ad8972f6ab46827057d2de63c082500156441dce775947",
+    "visualResult": "Unrelated photo/watermark is covered; left-side technical wiring and 10-address/8-data-line labels remain readable.",
+    "newFindings": []
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "allPassed": true,
+  "checks": 30,
+  "scope": "independent numerical and algorithmic checks for selected worked examples; full source-page coverage is recorded in module files",
+  "moduleSha256": {
+    "module_06.json": "dd8bec416d5de1c7355db6f45f8e9f072e3cedc453978c2965ece7584b5e6ca5",
+    "module_07.json": "d28e245fa3d751070b1fb47aa91f9238b355a96dc5030016fa625ab656434b4e",
+    "module_08.json": "6c7341f53e4f7c35373858b03145b3b7d61293583c156b6115f5b53088a443c3",
+    "module_09.json": "c9eccd7de6c89037c19c39aeac544967f8fd4c286c4c35fbfa8c5cde25d42b92",
+    "module_10.json": "ebd5f7560f1668ae1f793d5ae3d5740d20856be06ed15b8cfb7efbf9bff122bf"
+  },
+  "items": [
+    {
+      "name": "extension-32bits",
+      "result": 24576
+    },
+    {
+      "name": "instruction-bit-lower-bound",
+      "result": 23
+    },
+    {
+      "name": "instruction-byte-length",
+      "result": 24
+    },
+    {
+      "name": "relative-target",
+      "result": "0x2008"
+    },
+    {
+      "name": "chip-expansion",
+      "result": 32
+    },
+    {
+      "name": "mixed-expansion",
+      "result": 8
+    },
+    {
+      "name": "eprom-coverage",
+      "result": 65536
+    },
+    {
+      "name": "eprom-last-range",
+      "result": [
+        "0xfe000",
+        "0xfffff"
+      ]
+    },
+    {
+      "name": "hamming-even-0101",
+      "result": "0100101"
+    },
+    {
+      "name": "hamming-even-0011",
+      "result": "1000011"
+    },
+    {
+      "name": "hamming-odd-0011",
+      "result": "0101011"
+    },
+    {
+      "name": "hamming-syndrome-0100111",
+      "result": 6
+    },
+    {
+      "name": "hamming-syndrome-0101101",
+      "result": 4
+    },
+    {
+      "name": "all-16-hamming-words-with-7-single-bit-errors",
+      "result": "112 single-error corrections passed"
+    },
+    {
+      "name": "concentrated-refresh-us",
+      "result": 64.0
+    },
+    {
+      "name": "refresh-percentage",
+      "result": 3.2
+    },
+    {
+      "name": "distributed-refresh-row-spacing-us",
+      "result": 15.625
+    },
+    {
+      "name": "four-bank-T-equals-4tau-fourwords-in-tau",
+      "result": 7
+    },
+    {
+      "name": "pipeline-six-level-nine-instructions-time",
+      "result": 14
+    },
+    {
+      "name": "pipeline-speedup-rounded",
+      "result": 3.857143
+    },
+    {
+      "name": "pipeline-efficiency-percent",
+      "result": 64.285714
+    },
+    {
+      "name": "FIFO-hits",
+      "result": 1
+    },
+    {
+      "name": "FIFO-evicted",
+      "result": [
+        22,
+        11,
+        19
+      ]
+    },
+    {
+      "name": "LRU-hits",
+      "result": 1
+    },
+    {
+      "name": "LRU-evicted",
+      "result": [
+        11,
+        22,
+        19
+      ]
+    },
+    {
+      "name": "LFU-hits",
+      "result": 3
+    },
+    {
+      "name": "LFU-evicted",
+      "result": [
+        19,
+        16
+      ]
+    },
+    {
+      "name": "FIFO-thrashing-misses",
+      "result": 8
+    },
+    {
+      "name": "original-masks-entry-and-completion",
+      "result": [
+        "ABCD",
+        "ABCD"
+      ]
+    },
+    {
+      "name": "new-masks-entry-and-completion",
+      "result": [
+        "ABCD",
+        "ADCB"
+      ]
+    }
+  ]
+}

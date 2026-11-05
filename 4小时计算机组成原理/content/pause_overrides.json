@@ -1,0 +1,11 @@
+{
+  "m04c-017-p00": {
+    "sourceMp3Sha256": "a2f1f3d96fd7d3094f284bb52f8d61e65751b9b0cdcfa014aa5cde6c37ae60bc",
+    "originalWord": "行。每一行",
+    "leftText": "行。",
+    "rightText": "每一行",
+    "cutMilliseconds": 19190,
+    "quietIntervalSeconds": [19.05, 19.33],
+    "method": "Manual waveform review within the provider word interval: the sentence crosses a single returned word; cut at the center of the 280 ms measured quiet interval. No speech-speed adjustment."
+  }
+}

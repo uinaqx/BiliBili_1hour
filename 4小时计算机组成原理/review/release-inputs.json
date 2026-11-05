@@ -1,0 +1,25 @@
+{
+  "allPassed": true,
+  "courseSha256": "88476caeee068e8b87436b3b099c3a0a0c86cccbbb142a14a0d23c4f7282adbf",
+  "sourceSlides": 920,
+  "chapters": 10,
+  "scenes": 253,
+  "beats": 519,
+  "sourceAssetsVerified": 392,
+  "privacyReviewSha256": "805321ae51428c8eb4734fdf6ad48cfdd88ca6e7e89638688744720d33edddb1",
+  "verification": [
+    {
+      "report": "arithmetic-verification.json",
+      "checks": 32
+    },
+    {
+      "report": "data-example-verification.json",
+      "checks": 289
+    },
+    {
+      "report": "hardware-content-checks.json",
+      "checks": 30
+    }
+  ],
+  "scope": "Exact previously reviewed anonymous image assets, complete coverage ledger and matching numerical checks; final encoded video is checked separately."
+}
