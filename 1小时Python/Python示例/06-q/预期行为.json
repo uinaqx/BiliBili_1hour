@@ -1,0 +1,9 @@
+{
+  "kind": "runtime_error",
+  "expected": "运行时异常：IndexError，位置 3 不存在",
+  "stdin": "",
+  "runs": null,
+  "diagnostic": "IndexError",
+  "fixtures": {},
+  "files": {}
+}

@@ -1,0 +1,11 @@
+{
+  "kind": "run",
+  "expected": "True\n",
+  "stdin": "",
+  "runs": null,
+  "diagnostic": null,
+  "fixtures": {
+    "budget_tools.py": "def within(spent, budget):\n    return spent <= budget\n"
+  },
+  "files": {}
+}

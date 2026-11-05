@@ -1,0 +1,11 @@
+{
+  "kind": "run",
+  "expected": "20\n",
+  "stdin": "",
+  "runs": null,
+  "diagnostic": null,
+  "fixtures": {
+    "expenses.txt": "12\n8\n"
+  },
+  "files": {}
+}

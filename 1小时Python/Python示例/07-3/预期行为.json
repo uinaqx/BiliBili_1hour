@@ -1,0 +1,9 @@
+{
+  "kind": "run",
+  "expected": "['tea', 'bread', 'tea']\ntea | bread | tea\n",
+  "stdin": "",
+  "runs": null,
+  "diagnostic": null,
+  "fixtures": {},
+  "files": {}
+}

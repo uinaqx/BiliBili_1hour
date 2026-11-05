@@ -1,0 +1,9 @@
+{
+  "kind": "run",
+  "expected": "Hello, Python!\n",
+  "stdin": "",
+  "runs": null,
+  "diagnostic": null,
+  "fixtures": {},
+  "files": {}
+}

@@ -1,0 +1,9 @@
+{
+  "kind": "run",
+  "expected": "[ Tea ]\ntea\n",
+  "stdin": "",
+  "runs": null,
+  "diagnostic": null,
+  "fixtures": {},
+  "files": {}
+}

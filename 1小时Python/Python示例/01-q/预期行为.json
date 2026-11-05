@@ -1,0 +1,9 @@
+{
+  "kind": "syntax_error",
+  "expected": "语法检查失败：左括号没有对应的右括号",
+  "stdin": "",
+  "runs": null,
+  "diagnostic": "'(' was never closed",
+  "fixtures": {},
+  "files": {}
+}

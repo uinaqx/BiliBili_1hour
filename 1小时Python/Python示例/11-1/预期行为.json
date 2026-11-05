@@ -1,0 +1,18 @@
+{
+  "kind": "run",
+  "expected": "not an integer\ndone\n",
+  "stdin": "abc\n",
+  "runs": [
+    {
+      "stdin": "abc\n",
+      "expected": "not an integer\ndone\n"
+    },
+    {
+      "stdin": "12\n",
+      "expected": "12\ndone\n"
+    }
+  ],
+  "diagnostic": null,
+  "fixtures": {},
+  "files": {}
+}

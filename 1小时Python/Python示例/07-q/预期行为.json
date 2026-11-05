@@ -1,0 +1,9 @@
+{
+  "kind": "run",
+  "expected": "tea\n",
+  "stdin": "",
+  "runs": null,
+  "diagnostic": null,
+  "fixtures": {},
+  "files": {}
+}

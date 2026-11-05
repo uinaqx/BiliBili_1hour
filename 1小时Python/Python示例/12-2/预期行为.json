@@ -1,0 +1,9 @@
+{
+  "kind": "run",
+  "expected": "total=25\nremaining=5\n",
+  "stdin": "",
+  "runs": null,
+  "diagnostic": null,
+  "fixtures": {},
+  "files": {}
+}

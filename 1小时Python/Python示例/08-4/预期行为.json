@@ -1,0 +1,9 @@
+{
+  "kind": "run",
+  "expected": "3 5\n2\nTrue\n0\n",
+  "stdin": "",
+  "runs": null,
+  "diagnostic": null,
+  "fixtures": {},
+  "files": {}
+}
