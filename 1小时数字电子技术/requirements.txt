@@ -1,0 +1,7 @@
+requests>=2.32
+numpy>=1.26
+scipy>=1.12
+Pillow>=10
+matplotlib>=3.8
+openai-whisper>=20240930
+torch>=2.2

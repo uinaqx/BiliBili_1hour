@@ -1,0 +1,8 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>我的开销本</title><style>
+body{font:20px system-ui;background:#09172a;color:#eff5ff;max-width:800px;margin:60px auto;padding:24px}input,button{font:inherit;padding:10px;margin:6px;border-radius:8px}button{background:#ffbd68;cursor:pointer}li{padding:12px;border-bottom:1px solid #29455e}#message{color:#70cfff}
+</style></head><body><h1>我的开销本</h1><p>预算：30元</p>
+<form id="form"><input id="name" placeholder="名称" aria-label="名称"><input id="amount" placeholder="金额" aria-label="金额"><button>添加</button></form>
+<p id="message" role="status"></p><ul id="list"></ul><p id="summary"></p>
+<button id="reset" type="button">清空记录</button><script type="module" src="app.js"></script></body></html>

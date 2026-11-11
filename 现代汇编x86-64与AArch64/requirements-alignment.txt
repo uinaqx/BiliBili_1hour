@@ -1,0 +1,3 @@
+-r requirements.txt
+openai-whisper==20250625
+torch==2.11.0

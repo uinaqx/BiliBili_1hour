@@ -1,0 +1,13 @@
+<!doctype html>
+<meta charset="UTF-8">
+<form id="form">
+  <input id="name" value="午餐"><button>添加</button>
+</form>
+<p id="message"></p>
+<script>
+  document.querySelector("#form").addEventListener("submit", (event) => {
+    event.preventDefault();
+    const name = document.querySelector("#name").value.trim();
+    document.querySelector("#message").textContent = `收到：${name}`;
+  });
+</script>

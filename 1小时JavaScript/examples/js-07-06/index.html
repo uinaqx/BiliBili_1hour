@@ -1,0 +1,9 @@
+<!doctype html>
+<meta charset="UTF-8">
+<p id="message">你好</p>
+<script>
+  const p = document.querySelector("#message");
+  const before = p.textContent;
+  p.textContent = before + "，小林";
+  console.log(p.textContent);
+</script>

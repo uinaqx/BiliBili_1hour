@@ -1,0 +1,10 @@
+<!doctype html>
+<meta charset="UTF-8">
+<button id="add">增加</button><p id="count">0</p>
+<script>
+  let count = 0;
+  document.querySelector("#add").addEventListener("click", () => {
+    count += 1;
+    document.querySelector("#count").textContent = String(count);
+  });
+</script>

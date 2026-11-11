@@ -1,0 +1,16 @@
+node_modules/
+build/
+public/audio/
+__pycache__/
+debug.log
+build-npm.log
+/bin/
+/obj/
+**/bin/
+**/obj/
+*.vcd
+*.dll
+*.pdb
+*.webm
+*.mov
+*.s16

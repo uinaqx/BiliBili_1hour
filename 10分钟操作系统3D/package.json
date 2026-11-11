@@ -1,0 +1,28 @@
+{
+  "name": "operating-system-10min-3d",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio src/index.ts",
+    "voice": "python scripts/voice.py",
+    "timeline": "python scripts/voice.py --placeholder",
+    "stills": "node scripts/stills.mjs",
+    "render": "node scripts/render.mjs"
+  },
+  "dependencies": {
+    "@react-three/fiber": "9.3.0",
+    "@react-three/postprocessing": "3.0.4",
+    "@remotion/cli": "4.0.535",
+    "@remotion/three": "4.0.535",
+    "postprocessing": "6.37.6",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "remotion": "4.0.535",
+    "three": "0.178.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.0",
+    "@types/three": "0.178.0",
+    "typescript": "^5.9.0"
+  }
+}

@@ -1,6 +1,6 @@
 # BiliBili_1hour：编程、数学与智能体课程视频工程
 
-十九套可独立编辑、验证和重制的课程工程。首页按课程分为十九个文件夹，Rust 两讲和旧版计组分别保留。
+三十二套可独立编辑、验证和重制的课程工程。首页按课程分为三十二个文件夹，Rust 两讲和旧版计组分别保留。
 
 | 文件夹 | 内容 |
 |---|---|
@@ -23,6 +23,19 @@
 | [Rust第一讲](Rust第一讲/README.md) | Rust 基础十四个主题 |
 | [Rust第二讲](Rust第二讲/README.md) | Rust 进阶基础九个主题 |
 | [旧版计算机组成原理](旧版计算机组成原理/README.md) | 原两小时互动课程与配音工程 |
+| [1小时Verilog](1小时Verilog/README.md) | 电路描述、组合逻辑、时序逻辑与仿真 |
+| [1小时离散数学](1小时离散数学/README.md) | 逻辑、集合、关系、图论与可视化例题 |
+| [1小时数字电子技术](1小时数字电子技术/README.md) | 数字电路基础、时序与仿真示例 |
+| [1小时汇编语言8086](1小时汇编语言8086/README.md) | 8086、寄存器、标志位、内存与指令练习 |
+| [现代汇编x86-64与AArch64](现代汇编x86-64与AArch64/README.md) | x86-64 与 AArch64 指令、调用约定与实测执行 |
+| [1小时JavaScript](1小时JavaScript/README.md) | 零基础 JavaScript、动态高亮与独立示例 |
+| [1小时TypeScript](1小时TypeScript/README.md) | 类型、泛型、模块与完整网页项目 |
+| [1小时CSharp](1小时CSharp/README.md) | C# 12、LINQ、异步与完整控制台项目 |
+| [10分钟操作系统3D](10分钟操作系统3D/README.md) | Remotion 与 Three.js 的操作系统动画 |
+| [10分钟数据结构3D](10分钟数据结构3D/README.md) | Remotion 与 Three.js 的数据结构动画 |
+| [10分钟计算机组成原理](10分钟计算机组成原理/README.md) | 计算机组成原理图示与动画 |
+| [10分钟计算机网络](10分钟计算机网络/README.md) | 网络分层、传输与协议流程动画 |
+| [AgentHarness原理](AgentHarness原理/README.md) | 独立的 Remotion 原理讲解工程 |
 
 各目录独立安装依赖；数据结构、计组、C、C++、Java、Python、Kotlin、Go 八部工程可先运行 `npm run preview` 再打开 Studio。预览不调用语音服务，正式配音和导出流程见各目录 README。源码沿用[仓库许可证](LICENSE)，可据此修改或扩展其他语言。
 

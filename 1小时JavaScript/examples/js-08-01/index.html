@@ -1,0 +1,10 @@
+<!doctype html>
+<meta charset="UTF-8">
+<button id="add">记录一笔</button>
+<p id="message">等待点击</p>
+<script>
+  const button = document.querySelector("#add");
+  button.addEventListener("click", () => {
+    document.querySelector("#message").textContent = "已记录";
+  });
+</script>

@@ -1,0 +1,9 @@
+.\Program.cs(2,10): error CS0029: Cannot implicitly convert type 'string' to 'int' [.\Example.csproj]
+
+Build FAILED.
+
+.\Program.cs(2,10): error CS0029: Cannot implicitly convert type 'string' to 'int' [.\Example.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:02.96

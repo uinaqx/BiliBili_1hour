@@ -1,0 +1,11 @@
+
+/bin/
+/obj/
+**/bin/
+**/obj/
+*.vcd
+*.dll
+*.pdb
+*.webm
+*.mov
+*.s16

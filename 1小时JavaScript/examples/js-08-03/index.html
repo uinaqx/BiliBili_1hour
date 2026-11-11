@@ -1,0 +1,11 @@
+<!doctype html>
+<meta charset="UTF-8">
+<input id="amount" value="12">
+<button id="add">记录</button><p id="message"></p>
+<script>
+  document.querySelector("#add").addEventListener("click", () => {
+    const raw = document.querySelector("#amount").value;
+    const amount = Number(raw);
+    document.querySelector("#message").textContent = `${amount + 8}元`;
+  });
+</script>

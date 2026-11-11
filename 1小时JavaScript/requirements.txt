@@ -1,0 +1,7 @@
+Pillow>=10
+Pygments>=2
+numpy
+requests
+openai-whisper
+torch
+playwright

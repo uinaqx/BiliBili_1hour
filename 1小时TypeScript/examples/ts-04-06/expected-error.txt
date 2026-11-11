@@ -1,0 +1,1 @@
+main.ts(2,7): error TS2741: Property 'amount' is missing in type '{ name: string; }' but required in type 'Expense'.

@@ -1,0 +1,7 @@
+Pillow>=11,<13
+Pygments>=2.19,<3
+numpy>=2,<3
+requests>=2.32,<3
+openai-whisper==20250625
+torch>=2.6,<3
+playwright>=1.50,<2

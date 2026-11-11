@@ -1,0 +1,1 @@
+main.ts(3,10): error TS18047: 'text' is possibly 'null'.
