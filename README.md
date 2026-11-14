@@ -1,6 +1,6 @@
 # BiliBili_1hour：编程、数学与智能体课程视频工程
 
-三十二套可独立编辑、验证和重制的课程工程。首页按课程分为三十二个文件夹，Rust 两讲和旧版计组分别保留。
+三十四套可独立编辑、验证和重制的课程工程。首页按课程分为三十四个文件夹，Rust 两讲和旧版计组分别保留。
 
 | 文件夹 | 内容 |
 |---|---|
@@ -31,6 +31,8 @@
 | [1小时JavaScript](1小时JavaScript/README.md) | 零基础 JavaScript、动态高亮与独立示例 |
 | [1小时TypeScript](1小时TypeScript/README.md) | 类型、泛型、模块与完整网页项目 |
 | [1小时CSharp](1小时CSharp/README.md) | C# 12、LINQ、异步与完整控制台项目 |
+| [1小时Swift](1小时Swift/README.md) | 零基础 Swift、完整讲稿、开销记录项目和源码 |
+| [1小时SQL](1小时SQL/README.md) | SQLite、67 个实测示例、订单查询与综合报表 |
 | [10分钟操作系统3D](10分钟操作系统3D/README.md) | Remotion 与 Three.js 的操作系统动画 |
 | [10分钟数据结构3D](10分钟数据结构3D/README.md) | Remotion 与 Three.js 的数据结构动画 |
 | [10分钟计算机组成原理](10分钟计算机组成原理/README.md) | 计算机组成原理图示与动画 |
@@ -49,7 +51,7 @@
 
 [code-course-video](00_skills/code-course-video/SKILL.md) 汇总了本系列课程的制作流程与修复经验，可用于新课程制作、语音与画面同步修复、无字幕导出、审查及工程交付。
 
-- `references/`：教学设计、同步规范、渲染验收和制作总结与反思。
+- `references/`：教学设计、同步规范、字幕契约、渲染验收和制作总结。
 - `assets/`：持续高亮逻辑、Remotion 画面组件及时间轴示例。
 - `scripts/`：时间轴检查、成片抽帧与媒体验证、安全扫描和行为测试。
 
@@ -130,4 +132,3 @@ git diff --cached --stat
 审计脚本检查待跟踪文件中的凭证格式、Workspace ID、个人路径、音视频及生成目录，不显示匹配到的秘密内容。不要提交包含自己的配音与服务返回数据的压缩包。请在改动代码或文案后重新验证示例与画面。
 
 Rust 部分内容参考 [Rust 官方教材](https://doc.rust-lang.org/book/)，重点参照[引用与借用](https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html)及[生命周期](https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html)。Remotion 和语音服务遵循其各自许可与服务条款。
-

@@ -1,0 +1,7 @@
+build/
+out/
+__pycache__/
+public/audio/
+public/audio_original/
+.env
+expenses.json

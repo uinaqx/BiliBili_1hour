@@ -1,7 +1,7 @@
 import tempfile
 import pathlib
 import unittest
-from subtitle_sync import captions_from_words, mapped_words, normalized_words, quantize, validate
+from subtitle_sync import authored_words, captions_from_words, mapped_words, normalized_words, pause_schedule, quantize, validate
 
 
 def word(text,a,b,i=0):
@@ -15,12 +15,38 @@ class SubtitleTimingTests(unittest.TestCase):
         self.assertGreaterEqual(c[0]['end'],4)
 
     def test_pause_at_exact_boundary_is_not_added_to_previous_end(self):
-        w=mapped_words([word('前句。',0,1),word('后句。',1,2,1)],[1])
-        self.assertEqual(w[0]['end'],1);self.assertAlmostEqual(w[1]['start'],1.1)
+        w=mapped_words([word('前句。',0,1),word('后句。',1,2,1)],[1],[.18],48000)
+        self.assertEqual(w[0]['end'],1);self.assertAlmostEqual(w[1]['start'],1.18)
 
     def test_sample_grid_handles_float_boundary(self):
-        w=mapped_words([word('R',3.49,3.8000000000000003)],[3.8])
+        w=mapped_words([word('R',3.49,3.8000000000000003)],[3.8],[.17],44100)
         self.assertAlmostEqual(w[0]['end'],3.8)
+
+    def test_individual_pause_amounts_and_missing_declaration(self):
+        raw=[word('早',.4,.5),word('中',.5,1,1),word('晚',1,1.5,2)]
+        w=mapped_words(raw,[.5,1.],[.12,.23],48000)
+        self.assertAlmostEqual(w[0]['end'],.5)
+        self.assertAlmostEqual(w[1]['start'],.62)
+        self.assertAlmostEqual(w[1]['end'],1.12)
+        self.assertAlmostEqual(w[2]['start'],1.35)
+        with self.assertRaises(ValueError):
+            pause_schedule({},dict(cutsSeconds=[.5]),0,())
+
+    def test_authored_sql_spelling_and_path_remain_whole(self):
+        known=[word('sequel',0,1),word('A',1,1.2,1),word('/B.java',1.2,2,2)]
+        text='SQL A/B.java。'
+        mapped=authored_words(known,text,[dict(spoken='sequel',written='SQL')])
+        self.assertEqual(''.join(w['text'] for w in mapped),text)
+        self.assertIn('A/B.java',mapped[-1]['text'])
+        self.assertEqual(mapped[-1]['end'],2)
+
+    def test_negative_words_fold_text_without_claiming_timing(self):
+        raw=normalized_words([dict(text='甲',begin_time=100,end_time=30),
+                              dict(text='乙。',begin_time=300,end_time=900)])
+        c=captions_from_words(raw,duration=2)
+        self.assertEqual(c[0]['text'],'甲乙。')
+        self.assertAlmostEqual(c[0]['start'],.3)
+        self.assertAlmostEqual(c[0]['spokenEnd'],.9)
 
     def test_final_words_are_not_remapped_twice(self):
         w=normalized_words([dict(text='结束。',begin_time=2100,end_time=2500)])

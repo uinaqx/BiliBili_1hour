@@ -1,0 +1,6 @@
+CREATE TABLE stock (
+  id INTEGER PRIMARY KEY,
+  units INTEGER NOT NULL DEFAULT 0
+);
+INSERT INTO stock (id) VALUES (8);
+SELECT id, units FROM stock;

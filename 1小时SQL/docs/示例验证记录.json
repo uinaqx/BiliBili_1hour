@@ -1,0 +1,340 @@
+{
+  "sqlite": "3.42.0",
+  "examples": [
+    {
+      "key": "sq-01-01",
+      "output": "id | amount\n101 | 120\n102 | 80\n103 | 60",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-01-02",
+      "output": "message | answer\n你好，SQL | 5",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-01-03",
+      "output": "name | city\n小林 | 杭州\n小周 | 上海\n小陈 | 杭州\n小吴 | 南京",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-01-04",
+      "output": "id | customer_id | amount | status | ordered_on | coupon\n101 | 1 | 120 | 已支付 | 2026-06-01 | NEW10\n102 | 2 | 80 | 已支付 | 2026-06-02 | NULL",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-01-05",
+      "output": "id | amount | with_delivery\n101 | 120 | 125\n102 | 80 | 85\n103 | 60 | 65",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-01-06",
+      "output": "place | name\n杭州 | 小林\n上海 | 小周",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-02-01",
+      "output": "id | amount\n101 | 120\n104 | 200\n105 | 120\n106 | 160",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-02-02",
+      "output": "id | amount | status\n101 | 120 | 已支付\n104 | 200 | 已支付\n106 | 160 | 已支付",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-02-03",
+      "output": "id | status | amount\n103 | 待支付 | 60\n108 | 待支付 | 90",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-02-04",
+      "output": "id | ordered_on\n101 | 2026-06-01\n102 | 2026-06-02\n103 | 2026-06-03",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-02-05",
+      "output": "id | coupon_name\n102 | 无\n103 | 无",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-02-06",
+      "output": "id | amount\n101 | 120\n102 | 80\n107 | 90\n108 | 90",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-03-01",
+      "output": "id | amount\n104 | 200\n106 | 160\n101 | 120\n105 | 120",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-03-02",
+      "output": "id | amount\n104 | 200\n105 | 120\n106 | 160",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-03-03",
+      "output": "city\n上海\n南京\n杭州",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-03-04",
+      "output": "id | name\n1 | 小林\n2 | 小周\n3 | 小陈\n4 | 小吴",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-03-05",
+      "output": "id | amount | tag\n101 | 120 | 大额\n102 | 80 | 普通\n103 | 60 | 普通\n104 | 200 | 大额",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-03-06",
+      "output": "id | amount\n105 | 120\n101 | 120",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-04-01",
+      "output": "n | total\n5 | 650",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-04-02",
+      "output": "orders_count | coupon_count\n8 | 2",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-04-03",
+      "output": "status | n | total\n已取消 | 1 | 120\n已支付 | 5 | 650\n待支付 | 2 | 150",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-04-04",
+      "output": "customer_id | total\n3 | 360\n1 | 210",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-04-05",
+      "output": "average | smallest | largest\n130.0 | 80 | 200",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-04-06",
+      "output": "customer_id | n\n1 | 2\n3 | 2",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-05-01",
+      "output": "id | name | amount\n101 | 小林 | 120\n102 | 小周 | 80\n103 | 小林 | 60\n104 | 小陈 | 200",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-05-02",
+      "output": "name | id | amount\n小林 | 101 | 120\n小林 | 103 | 60\n小林 | 107 | 90",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-05-03",
+      "output": "name | order_id\n小陈 | 104\n小陈 | 106\n小吴 | NULL",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-05-04",
+      "output": "name | paid_count\n小林 | 2\n小周 | 1\n小陈 | 2\n小吴 | 0",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-05-05",
+      "output": "id | name\n4 | 小吴",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-05-06",
+      "output": "joined_rows | old_orders\n1 | 0",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-06-01",
+      "output": "id | amount\n104 | 200\n106 | 160\n101 | 120\n105 | 120",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-06-02",
+      "output": "id | name\n3 | 小陈",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-06-03",
+      "output": "id | name\n1 | 小林\n2 | 小周",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-06-04",
+      "output": "customer_id | total\n3 | 360\n1 | 210\n2 | 80",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-06-05",
+      "output": "id | bucket\n101 | 六月\n102 | 六月\n103 | 六月\n104 | 七月\n105 | 七月",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-06-06",
+      "output": "customer_id | total\n3 | 360\n1 | 210",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-07-01",
+      "output": "id | name | price | weight\n1 | 笔记本 | 12 | 0.18",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-07-02",
+      "output": "约束错误 · UNIQUE constraint failed: tickets.id",
+      "diagnostic": "UNIQUE constraint failed"
+    },
+    {
+      "key": "sq-07-03",
+      "output": "约束错误 · UNIQUE constraint failed: accounts.email",
+      "diagnostic": "UNIQUE constraint failed"
+    },
+    {
+      "key": "sq-07-04",
+      "output": "id | price | status\n1 | 12 | 在售",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-07-05",
+      "output": "约束错误 · FOREIGN KEY constraint failed",
+      "diagnostic": "FOREIGN KEY constraint failed"
+    },
+    {
+      "key": "sq-07-06",
+      "output": "name | type | dflt_value\nid | INTEGER | NULL\ntitle | TEXT | NULL\nremain | INTEGER | 0",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-07-07",
+      "output": "name | type | notnull | pk\nid | INTEGER | 0 | 1\ncustomer_id | INTEGER | 1 | 0\ncoupon | TEXT | 0 | 0",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-07-08",
+      "output": "id | units\n8 | 0",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-08-01",
+      "output": "id | amount | status\n110 | 75 | 已支付",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-08-02",
+      "output": "id | amount | status\n110 | 75 | 待支付\n111 | 40 | 待支付",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-08-03",
+      "output": "id | status\n103 | 已支付",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-08-04",
+      "output": "id | amount\n102 | 90",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-08-05",
+      "output": "remaining\n0",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-08-06",
+      "output": "copied\n5",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-08-07",
+      "output": "id | coupon\n103 | 待跟进\n108 | 待跟进",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-08-08",
+      "output": "id | amount\n103 | 65\n108 | 90",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-09-01",
+      "output": "id | amount\n101 | 120",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-09-02",
+      "output": "paid\n7",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-09-03",
+      "output": "id | amount\n101 | 120\n103 | 60\n107 | 90",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-09-04",
+      "output": "id | parent | notused | detail\n2 | 0 | 0 | SEARCH orders USING COVERING INDEX idx_customer (customer_id=?)",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-09-05",
+      "output": "id | ordered_on\n104 | 2026-07-01\n106 | 2026-07-03\n107 | 2026-07-04",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-09-06",
+      "output": "id | status\n105 | 已取消",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-10-01",
+      "output": "id | amount | pos\n104 | 200 | 1\n106 | 160 | 2\n101 | 120 | 3\n107 | 90 | 4\n102 | 80 | 5",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-10-02",
+      "output": "customer_id | id | amount | pos\n1 | 101 | 120 | 1\n1 | 107 | 90 | 2\n2 | 102 | 80 | 1\n3 | 104 | 200 | 1\n3 | 106 | 160 | 2",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-10-03",
+      "output": "id | name | n | total\n3 | 小陈 | 2 | 360\n1 | 小林 | 2 | 210\n2 | 小周 | 1 | 80\n4 | 小吴 | 0 | 0",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-10-04",
+      "output": "name | total | rank\n小陈 | 360 | 1\n小林 | 210 | 2\n小周 | 80 | 3\n小吴 | 0 | 4",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-10-05",
+      "output": "paying_customers | paid_revenue\n3 | 650",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-10-06",
+      "output": "customer_id | id | amount\n1 | 101 | 120\n2 | 102 | 80\n3 | 104 | 200",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-10-07",
+      "output": "name | n | june_total\n小林 | 1 | 120\n小周 | 1 | 80\n小陈 | 0 | 0\n小吴 | 0 | 0",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-10-08",
+      "output": "n | total\n5 | 650",
+      "diagnostic": null
+    },
+    {
+      "key": "sq-10-09",
+      "output": "customer_id | total\n3 | 360",
+      "diagnostic": null
+    }
+  ]
+}

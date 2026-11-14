@@ -1,0 +1,346 @@
+{
+  "swiftVersion": "Swift version 6.4.2 (swift-6.4.2-RELEASE)\nTarget: x86_64-unknown-windows-msvc\nBuild config: +assertions",
+  "verified": [
+    {
+      "key": "sw-01-01",
+      "output": "18",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-01-02",
+      "output": "你好，Swift！",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-01-03",
+      "output": "10",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-01-04",
+      "output": "午餐 3 12.5 true",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-01-05",
+      "output": "总额：37.5 元",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-01-06",
+      "output": "20",
+      "expectedCompileError": "let"
+    },
+    {
+      "key": "sw-02-01",
+      "output": "预算内",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-02-02",
+      "output": "true\nfalse",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-02-03",
+      "output": "查看总额",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-02-04",
+      "output": "25",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-02-05",
+      "output": "2\n1\n0\n1\n2",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-02-06",
+      "output": "8",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-03-01",
+      "output": "12\n4\n[12, 10, 5, 3]",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-03-02",
+      "output": "午餐\n交通",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-03-03",
+      "output": "15\n0\n3",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-03-04",
+      "output": "3\ntrue\n交通",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-03-05",
+      "output": "午餐\n午餐 12\n20",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-03-06",
+      "output": "20 2\n[12, 5]",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-04-01",
+      "output": "18",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-04-02",
+      "output": "午餐 12\n12",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-04-03",
+      "output": "午餐 12\n交通 8",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-04-04",
+      "output": "20",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-04-05",
+      "output": "5\n0",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-04-06",
+      "output": "25",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-05-01",
+      "output": "86\n0",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-05-02",
+      "output": "13",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-05-03",
+      "output": "8\n0",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-05-04",
+      "output": "2\n0",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-05-05",
+      "output": "已录入 125 分",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-05-06",
+      "output": "2300",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-05-07",
+      "output": "0\n-1",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-06-01",
+      "output": "午餐\n1800",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-06-02",
+      "output": "500",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-06-03",
+      "output": "地铁 300 分",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-06-04",
+      "output": "800\n300",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-06-05",
+      "output": "已录入 600",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-06-06",
+      "output": "500 700",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-06-07",
+      "output": "0",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-07-01",
+      "output": "开销：早餐",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-07-02",
+      "output": "250 分",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-07-03",
+      "output": "待填写",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-07-04",
+      "output": "开销\n提醒",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-07-05",
+      "output": "600\n车票",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-07-06",
+      "output": "900\n电影票",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-07-07",
+      "output": "8\nA",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-07-08",
+      "output": "2\n9",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-08-01",
+      "output": "14",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-08-02",
+      "output": "300 分\n1800 分\n500 分",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-08-03",
+      "output": "[1800, 2300]",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-08-04",
+      "output": "[300, 500, 1800]\n[1800, 300, 500]",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-08-05",
+      "output": "2600",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-08-06",
+      "output": "true\nfalse",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-08-07",
+      "output": "1800 分、2300 分",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-08-08",
+      "output": "2100",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-09-01",
+      "output": "120",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-09-02",
+      "output": "格式错误",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-09-03",
+      "output": "500\n0",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-09-04",
+      "output": "开始\n生成报告\n结束",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-09-05",
+      "output": "2600",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-09-06",
+      "output": "2100",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-09-07",
+      "output": "请重输\n继续",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-10-01",
+      "output": "午餐 1800 分\n地铁 300 分",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-10-02",
+      "output": "2100",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-10-03",
+      "output": "已删除 地铁\n午餐、早餐",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-10-04",
+      "output": "1 1800",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-10-05",
+      "output": "2600",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-10-06",
+      "output": "300\n1700",
+      "expectedCompileError": null
+    },
+    {
+      "key": "sw-10-07",
+      "output": "1. 录入开销\n2. 查看列表\n3. 删除记录\n4. 保存文件",
+      "expectedCompileError": null
+    }
+  ],
+  "interactiveProject": true
+}

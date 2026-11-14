@@ -15,6 +15,7 @@ description: 制作或修复编程与计算机课程视频，使用代码或图�
 | --- | --- | --- |
 | 新课制作 | 内容、讲稿分镜、代码验证、配音、同步、渲染与交付 | [教学与画面](references/course-design.md)，按阶段读取其余材料 |
 | 同步修复 | 修正讲解对象和实际语音起点，保留认可的高亮机制 | [同步规范](references/synchronization.md)、[渲染与验收](references/render-delivery.md) |
+| 生成或烧录字幕 | 校验最终 PCM、词时间、正式讲稿和本版本母版 | [字幕契约](references/subtitle-contract.md) |
 | 只导出无字幕 | 关闭字幕层，以相同时间轴导出，复制原音轨及章节 | [无字幕导出](references/render-delivery.md#只去掉字幕) |
 | 只审查、不修改 | 只读复现，列课程、原时间戳、问题、预期和证据 | [验收分层](references/render-delivery.md#验收分层) |
 | 打包或上传 | 整理可复现工程，扫描内容与版本记录，按已有授权上传 | [工程交付](references/render-delivery.md#工程与安全交付) |
@@ -41,6 +42,10 @@ description: 制作或修复编程与计算机课程视频，使用代码或图�
 6. 制作约 60–90 秒内部试片，覆盖长代码、输出、图示、语音、字幕与高亮切换。检查后继续。时长按实测配音、阅读与思考停顿控制，不用大段空白凑时长。
 7. 分章渲染并缓存。静态页可用事件驱动 VFR；持续动画应逐帧或充分采样。检查最终成片后再交付工程。
 
+## 字幕的统一入口
+
+任何课程版本在生成字幕前读取[字幕契约](references/subtitle-contract.md)。以最终 PCM 和工程时间轴定位词级字幕。用 `scripts/subtitle_workflow.py build --project PROJECT --video MASTER --out TRACKS` 检查时基并生成轨道，再用 `scripts/subtitle_workflow.py burn --plan TRACKS/subtitle-plan.json --output VIDEO` 从同版本无字幕母版烧录。烧录先展开为工程 FPS 的恒帧视频再运行 ASS，复制原音轨与章节。结合成片边界帧和 ASR 抽样复核后交付。
+
 ## 可复用资源
 
 这些是工具和组件，不是已完成的一小时课程。正式课须扩充内容；已有工程不必为使用资源而重构。
@@ -48,7 +53,6 @@ description: 制作或修复编程与计算机课程视频，使用代码或图�
 - [assets/persistent-sync.ts](assets/persistent-sync.ts)：持续高亮、分幕隔离与图示状态函数；测试运行渲染所用的同一实现。
 - [assets/CourseFrame.tsx](assets/CourseFrame.tsx)：深色画面骨架，左代码/图示、左下输出、右注解、独立字幕；无字幕开关不导致重排。
 - [assets/course.example.json](assets/course.example.json)、[assets/anchors.example.json](assets/anchors.example.json)、[assets/words.example.json](assets/words.example.json)：最小格式示例。
-- `python scripts/subtitle_workflow.py build --project PROJECT --video SUBTITLE_FREE.mp4 --out OUTPUT`：从最终配音生成版本绑定的字幕；`burn --plan OUTPUT/subtitle-plan.json --output NEW.mp4` 嵌入字幕。适配范围和验收见[同步规范](references/synchronization.md#字幕构建与烧录入口)。
 - `python scripts/timeline_tools.py validate COURSE.json`：检查时间、行号、初始高亮、分幕、字幕与练习停顿；覆盖不足只报告，不编造语义。
 - `python scripts/timeline_tools.py resolve COURSE.json ANCHORS.json --root PROJECT --output RESOLVED.json`：解析已人工选择的短语；重复短语明确出现次数，失败不写部分结果。
 - `python scripts/media_qa.py extract VIDEO.mp4 --times 12.5,18.2 --output FRAMES`：提取 VFR 中该时刻正在显示的帧，防止误取未来画面。
